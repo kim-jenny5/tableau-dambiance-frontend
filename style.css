@@ -12,15 +12,6 @@ body {
 }
 
 .center-container {
-  /* position: absolute;
-  width: fit-content;
-  margin: auto;
-  top: 33%;
-  left: 0;
-  right: 0; */
-}
-
-.focus-img {
   position: absolute;
   width: fit-content;
   margin: auto;
@@ -28,8 +19,6 @@ body {
   left: 0;
   right: 0;
   padding: 0 100px 0 100px;
-  /* text-align: center; */
-  /* width: auto; */
 }
 
 .center-text {
@@ -38,12 +27,6 @@ body {
   font-size: 200%;
   top: 40%;
   right: 12%;
-  /* margin-left: 40px;
-  margin-right: 40px; */
-  /* margin: auto; */
-  /* left: 40%;
-  right: 0%; */
-  /* bottom: 0; */
 }
 
 .tableau {

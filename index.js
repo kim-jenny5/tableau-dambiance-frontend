@@ -6,7 +6,6 @@ collectionApiCall.getCollections();
 // getting elements from DOM
 const qMark = document.querySelector(".about-btn");
 
-// console.log(qMark);
 qMark.addEventListener("click", function () {
   debugger;
 });
