@@ -1,11 +1,14 @@
 const base_url = `http://localhost:3000`;
 const collectionApiCall = new CollectionApi(base_url);
 
-collectionApiCall.getCollections();
+// collectionApiCall.getCollections();
 
-// getting elements from DOM
-const qMark = document.querySelector(".about-btn");
+// // getting elements from DOM
+// const qMark = document.querySelector(".about-btn");
+// const about =
 
-qMark.addEventListener("click", function () {
-  debugger;
-});
+// // ------------------
+
+// qMark.addEventListener("click", function () {
+//   debugger;
+// });
