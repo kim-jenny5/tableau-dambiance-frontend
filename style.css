@@ -12,27 +12,34 @@ body {
 }
 
 .center-container {
+  /* position: absolute;
+  width: fit-content;
+  margin: auto;
+  top: 33%;
+  left: 0;
+  right: 0; */
+}
+
+.focus-img {
   position: absolute;
   width: fit-content;
   margin: auto;
   top: 33%;
-  /* bottom: 0; */
   left: 0;
   right: 0;
+  /* width: auto; */
 }
 
 .center-text {
   position: absolute;
+  text-align: center;
   /* z-index: 1; */
-  /* top: 35%; */
-  /* left: 24%; */
   font-size: 200%;
-  /* margin: auto; */
-  margin-top: 34.5%;
-  margin-left: 35%;
-  /* left: 0;
-  right: 0; */
-  /* top: 50%; */
+  /* margin: auto;
+  left: 40%;
+  right: 0%; */
+  top: 35%;
+  /* bottom: 0; */
 }
 
 .tableau {
