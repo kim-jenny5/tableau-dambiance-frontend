@@ -1,0 +1,30 @@
+/* @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"; */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+
+body {
+  font-family: "Playfair Display", serif;
+}
+
+/* .page-container {
+  position: relative;
+} */
+
+.about-btn {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+}
+
+.custom-container {
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.center-text {
+  position: absolute;
+  top: 42%;
+  left: 24%;
+  /* transform: translate(-50%, -50%); */
+}
