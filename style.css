@@ -26,5 +26,23 @@ body {
   position: absolute;
   top: 42%;
   left: 24%;
-  /* transform: translate(-50%, -50%); */
+}
+
+/* .app-name-container {
+    position: absolute;
+    bottom: 0;
+    } */
+
+.tableau {
+  writing-mode: vertical-lr;
+  font-size: 300%;
+  position: absolute;
+  bottom: 6%;
+}
+
+.dambiance {
+  font-size: 300%;
+  left: 1%;
+  position: absolute;
+  bottom: 0;
 }
