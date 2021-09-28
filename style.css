@@ -22,15 +22,17 @@ body {
 }
 
 .center-text {
-  /* position: absolute; */
+  position: absolute;
   /* z-index: 1; */
   /* top: 35%; */
   /* left: 24%; */
   font-size: 200%;
   /* margin: auto; */
+  margin-top: 34.5%;
+  margin-left: 35%;
   /* left: 0;
   right: 0; */
-  top: 50%;
+  /* top: 50%; */
 }
 
 .tableau {
