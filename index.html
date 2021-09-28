@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
     <script src="index.js" defer></script>
     <title>Tableau d'Ambiance</title>
   </head>
@@ -13,11 +19,6 @@
     <script src="src/collection_api.js"></script>
     <script src="src/user.js"></script>
     <script src="src/user_api.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    ></script>
     <!-- <script src="index.js"></script> -->
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -35,18 +36,21 @@
       />
     </svg>
     <div class="center-container">
-      <img src="imgs/camera-focus.png" width="300" height="300" />
+      <img
+        src="imgs/camera-focus.png"
+        class="focus-img"
+        width="300"
+        height="300"
+      />
       <h2 class="center-text">Showcase your memories</h2>
     </div>
-    <div class="tableau">Tableau</div>
-    <div class="dambiance">d'Ambiance</div>
+    <div class="tableau fw-bold">Tableau</div>
+    <div class="dambiance fw-bold">d'Ambiance</div>
     <div class="about-side-menu">
-      <div class="relative-container">
-        <div class="about-side-menu-txt-container">
-          <div class="about-app text-end">About</div>
-          <div class="about-dev">The Dev 👩🏻‍💻</div>
-          <div class="copyright">© Jenny Kim, 2021</div>
-        </div>
+      <div class="about-side-menu-txt-container text-end">
+        <div class="about-app">About</div>
+        <div class="about-dev mt-2">The Dev 👩🏻‍💻</div>
+        <div class="copyright mt-5">© Jenny Kim, 2021</div>
       </div>
     </div>
   </body>
