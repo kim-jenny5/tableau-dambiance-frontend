@@ -27,18 +27,22 @@ body {
   top: 33%;
   left: 0;
   right: 0;
+  padding: 0 100px 0 100px;
+  /* text-align: center; */
   /* width: auto; */
 }
 
 .center-text {
   position: absolute;
   text-align: center;
-  /* z-index: 1; */
   font-size: 200%;
-  /* margin: auto;
-  left: 40%;
+  top: 40%;
+  right: 12%;
+  /* margin-left: 40px;
+  margin-right: 40px; */
+  /* margin: auto; */
+  /* left: 40%;
   right: 0%; */
-  top: 35%;
   /* bottom: 0; */
 }
 
