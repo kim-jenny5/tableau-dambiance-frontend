@@ -13,18 +13,24 @@ body {
 
 .center-container {
   position: absolute;
-  text-align: center;
   width: fit-content;
+  margin: auto;
+  top: 33%;
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
 }
 
 .center-text {
-  position: absolute;
-  top: 42%;
-  left: 24%;
-}
-
-.focus-img {
-  position: absolute;
+  /* position: absolute; */
+  /* z-index: 1; */
+  /* top: 35%; */
+  /* left: 24%; */
+  font-size: 200%;
+  /* margin: auto; */
+  /* left: 0;
+  right: 0; */
+  top: 50%;
 }
 
 .tableau {
