@@ -7,7 +7,6 @@ collectionApiCall.getCollections();
 const qMark = document.querySelector(".about-btn");
 
 // console.log(qMark);
-qMark.addEventListener("click", function (e) {
+qMark.addEventListener("click", function () {
   debugger;
-  //   console.log("Hello");
 });
