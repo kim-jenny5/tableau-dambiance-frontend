@@ -9,6 +9,7 @@ a:link {
   text-decoration: none;
 }
 
+/* STARTING PAGE */
 .open-about-btn,
 .close-about-btn {
   position: fixed;
@@ -110,4 +111,23 @@ a:link {
 .copyright {
   font-size: 10px;
   font-weight: normal;
+}
+
+/* NEW USER PAGE */
+.new-user-container {
+  position: absolute;
+  width: fit-content !important;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+
+.new-user-header {
+  font-size: 150%;
+  padding-left: 55px;
+}
+
+.new-user-subtitle {
+  font-size: 90%;
+  font-family: "Open Sans", sans-serif;
 }
