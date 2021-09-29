@@ -4,7 +4,6 @@ const xBtn = document.querySelector(".close-about-btn");
 const about = document.querySelector(".about-app");
 const aboutGrp = document.querySelector(".about-app-txt-grp");
 const aboutDev = document.querySelector(".about-dev");
-// const aboutDevGrp = document.querySelector(".about-dev-txt-grp");
 const aboutDevGrp = document.querySelectorAll(".about-dev-txt-grp");
 const aboutMenu = document.querySelector(".about-side-menu");
 
@@ -41,7 +40,6 @@ about.addEventListener("click", function () {
 aboutDev.addEventListener("click", function () {
   for (const element of aboutDevGrp) {
     if (element.style.display === "none") {
-      //   debugger;
       element.style.display = "block";
     } else {
       element.style.display = "none";
