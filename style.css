@@ -31,16 +31,10 @@ body {
 
 .user-btns {
   position: absolute;
-  /* text-align: center; */
   font-size: 125%;
   top: 55%;
   right: 3%;
   font-family: "Open Sans", sans-serif;
-}
-
-.new-user,
-.returning-user {
-  max-width: 100%;
 }
 
 .tableau {
@@ -67,17 +61,23 @@ body {
   z-index: -1;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .about-app-headers {
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.about-app-txt {
+  font-size: 12px;
 }
 
 .about-side-menu-txt-container {
   margin-top: 25%;
-  margin-right: 5%;
-  /* width: 275px; */
+  /* margin-right: 5%; */
 }
 
 .copyright {
