@@ -1,4 +1,5 @@
 // getting elements from DOM
+const startingPg = document.querySelector(".starting-page");
 const qMark = document.querySelector(".open-about-btn");
 const xBtn = document.querySelector(".close-about-btn");
 const about = document.querySelector(".about-app");
@@ -6,6 +7,8 @@ const aboutGrp = document.querySelector(".about-app-txt-grp");
 const aboutDev = document.querySelector(".about-dev");
 const aboutDevGrp = document.querySelectorAll(".about-dev-txt-grp");
 const aboutMenu = document.querySelector(".about-side-menu");
+const newUser = document.querySelector(".new-user");
+const returningUser = document.querySelector(".returning-user");
 
 // ------------------
 
@@ -45,4 +48,12 @@ aboutDev.addEventListener("click", function () {
       element.style.display = "none";
     }
   }
+});
+
+newUser.addEventListener("click", function () {
+  startingPg.style.display = "none";
+});
+
+returningUser.addEventListener("click", function () {
+  startingPg.style.display = "none";
 });
