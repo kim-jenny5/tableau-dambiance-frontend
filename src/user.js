@@ -63,3 +63,9 @@ returningUser.addEventListener("click", function () {
   startingPg.style.display = "none";
   returningUserPg.style.display = "block";
 });
+
+// class User {
+//   constructor({ id, username, collections }) {
+//     this.username = username;
+//   }
+// }
