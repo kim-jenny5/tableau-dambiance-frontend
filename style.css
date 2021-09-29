@@ -52,16 +52,21 @@ body {
   width: 300px;
   z-index: -1;
   font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
+
+.about-app-headers {
   font-size: 18px;
   font-weight: bold;
 }
 
 .about-side-menu-txt-container {
   margin-top: 25%;
-  margin-right: 10%;
+  margin-right: 5%;
+  /* width: 275px; */
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: normal;
 }
