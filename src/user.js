@@ -7,3 +7,11 @@ const aboutDev = document.querySelector(".about-dev");
 qMark.addEventListener("click", function () {
   debugger;
 });
+
+about.addEventListener("click", function () {
+  debugger;
+});
+
+aboutDev.addEventListener("click", function () {
+  debugger;
+});
