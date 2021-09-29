@@ -69,10 +69,12 @@ body {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .about-app-txt {
   font-size: 12px;
+  display: none;
 }
 
 .about-side-menu-txt-container {

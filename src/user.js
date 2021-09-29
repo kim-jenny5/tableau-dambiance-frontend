@@ -1,7 +1,10 @@
 // getting elements from DOM
 const qMark = document.querySelector(".about-btn");
 const about = document.querySelector(".about-app");
+const aboutGrp = document.querySelector(".about-app-txt-grp");
 const aboutDev = document.querySelector(".about-dev");
+const aboutDevGrp = document.querySelector(".about-dev-txt-grp");
+
 // ------------------
 
 qMark.addEventListener("click", function () {
@@ -9,9 +12,20 @@ qMark.addEventListener("click", function () {
 });
 
 about.addEventListener("click", function () {
-  debugger;
+  if (aboutGrp.style.display === "none") {
+    aboutGrp.style.display = "block";
+  } else {
+    aboutGrp.style.display = "none";
+  }
+  //   debugger;
 });
 
 aboutDev.addEventListener("click", function () {
-  debugger;
+  if (aboutDevGrp.style.display === "none") {
+    aboutDevGrp.style.display = "block";
+  } else {
+    aboutDevGrp.style.display = "none";
+  }
+
+  //   debugger;
 });
