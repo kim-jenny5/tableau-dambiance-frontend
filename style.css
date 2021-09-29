@@ -29,6 +29,20 @@ body {
   right: 12%;
 }
 
+.user-btns {
+  position: absolute;
+  /* text-align: center; */
+  font-size: 125%;
+  top: 55%;
+  right: 3%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.new-user,
+.returning-user {
+  max-width: 100%;
+}
+
 .tableau {
   writing-mode: vertical-lr;
   font-size: 300%;
