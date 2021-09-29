@@ -16,7 +16,7 @@ class UserApi {
   }
 
   createUsers() {
-    const user = {
+    const userObj = {
       //   user: {
       username: newUsername.value,
       //   },
