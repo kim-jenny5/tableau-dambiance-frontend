@@ -5,6 +5,10 @@ body {
   font-family: "Playfair Display", serif !important;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 .open-about-btn,
 .close-about-btn {
   position: fixed;

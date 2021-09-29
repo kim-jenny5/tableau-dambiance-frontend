@@ -5,6 +5,7 @@ const about = document.querySelector(".about-app");
 const aboutGrp = document.querySelector(".about-app-txt-grp");
 const aboutDev = document.querySelector(".about-dev");
 const aboutDevGrp = document.querySelector(".about-dev-txt-grp");
+// const aboutDevGrp = document.querySelectorAll(".about-dev-txt-grp");
 const aboutMenu = document.querySelector(".about-side-menu");
 
 // ------------------
