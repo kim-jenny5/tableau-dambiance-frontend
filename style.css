@@ -5,7 +5,8 @@ body {
   font-family: "Playfair Display", serif !important;
 }
 
-.about-btn {
+.open-about-btn,
+.close-about-btn {
   position: fixed;
   top: 1%;
   right: 1%;
@@ -63,6 +64,7 @@ body {
   font-size: 12px;
   padding-left: 25px;
   padding-right: 25px;
+  /* display: none; */
 }
 
 .about-app-headers {
