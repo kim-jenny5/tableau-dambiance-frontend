@@ -62,6 +62,21 @@ a:link {
   bottom: 0;
 }
 
+.slogan-top {
+  font-size: 200%;
+  position: absolute;
+  top: 0;
+  right: 1%;
+}
+
+.slogan-right {
+  font-size: 200%;
+  position: absolute;
+  right: 0;
+  top: 5%;
+  writing-mode: vertical-lr;
+}
+
 .about-side-menu {
   position: fixed;
   top: 0;
