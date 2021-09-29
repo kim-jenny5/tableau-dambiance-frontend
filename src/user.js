@@ -14,6 +14,10 @@ const startingPg = document.querySelector(".starting-page");
 const newUserPg = document.querySelector(".new-user-page");
 const returningUserPg = document.querySelector(".returning-user-page");
 
+// new user form
+const newUserForm = document.querySelector(".new-user-form");
+const newUsername = document.getElementById("new-user-username");
+
 // ------------------
 
 qMark.addEventListener("click", function () {
@@ -64,8 +68,18 @@ returningUser.addEventListener("click", function () {
   returningUserPg.style.display = "block";
 });
 
-// class User {
-//   constructor({ id, username, collections }) {
-//     this.username = username;
-//   }
-// }
+class User {
+  constructor({ id, username, collections }) {
+    this.id = id;
+    this.username = username;
+    this.collections = collections;
+  }
+}
+
+newUserForm.addEventListener("submit", handleSubmit);
+
+function handleSubmit(e) {
+  e.preventDefault();
+  userApiCall.createUsers();
+  //   debugger;
+}
