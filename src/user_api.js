@@ -8,8 +8,10 @@ class UserApi {
       .then((resp) => resp.json())
       .then((data) => {
         for (const user of data) {
-          //   new User(user);
+          const u = new User(user);
+          u.findUser();
           //   debugger;
+          //   console.log(user);
         }
       })
       .catch();

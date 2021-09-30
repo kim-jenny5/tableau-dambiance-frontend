@@ -7,7 +7,7 @@ class PictureApi {
     fetch(this.url + `/pictures`)
       .then((resp) => resp.json())
       .then((data) => {
-        debugger;
+        // debugger;
       })
       .catch();
   }

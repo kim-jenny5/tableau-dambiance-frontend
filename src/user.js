@@ -17,6 +17,8 @@ const returningUserPg = document.querySelector(".returning-user-page");
 // new user form
 const newUserForm = document.querySelector(".new-user-form");
 const newUsername = document.getElementById("new-user-username");
+const returningUserForm = document.querySelector(".returning-user-form");
+const returningUsername = document.getElementById("returning-user-username");
 
 // ------------------
 
@@ -68,11 +70,19 @@ returningUser.addEventListener("click", function () {
   returningUserPg.style.display = "block";
 });
 
+// ------------------------------
+
 class User {
   constructor({ id, username, collections }) {
     this.id = id;
     this.username = username;
     this.collections = collections;
+  }
+
+  findUser() {
+    if (returningUsername.value === this.username) {
+      debugger;
+    }
   }
 }
 
@@ -82,4 +92,11 @@ function handleSubmit(e) {
   e.preventDefault();
   userApiCall.createUsers();
   //   debugger;
+}
+
+returningUserForm.addEventListener("submit", returningUserSubmit);
+
+function returningUserSubmit(e) {
+  e.preventDefault();
+  userApiCall.getUsers();
 }
