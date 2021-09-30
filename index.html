@@ -134,9 +134,9 @@
     <div class="new-user-page" style="display: none">
       <div class="slogan-top fw-bold">Showcase your</div>
       <div class="slogan-right fw-bold">memories</div>
-      <div class="new-user-container container">
+      <div class="user-container container">
         <div class="row">
-          <div class="col new-user-header text-center">Choose a username</div>
+          <div class="col user-header text-center">Choose a username</div>
         </div>
         <div class="row">
           <div class="col new-user-subtitle text-center">
@@ -146,13 +146,11 @@
               <input
                 type="text"
                 id="new-user-username"
-                name="user-username"
+                name="new-user-username"
                 class="user-username mb-3 text-center"
               />
               <br />
-              <button type="submit" class="continue-btn fw-bold">
-                Continue
-              </button>
+              <button type="submit" class="continue-btn">continue</button>
             </form>
           </div>
         </div>
@@ -161,6 +159,24 @@
     <div class="returning-user-page" style="display: none">
       <div class="slogan-top fw-bold">Showcase your</div>
       <div class="slogan-right fw-bold">memories</div>
+      <div class="user-container container">
+        <div class="row">
+          <div class="col user-header text-center">Welcome back,</div>
+        </div>
+        <div class="row text-center">
+          <form class="returning-user-form mt-2">
+            <label for="returning-user-username"></label>
+            <input
+              type="text"
+              id="returning-user-username"
+              name="returning-user-username"
+              class="user-username mb-3 text-center"
+            />
+            <br />
+            <button type="submit" class="continue-btn">continue</button>
+          </form>
+        </div>
+      </div>
     </div>
     <div class="tableau fw-bold">Tableau</div>
     <div class="dambiance fw-bold">d'Ambiance</div>
