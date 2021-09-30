@@ -6,6 +6,12 @@ class CollectionApi {
   getCollections() {
     fetch(this.url + `/collections`)
       .then((resp) => resp.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        for (const collection of data) {
+          let c = new Collection(collection);
+          debugger;
+        }
+      })
+      .catch();
   }
 }
