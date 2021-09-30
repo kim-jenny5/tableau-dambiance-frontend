@@ -163,9 +163,9 @@ a:link {
 
 .hamburger {
   position: fixed;
-  width: 30px;
-  height: 30px;
-  top: 2%;
+  width: 25px;
+  height: 25px;
+  top: 2.5%;
   left: 2%;
   cursor: pointer;
 }
@@ -182,4 +182,26 @@ a:link {
   font-size: 12px;
   /* padding-left: 25px;
   padding-right: 25px; */
+}
+
+.collections-side-menu-txt-container {
+  margin-top: 25%;
+  margin-left: 10%;
+}
+
+.username-display {
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
+}
+
+.collections-header {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.close-collections-btn {
+  position: fixed;
+  top: 2%;
+  left: 15%;
+  cursor: pointer;
 }
