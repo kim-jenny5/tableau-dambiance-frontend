@@ -81,20 +81,11 @@ class User {
 
   findUser() {
     if (returningUsername.value === this.username) {
-      //   console.log(this.collections);
-      // const usersCollections = this.collections;
-      // this.collections;
-      // debugger;
       const user = this;
       const username = document.querySelector(".username-display");
       username.innerText = user.username;
-      Collection.setUpUsersPage(user);
-      // debugger;
-      // const usersCollections = document.querySelector(".collections-display");
 
-      // usersCollections.appendChild(this.collections);
-      //   usersCollections.listCollections();
-      //   debugger;
+      Collection.setUpUsersPage(user);
     }
   }
 
@@ -108,7 +99,6 @@ newUserForm.addEventListener("submit", handleSubmit);
 function handleSubmit(e) {
   e.preventDefault();
   userApiCall.createUsers();
-  //   debugger;
 }
 
 returningUserForm.addEventListener("submit", returningUserSubmit);
@@ -118,6 +108,6 @@ function returningUserSubmit(e) {
   returningUserPg.style.display = "none";
   const mainPg = document.querySelector(".main-page");
   mainPg.style.display = "block";
-  // debugger;
+
   userApiCall.getUsers();
 }
