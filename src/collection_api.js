@@ -9,7 +9,7 @@ class CollectionApi {
       .then((data) => {
         for (const collection of data) {
           const c = new Collection(collection);
-          c.getCollection();
+          // c.getCollection();
         }
       })
       .catch();

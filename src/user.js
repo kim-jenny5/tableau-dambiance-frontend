@@ -86,23 +86,24 @@ class User {
       username.innerText = user.username;
 
       Collection.setUpUsersPage(user);
-      this.listCollections(user.collections);
+      // this.listCollections(user.collections);
+      Collection.listCollections(user);
     }
   }
 
-  listCollections(collections) {
-    collections.find(function (c) {
-      c.created_at;
-      debugger;
-    });
+  // listCollections(collections) {
+  //   collections.find(function (c) {
+  //     c.created_at;
+  //     debugger;
+  //   });
 
-    // const allCollections = collections;
+  //   // const allCollections = collections;
 
-    // debugger;
-    const filename = document.querySelector(".file-name");
-    filename.innerText = this.name;
-    console.log(filename);
-  }
+  //   // debugger;
+  //   const filename = document.querySelector(".file-name");
+  //   filename.innerText = this.name;
+  //   console.log(filename);
+  // }
 }
 
 newUserForm.addEventListener("submit", handleSubmit);

@@ -42,10 +42,8 @@ class Collection {
     });
   }
 
-  getCollection() {
-    // const filename = document.querySelector(".file-name");
-    // filename.innerText = this.name;
-    // console.log(filename);
-    // debugger;
+  static listCollections(user) {
+    const eachCollection = document.querySelectorAll(".each-collection");
+    debugger;
   }
 }
