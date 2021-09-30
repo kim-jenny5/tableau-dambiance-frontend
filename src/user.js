@@ -81,8 +81,15 @@ class User {
 
   findUser() {
     if (returningUsername.value === this.username) {
-      debugger;
+      //   console.log(this.collections);
+      const usersCollections = this.collections;
+      //   usersCollections.listCollections();
+      //   debugger;
     }
+  }
+
+  listCollections() {
+    debugger;
   }
 }
 

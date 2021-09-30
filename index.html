@@ -11,6 +11,7 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="src/collection.js" defer></script>
     <script src="src/collection_api.js" defer></script>
     <script src="src/user.js" defer></script>
@@ -21,7 +22,7 @@
     <title>Tableau d'Ambiance</title>
   </head>
   <body>
-    <div class="starting-page" style="display: block">
+    <div class="starting-page" style="display: none">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
@@ -61,8 +62,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="tableau fw-bold">Tableau</div>
-      <div class="dambiance fw-bold">d'Ambiance</div> -->
       <div class="about-side-menu" style="display: none">
         <div class="about-side-menu-txt-container text-end">
           <div class="about-app about-app-headers">About</div>
@@ -179,6 +178,18 @@
           </form>
         </div>
       </div>
+    </div>
+    <div class="main-page" style="display: block">
+      <div class="container mt-3">
+        <div class="file-name text-center" style="display: block">
+          Collection Name Here
+        </div>
+      </div>
+      <span
+        class="iconify hamburger"
+        data-icon="icon-park:hamburger-button"
+      ></span>
+      <div class="collections-side-menu" style="display: block"></div>
     </div>
     <div class="tableau logo fw-bold">Tableau</div>
     <div class="dambiance logo fw-bold">d'Ambiance</div>

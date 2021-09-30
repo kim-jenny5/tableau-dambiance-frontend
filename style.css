@@ -12,14 +12,14 @@ a:link {
 .tableau {
   writing-mode: vertical-lr;
   font-size: 300%;
-  position: absolute;
+  position: fixed;
   bottom: 7%;
 }
 
 .dambiance {
   font-size: 300%;
   left: 1%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
@@ -152,4 +152,34 @@ a:link {
   font-weight: bold;
   border: none;
   background-color: transparent;
+}
+
+/* MAIN PAGE */
+.file-name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hamburger {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: 2%;
+  left: 2%;
+  cursor: pointer;
+}
+
+.collections-side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f6f6f6;
+  height: 100%;
+  width: 300px;
+  z-index: -1;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  /* padding-left: 25px;
+  padding-right: 25px; */
 }

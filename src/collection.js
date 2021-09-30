@@ -7,3 +7,6 @@ class Collection {
     this.created_at = created_at;
   }
 }
+
+const hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener("click", function () {});
