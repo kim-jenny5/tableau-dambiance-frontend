@@ -5,12 +5,15 @@ const collectionsMenu = document.querySelector(".collections-side-menu");
 const collectionsList = document.querySelector(".collections-display");
 
 class Collection {
+  static all = [];
+
   constructor({ id, name, pictures, user, created_at }) {
     this.id = id;
     this.name = name;
     this.pictures = pictures;
     this.user = user;
     this.created_at = created_at;
+    Collection.all.push(this);
   }
 
   static setUpUsersPage(user) {
@@ -25,8 +28,8 @@ class Collection {
         collectionEl.className = "each-collection";
         collectionEl.innerText = collection.name;
         collectionsList.append(collectionEl);
-        // debugger;
       }
+      Collection.getToEachCollection(user);
     });
 
     xCollectionsBtn.addEventListener("click", function () {
@@ -42,8 +45,25 @@ class Collection {
     });
   }
 
-  static listCollections(user) {
+  static getToEachCollection(user) {
     const eachCollection = document.querySelectorAll(".each-collection");
-    debugger;
+
+    for (const collection of eachCollection) {
+      // console.log(collection);
+      // debugger;
+      collection.addEventListener("click", function (e) {
+        const foundCollection = user.collections.find(
+          (c) => c.name === e.target.innerText
+        );
+        // console.log(Collection.all);
+        console.log(foundCollection);
+        debugger;
+      });
+    }
+    // eachCollection.find(function (c) {
+    //   debugger;
+    // });
+    // console.log(eachCollection);
+    // debugger;
   }
 }

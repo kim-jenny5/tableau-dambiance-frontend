@@ -87,9 +87,11 @@ class User {
 
       Collection.setUpUsersPage(user);
       // this.listCollections(user.collections);
-      Collection.listCollections(user);
+      // Collection.getToEachCollection(user);
     }
   }
+
+  getToEachCollection() {}
 
   // listCollections(collections) {
   //   collections.find(function (c) {

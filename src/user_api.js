@@ -15,10 +15,10 @@ class UserApi {
       .catch();
   }
 
-  createUsers() {
-    const user = {
-      username: newUsername.value,
-    };
-    debugger;
-  }
+  // createUsers() {
+  //   const user = {
+  //     username: newUsername.value,
+  //   };
+  //   debugger;
+  // }
 }
