@@ -20,8 +20,6 @@ const newUsername = document.getElementById("new-user-username");
 const returningUserForm = document.querySelector(".returning-user-form");
 const returningUsername = document.getElementById("returning-user-username");
 
-const collectionsList = document.querySelectorAll(".each-collection");
-
 // ------------------
 
 qMark.addEventListener("click", function () {
@@ -107,12 +105,23 @@ class User {
       collectionsDisplay.append(collectionEl);
       // debugger;
     }
-    // debugger;
+    const collectionsList = document.querySelectorAll(".each-collection");
+
+    for (const cEl of collectionsList) {
+      cEl.addEventListener("click", this.clickOnCollection);
+    }
     // collectionsList.addEventListener("")
   }
 
-  accessCollection() {
-    debugger;
+  clickOnCollection(e) {
+    e.target.innerText;
+    const foundCollection = Collection.all.find(
+      (c) => c.name === e.target.innerText
+    );
+    foundCollection.accessCollection();
+    // console.log(foundCollection);
+
+    // debugger;
   }
   // listCollections(collections) {
   //   collections.find(function (c) {

@@ -29,7 +29,7 @@ class Collection {
       //   collectionEl.innerText = collection.name;
       //   collectionsDisplay.append(collectionEl);
       // }
-      // Collection.getToEachCollection(user);
+      // Collection.accessCollection(user);
       user.listCollections();
     });
 
@@ -46,21 +46,22 @@ class Collection {
     });
   }
 
-  static getToEachCollection(user) {
-    const eachCollection = document.querySelectorAll(".each-collection");
+  accessCollection() {
+    debugger;
+    // const eachCollection = document.querySelectorAll(".each-collection");
 
-    for (const collection of eachCollection) {
-      // console.log(collection);
-      // debugger;
-      collection.addEventListener("click", function (e) {
-        const foundCollection = user.collections.find(
-          (c) => c.name === e.target.innerText
-        );
-        // console.log(Collection.all);
-        console.log(foundCollection);
-        debugger;
-      });
-    }
+    // for (const collection of eachCollection) {
+    //   // console.log(collection);
+    //   // debugger;
+    //   collection.addEventListener("click", function (e) {
+    //     // const foundCollection = user.collections.find(
+    //     //   (c) => c.name === e.target.innerText
+    //     // );
+    //     // // console.log(Collection.all);
+    //     // console.log(foundCollection);
+    //     // debugger;
+    //   });
+    // }
     // eachCollection.find(function (c) {
     //   debugger;
     // });
