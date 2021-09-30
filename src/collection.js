@@ -1,3 +1,9 @@
+const hamburger = document.querySelector(".hamburger");
+const xCollectionsBtn = document.querySelector(".close-collections-btn");
+const collectionsMenu = document.querySelector(".collections-side-menu");
+
+const collectionsList = document.querySelector(".collections-display");
+
 class Collection {
   constructor({ id, name, pictures, user, created_at }) {
     this.id = id;
@@ -14,18 +20,16 @@ class Collection {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
       }
-      const collectionsList = document.querySelector(".collections-display");
       for (const collection of user.collections) {
         const collectionEl = document.createElement("div");
         collectionEl.innerText = collection.name;
-        console.log(collectionEl);
-        // debugger;
         collectionsList.append(collectionEl);
-        // debugger;
       }
     });
 
     xCollectionsBtn.addEventListener("click", function () {
+      // debugger;
+      collectionsList.innerHTML = "";
       if (xCollectionsBtn.style.display === "none") {
         xCollectionsBtn.style.display = "block";
         hamburger.style.display = "none";
@@ -37,10 +41,6 @@ class Collection {
     });
   }
 }
-
-const hamburger = document.querySelector(".hamburger");
-const xCollectionsBtn = document.querySelector(".close-collections-btn");
-const collectionsMenu = document.querySelector(".collections-side-menu");
 
 // hamburger.addEventListener("click", function () {
 //   collectionsMenu.style.display = "block";
