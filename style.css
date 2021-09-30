@@ -131,3 +131,20 @@ a:link {
   font-size: 90%;
   font-family: "Open Sans", sans-serif;
 }
+
+#new-user-username {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  width: 300px;
+  font-size: 125%;
+  font-family: "Playfair Display", serif;
+}
+
+.continue-btn {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+}
