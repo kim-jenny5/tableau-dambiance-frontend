@@ -22,6 +22,7 @@ class Collection {
       }
       for (const collection of user.collections) {
         const collectionEl = document.createElement("div");
+        collectionEl.className = "each-collection";
         collectionEl.innerText = collection.name;
         collectionsList.append(collectionEl);
       }

@@ -203,3 +203,8 @@ a:link {
   left: 15%;
   cursor: pointer;
 }
+
+.each-collection {
+  width: fit-content;
+  cursor: pointer;
+}
