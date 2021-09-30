@@ -10,12 +10,23 @@ class Collection {
 
 const hamburger = document.querySelector(".hamburger");
 const xCollectionsBtn = document.querySelector(".close-collections-btn");
+const collectionsMenu = document.querySelector(".collections-side-menu");
 
 hamburger.addEventListener("click", function () {
-  // debugger;
+  collectionsMenu.style.display = "block";
   if (xCollectionsBtn.style.display === "none") {
-    // debugger;
     hamburger.style.display = "none";
-    xCollectionsBtn.style = "block";
+    xCollectionsBtn.style.display = "block";
+  }
+});
+
+xCollectionsBtn.addEventListener("click", function () {
+  if (xCollectionsBtn.style.display === "none") {
+    xCollectionsBtn.style.display = "block";
+    hamburger.style.display = "none";
+  } else {
+    xCollectionsBtn.style.display = "none";
+    hamburger.style.display = "block";
+    collectionsMenu.style.display = "none";
   }
 });
