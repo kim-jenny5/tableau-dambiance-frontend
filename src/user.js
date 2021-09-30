@@ -86,11 +86,22 @@ class User {
       username.innerText = user.username;
 
       Collection.setUpUsersPage(user);
+      this.listCollections(user.collections);
     }
   }
 
-  listCollections() {
-    debugger;
+  listCollections(collections) {
+    collections.find(function (c) {
+      c.created_at;
+      debugger;
+    });
+
+    // const allCollections = collections;
+
+    // debugger;
+    const filename = document.querySelector(".file-name");
+    filename.innerText = this.name;
+    console.log(filename);
   }
 }
 

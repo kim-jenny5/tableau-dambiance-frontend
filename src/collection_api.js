@@ -8,7 +8,8 @@ class CollectionApi {
       .then((resp) => resp.json())
       .then((data) => {
         for (const collection of data) {
-          let c = new Collection(collection);
+          const c = new Collection(collection);
+          c.getCollection();
         }
       })
       .catch();

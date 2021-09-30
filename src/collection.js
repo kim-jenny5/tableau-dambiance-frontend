@@ -25,6 +25,7 @@ class Collection {
         collectionEl.className = "each-collection";
         collectionEl.innerText = collection.name;
         collectionsList.append(collectionEl);
+        // debugger;
       }
     });
 
@@ -39,5 +40,12 @@ class Collection {
         collectionsMenu.style.display = "none";
       }
     });
+  }
+
+  getCollection() {
+    // const filename = document.querySelector(".file-name");
+    // filename.innerText = this.name;
+    // console.log(filename);
+    // debugger;
   }
 }
