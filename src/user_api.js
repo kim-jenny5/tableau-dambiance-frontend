@@ -10,7 +10,7 @@ class UserApi {
         for (const user of data) {
           const u = new User(user);
           u.findUser();
-          //   debugger;
+          // debugger;
           //   console.log(user);
         }
       })

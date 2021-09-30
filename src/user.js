@@ -82,7 +82,15 @@ class User {
   findUser() {
     if (returningUsername.value === this.username) {
       //   console.log(this.collections);
-      const usersCollections = this.collections;
+      // const usersCollections = this.collections;
+      // this.collections;
+      // debugger;
+      const user = this;
+      Collection.setUpUsersPage(user);
+      // debugger;
+      // const usersCollections = document.querySelector(".collections-display");
+
+      // usersCollections.appendChild(this.collections);
       //   usersCollections.listCollections();
       //   debugger;
     }
@@ -105,5 +113,9 @@ returningUserForm.addEventListener("submit", returningUserSubmit);
 
 function returningUserSubmit(e) {
   e.preventDefault();
+  returningUserPg.style.display = "none";
+  const mainPg = document.querySelector(".main-page");
+  mainPg.style.display = "block";
+  // debugger;
   userApiCall.getUsers();
 }
