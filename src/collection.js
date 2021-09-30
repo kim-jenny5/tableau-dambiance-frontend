@@ -23,13 +23,14 @@ class Collection {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
       }
-      for (const collection of user.collections) {
-        const collectionEl = document.createElement("div");
-        collectionEl.className = "each-collection";
-        collectionEl.innerText = collection.name;
-        collectionsList.append(collectionEl);
-      }
-      Collection.getToEachCollection(user);
+      // for (const collection of user.collections) {
+      //   const collectionEl = document.createElement("div");
+      //   collectionEl.className = "each-collection";
+      //   collectionEl.innerText = collection.name;
+      //   collectionsList.append(collectionEl);
+      // }
+      // Collection.getToEachCollection(user);
+      user.getToEachCollection();
     });
 
     xCollectionsBtn.addEventListener("click", function () {

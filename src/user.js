@@ -91,7 +91,18 @@ class User {
     }
   }
 
-  getToEachCollection() {}
+  getToEachCollection() {
+    // debugger;
+    const usersCollection = Collection.all.filter((collection) => {
+      // debugger;
+      collection.user.id === this.id;
+    });
+    console.log(usersCollection);
+    const collectionsList = document.querySelector(".collections-display");
+    for (const collection of usersCollection) {
+      collectionsList.appendChild(collection);
+    }
+  }
 
   // listCollections(collections) {
   //   collections.find(function (c) {
