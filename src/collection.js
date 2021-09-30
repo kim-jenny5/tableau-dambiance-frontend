@@ -9,4 +9,13 @@ class Collection {
 }
 
 const hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", function () {});
+const xCollectionsBtn = document.querySelector(".close-collections-btn");
+
+hamburger.addEventListener("click", function () {
+  // debugger;
+  if (xCollectionsBtn.style.display === "none") {
+    // debugger;
+    hamburger.style.display = "none";
+    xCollectionsBtn.style = "block";
+  }
+});
