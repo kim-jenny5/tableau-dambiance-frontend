@@ -9,7 +9,6 @@ class Collection {
 
   static setUpUsersPage(user) {
     hamburger.addEventListener("click", function () {
-      // console.log(user);
       collectionsMenu.style.display = "block";
       if (xCollectionsBtn.style.display === "none") {
         hamburger.style.display = "none";

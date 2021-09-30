@@ -86,6 +86,8 @@ class User {
       // this.collections;
       // debugger;
       const user = this;
+      const username = document.querySelector(".username-display");
+      username.innerText = user.username;
       Collection.setUpUsersPage(user);
       // debugger;
       // const usersCollections = document.querySelector(".collections-display");
