@@ -20,6 +20,8 @@ const newUsername = document.getElementById("new-user-username");
 const returningUserForm = document.querySelector(".returning-user-form");
 const returningUsername = document.getElementById("returning-user-username");
 
+const collectionsList = document.querySelectorAll(".each-collection");
+
 // ------------------
 
 qMark.addEventListener("click", function () {
@@ -91,19 +93,27 @@ class User {
     }
   }
 
-  getToEachCollection() {
+  listCollections() {
     // debugger;
     const usersCollection = Collection.all.filter((collection) => {
-      // debugger;
-      collection.user.id === this.id;
+      return collection.user.id === this.id;
     });
-    console.log(usersCollection);
-    const collectionsList = document.querySelector(".collections-display");
+    // console.log(usersCollection);
+    const collectionsDisplay = document.querySelector(".collections-display");
     for (const collection of usersCollection) {
-      collectionsList.appendChild(collection);
+      const collectionEl = document.createElement("div");
+      collectionEl.className = "each-collection";
+      collectionEl.innerText = collection.name;
+      collectionsDisplay.append(collectionEl);
+      // debugger;
     }
+    // debugger;
+    // collectionsList.addEventListener("")
   }
 
+  accessCollection() {
+    debugger;
+  }
   // listCollections(collections) {
   //   collections.find(function (c) {
   //     c.created_at;

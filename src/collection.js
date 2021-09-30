@@ -2,7 +2,7 @@ const hamburger = document.querySelector(".hamburger");
 const xCollectionsBtn = document.querySelector(".close-collections-btn");
 const collectionsMenu = document.querySelector(".collections-side-menu");
 
-const collectionsList = document.querySelector(".collections-display");
+const collectionsDisplay = document.querySelector(".collections-display");
 
 class Collection {
   static all = [];
@@ -27,14 +27,14 @@ class Collection {
       //   const collectionEl = document.createElement("div");
       //   collectionEl.className = "each-collection";
       //   collectionEl.innerText = collection.name;
-      //   collectionsList.append(collectionEl);
+      //   collectionsDisplay.append(collectionEl);
       // }
       // Collection.getToEachCollection(user);
-      user.getToEachCollection();
+      user.listCollections();
     });
 
     xCollectionsBtn.addEventListener("click", function () {
-      collectionsList.innerHTML = "";
+      collectionsDisplay.innerHTML = "";
       if (xCollectionsBtn.style.display === "none") {
         xCollectionsBtn.style.display = "block";
         hamburger.style.display = "none";
