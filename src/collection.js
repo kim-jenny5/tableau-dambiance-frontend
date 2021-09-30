@@ -9,11 +9,20 @@ class Collection {
 
   static setUpUsersPage(user) {
     hamburger.addEventListener("click", function () {
-      console.log(user);
+      // console.log(user);
       collectionsMenu.style.display = "block";
       if (xCollectionsBtn.style.display === "none") {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
+      }
+      const collectionsList = document.querySelector(".collections-display");
+      for (const collection of user.collections) {
+        const collectionEl = document.createElement("div");
+        collectionEl.innerText = collection.name;
+        console.log(collectionEl);
+        // debugger;
+        collectionsList.append(collectionEl);
+        // debugger;
       }
     });
 
