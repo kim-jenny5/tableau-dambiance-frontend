@@ -58,8 +58,9 @@ class Collection {
     for (const picture of this.pictures) {
       // console.log(picture.img_file);
       debugger;
+      picture.attachToDom();
     }
-    Picture.getCollection(this);
+    // Picture.getCollection(this);
     // debugger;
     // const eachCollection = document.querySelectorAll(".each-collection");
 

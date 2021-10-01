@@ -75,7 +75,7 @@ class User {
     const usersCollection = Collection.all.filter((collection) => {
       return collection.user.id === this.id;
     });
-    debugger;
+    // debugger;
     // console.log(usersCollection);
     // const collectionsDisplay = document.querySelector(".collections-display");
 
