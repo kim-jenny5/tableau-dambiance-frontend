@@ -241,4 +241,23 @@ a:link {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  width: 100%;
+  max-width: max-content;
+}
+
+.board-numbers {
+  position: fixed;
+  right: 15%;
+  writing-mode: vertical-lr;
+}
+
+.board-numbers button {
+  border: none;
+  background-color: #f6f6f6;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.board-numbers button:hover {
+  opacity: 0.6;
 }
