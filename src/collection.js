@@ -13,38 +13,37 @@ class Collection {
     this.pictures = pictures;
     this.user = user;
     this.created_at = created_at;
+
+    // const collectionEl = document.createElement("div");
+    // collectionEl.className = "each-collection";
+    // collectionEl.innerText = this.name;
+    // collectionsDisplay.append(collectionEl);
+
     Collection.all.push(this);
   }
 
-  static setUpUsersPage(user) {
-    hamburger.addEventListener("click", function () {
-      collectionsMenu.style.display = "block";
-      if (xCollectionsBtn.style.display === "none") {
-        hamburger.style.display = "none";
-        xCollectionsBtn.style.display = "block";
-      }
-      // for (const collection of user.collections) {
-      //   const collectionEl = document.createElement("div");
-      //   collectionEl.className = "each-collection";
-      //   collectionEl.innerText = collection.name;
-      //   collectionsDisplay.append(collectionEl);
-      // }
-      // Collection.accessCollection(user);
-      user.listCollections();
-    });
+  // static setUpUsersPage(user) {
+  //   hamburger.addEventListener("click", function () {
+  //     collectionsMenu.style.display = "block";
+  //     if (xCollectionsBtn.style.display === "none") {
+  //       hamburger.style.display = "none";
+  //       xCollectionsBtn.style.display = "block";
+  //     }
+  //     user.listCollections();
+  //   });
 
-    xCollectionsBtn.addEventListener("click", function () {
-      collectionsDisplay.innerHTML = "";
-      if (xCollectionsBtn.style.display === "none") {
-        xCollectionsBtn.style.display = "block";
-        hamburger.style.display = "none";
-      } else {
-        xCollectionsBtn.style.display = "none";
-        hamburger.style.display = "block";
-        collectionsMenu.style.display = "none";
-      }
-    });
-  }
+  //   xCollectionsBtn.addEventListener("click", function () {
+  //     collectionsDisplay.innerHTML = "";
+  //     if (xCollectionsBtn.style.display === "none") {
+  //       xCollectionsBtn.style.display = "block";
+  //       hamburger.style.display = "none";
+  //     } else {
+  //       xCollectionsBtn.style.display = "none";
+  //       hamburger.style.display = "block";
+  //       collectionsMenu.style.display = "none";
+  //     }
+  //   });
+  // }
 
   accessCollection() {
     Picture.getCollection(this);
@@ -69,4 +68,6 @@ class Collection {
     // console.log(eachCollection);
     // debugger;
   }
+
+  listCollections() {}
 }

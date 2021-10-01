@@ -81,29 +81,57 @@ class User {
 
   findUser() {
     if (returningUsername.value === this.username) {
-      const user = this;
+      // const user = this;
       const username = document.querySelector(".username-display");
-      username.innerText = user.username;
+      // username.innerText = user.username;
+      username.innerText = this.username;
 
-      Collection.setUpUsersPage(user);
-      // this.listCollections(user.collections);
-      // Collection.getToEachCollection(user);
+      // Collection.setUpUsersPage(user);
+
+      this.setUpUsersPage();
     }
   }
 
-  listCollections() {
-    // debugger;
+  setUpUsersPage() {
+    hamburger.addEventListener("click", () => {
+      collectionsMenu.style.display = "block";
+      if (xCollectionsBtn.style.display === "none") {
+        hamburger.style.display = "none";
+        xCollectionsBtn.style.display = "block";
+      }
+      // debugger;
+      this.gettingCollections();
+    });
+
+    xCollectionsBtn.addEventListener("click", function () {
+      collectionsDisplay.innerHTML = "";
+      if (xCollectionsBtn.style.display === "none") {
+        xCollectionsBtn.style.display = "block";
+        hamburger.style.display = "none";
+      } else {
+        xCollectionsBtn.style.display = "none";
+        hamburger.style.display = "block";
+        collectionsMenu.style.display = "none";
+      }
+    });
+  }
+
+  gettingCollections() {
     const usersCollection = Collection.all.filter((collection) => {
       return collection.user.id === this.id;
     });
+    // debugger;
     // console.log(usersCollection);
     const collectionsDisplay = document.querySelector(".collections-display");
 
+    usersCollection.listCollections();
+
     for (const collection of usersCollection) {
-      const collectionEl = document.createElement("div");
-      collectionEl.className = "each-collection";
-      collectionEl.innerText = collection.name;
-      collectionsDisplay.append(collectionEl);
+      debugger;
+      // const collectionEl = document.createElement("div");
+      // collectionEl.className = "each-collection";
+      // collectionEl.innerText = collection.name;
+      // collectionsDisplay.append(collectionEl);
       // debugger;
     }
     const collectionsList = document.querySelectorAll(".each-collection");
@@ -124,7 +152,7 @@ class User {
 
     // debugger;
   }
-  // listCollections(collections) {
+  // gettingCollections(collections) {
   //   collections.find(function (c) {
   //     c.created_at;
   //     debugger;

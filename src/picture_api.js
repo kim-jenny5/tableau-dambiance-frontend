@@ -16,11 +16,11 @@ class PictureApi {
   }
 
   getPicturesApi(picture) {
-    debugger;
+    // debugger;
     fetch(this.url + `/pictures/${picture.id}`)
       .then((resp) => resp.json())
       .then((data) => {
-        debugger;
+        // debugger;
         // for (const picture of data) {
         //   const p = new Picture(picture);
         //   p.attachPictures();

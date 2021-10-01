@@ -6,6 +6,7 @@ class Picture {
     this.img_file = img_file;
     this.collection = collection;
     Picture.all.push(this);
+    // event listener here
   }
 
   static getCollection(collection) {
