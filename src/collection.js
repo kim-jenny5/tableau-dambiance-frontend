@@ -49,7 +49,7 @@ class Collection {
     // const collectionsDisplay = document.querySelector(".collections-display");
     collectionEl.className = "each-collection";
     collectionEl.innerText = this.name;
-    collectionsDisplay.append(collectionEl);
+    collectionsDisplay.appendChild(collectionEl);
     // debugger;
   }
 
