@@ -127,21 +127,11 @@ class User {
   }
 
   gettingCollections() {
-    // debugger;
-    // console.log("HI");
-
     const usersCollection = Collection.all.filter((collection) => {
       return collection.user.id === this.id;
     });
-    // debugger;
-    // console.log(usersCollection);
-    // const collectionsDisplay = document.querySelector(".collections-display");
-
-    // usersCollection.appendCollections();
-    // debugger;
 
     for (const collection of usersCollection) {
-      // console.log(collection);
       collection.appendCollections();
     }
 
@@ -152,19 +142,20 @@ class User {
       collectionsMenu.style.display = "none";
     });
 
-    const collectionsList = document.querySelectorAll(".each-collection");
+    // const collectionsList = document.querySelectorAll(".each-collection");
 
-    for (const collectionEl of collectionsList) {
-      collectionEl.addEventListener("click", this.clickOnCollection);
-    }
+    // for (const collectionEl of collectionsList) {
+    //   collectionEl.addEventListener("click", this.clickOnCollection);
+    // }
   }
 
-  clickOnCollection(e) {
-    const foundCollection = Collection.all.find(
-      (c) => c.name === e.target.innerText
-    );
-    foundCollection.accessCollection(e);
-  }
+  // clickOnCollection(e) {
+  //   debugger;
+  //   const foundCollection = Collection.all.find(
+  //     (c) => c.name === e.target.innerText
+  //   );
+  //   foundCollection.accessCollection(e);
+  // }
 
   // gettingCollections(collections) {
   //   collections.find(function (c) {

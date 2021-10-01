@@ -27,9 +27,11 @@ class Picture {
   // }
 
   attachToDom() {
-    const pictureBoard = document.querySelector(".picture-board");
+    // const pictureBoard = document.querySelector(".picture-board");
+    // pictureBoard.innerHTML = "";
     const picEl = document.createElement("img");
     picEl.src = `${base_url}${this.url}`;
+    // debugger;
     // debugger;
     pictureBoard.appendChild(picEl);
     // Collection.accessCollections(this);

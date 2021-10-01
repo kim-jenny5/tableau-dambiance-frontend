@@ -4,6 +4,7 @@ const userApiCall = new UserApi(base_url);
 const pictureApiCall = new PictureApi(base_url);
 
 const collectionsDisplay = document.querySelector(".collections-display");
+const pictureBoard = document.querySelector(".picture-board");
 
 const logo = document.querySelectorAll(".logo");
 

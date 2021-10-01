@@ -50,20 +50,31 @@ class Collection {
     collectionEl.className = "each-collection";
     collectionEl.innerText = this.name;
     collectionsDisplay.appendChild(collectionEl);
+
+    // const collectionsList = document.querySelectorAll(".each-collection");
+
+    // for (const collectionEl of collectionsList) {
+    // debugger;
+    collectionEl.addEventListener("click", this.clickOnCollection);
+    // }
+  }
+
+  clickOnCollection(e) {
+    const pictureBoard = document.querySelector(".picture-board");
+    pictureBoard.innerHTML = "";
+
+    const foundCollection = Collection.all.find(
+      (c) => c.name === e.target.innerText
+    );
+    foundCollection.accessCollection(e);
   }
 
   accessCollection(e) {
-    // debugger;
-
     const collectionPictures = Picture.all.filter((pic) => {
       return pic.collection.name === e.target.innerText;
     });
 
-    // debugger;
     for (const picture of collectionPictures) {
-      // console.log(picture.img_file);
-      // const p = new Picture(picture);
-      // debugger;
       picture.attachToDom();
     }
     //   // Picture.getCollection(this);
