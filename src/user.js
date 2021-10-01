@@ -112,7 +112,7 @@ class User {
     const foundCollection = Collection.all.find(
       (c) => c.name === e.target.innerText
     );
-    foundCollection.accessCollection();
+    foundCollection.accessCollection(e);
     // console.log(foundCollection);
 
     // debugger;

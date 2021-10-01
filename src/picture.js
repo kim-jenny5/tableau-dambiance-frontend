@@ -1,9 +1,10 @@
 class Picture {
   static all = [];
 
-  constructor({ id, img_file, collection }) {
+  constructor({ id, url, collection }) {
     this.id = id;
-    this.img_file = img_file;
+    this.url = url;
+    // this.img_file = img_file;
     this.collection = collection;
     Picture.all.push(this);
     // event listener here
@@ -27,5 +28,7 @@ class Picture {
 
   attachToDom() {
     debugger;
+    // const
+    // Collection.accessCollections(this);
   }
 }

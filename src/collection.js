@@ -53,33 +53,47 @@ class Collection {
     // debugger;
   }
 
-  accessCollection() {
+  accessCollection(e) {
     // debugger;
-    for (const picture of this.pictures) {
+
+    const collectionPictures = Picture.all.filter((pic) => {
+      return pic.collection.name === e.target.innerText;
+    });
+
+    // debugger;
+    for (const picture of collectionPictures) {
       // console.log(picture.img_file);
-      debugger;
+      // const p = new Picture(picture);
+      // debugger;
       picture.attachToDom();
     }
-    // Picture.getCollection(this);
-    // debugger;
-    // const eachCollection = document.querySelectorAll(".each-collection");
-
-    // for (const collection of eachCollection) {
-    //   // console.log(collection);
+    //   // Picture.getCollection(this);
     //   // debugger;
-    //   collection.addEventListener("click", function (e) {
-    //     // const foundCollection = user.collections.find(
-    //     //   (c) => c.name === e.target.innerText
-    //     // );
-    //     // // console.log(Collection.all);
-    //     // console.log(foundCollection);
-    //     // debugger;
-    //   });
+    //   // const eachCollection = document.querySelectorAll(".each-collection");
+
+    //   // for (const collection of eachCollection) {
+    //   //   // console.log(collection);
+    //   //   // debugger;
+    //   //   collection.addEventListener("click", function (e) {
+    //   //     // const foundCollection = user.collections.find(
+    //   //     //   (c) => c.name === e.target.innerText
+    //   //     // );
+    //   //     // // console.log(Collection.all);
+    //   //     // console.log(foundCollection);
+    //   //     // debugger;
+    //   //   });
+    //   // }
+    //   // eachCollection.find(function (c) {
+    //   //   debugger;
+    //   // });
+    //   // console.log(eachCollection);
+    //   // debugger;
     // }
-    // eachCollection.find(function (c) {
+
+    // static accessCollections(allPictures) {
     //   debugger;
-    // });
-    // console.log(eachCollection);
-    // debugger;
+    //   // for (const picture of allPictures) {
+    //   // }
+    // }
   }
 }
