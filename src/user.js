@@ -136,10 +136,11 @@ class User {
       // debugger;
     }
 
+    // debugger;
     const collectionsList = document.querySelectorAll(".each-collection");
 
-    for (const cEl of collectionsList) {
-      cEl.addEventListener("click", this.clickOnCollection);
+    for (const collectionEl of collectionsList) {
+      collectionEl.addEventListener("click", this.clickOnCollection);
     }
     // collectionsList.addEventListener("")
   }

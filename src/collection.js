@@ -2,8 +2,6 @@ const hamburger = document.querySelector(".hamburger");
 const xCollectionsBtn = document.querySelector(".close-collections-btn");
 const collectionsMenu = document.querySelector(".collections-side-menu");
 
-const collectionsDisplay = document.querySelector(".collections-display");
-
 class Collection {
   static all = [];
 
@@ -45,7 +43,18 @@ class Collection {
   //   });
   // }
 
+  appendCollections() {
+    // debugger;
+    const collectionEl = document.createElement("div");
+    const collectionsDisplay = document.querySelector(".collections-display");
+    collectionEl.className = "each-collection";
+    collectionEl.innerText = this.name;
+    collectionsDisplay.append(collectionEl);
+    // debugger;
+  }
+
   accessCollection() {
+    debugger;
     Picture.getCollection(this);
     // debugger;
     // const eachCollection = document.querySelectorAll(".each-collection");
@@ -66,15 +75,6 @@ class Collection {
     //   debugger;
     // });
     // console.log(eachCollection);
-    // debugger;
-  }
-
-  appendCollections() {
-    // debugger;
-    const collectionEl = document.createElement("div");
-    collectionEl.className = "each-collection";
-    collectionEl.innerText = this.name;
-    collectionsDisplay.append(collectionEl);
     // debugger;
   }
 }
