@@ -93,13 +93,19 @@ class User {
       logout.addEventListener("click", () => {
         startingPg.style.display = "block";
         mainPg.style.display = "none";
-        returningUserPg.style.display = "none";
         newUserPg.style.display = "none";
         collectionsMenu.style.display = "none";
         hamburger.style.display = "block";
         returningUsername.value = "";
         pictureBoard.innerHTML = "";
         title.innerText = "untitled";
+      });
+
+      const newBtn = document.querySelector(".new-btn");
+      newBtn.addEventListener("click", () => {
+        pictureBoard.innerHTML = "";
+        title.innerText = "untitled";
+        debugger;
       });
     });
   }
