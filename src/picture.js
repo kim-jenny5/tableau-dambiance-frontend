@@ -15,7 +15,11 @@ class Picture {
     // debugger;
     // console.log(allCollectionPics);
     for (const picture of allCollectionPics) {
-      debugger;
+      const picEl = document.createElement("img");
+      picEl.src = picture.img_file;
+      // debugger;
+      const pictureBoard = document.querySelector(".picture-board");
+      pictureBoard.appendChild("picEl");
     }
     // collection;
   }
