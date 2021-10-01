@@ -51,7 +51,6 @@ class User {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
       }
-      // debugger;
       this.gettingCollections();
     });
 
@@ -72,10 +71,11 @@ class User {
   }
 
   gettingCollections() {
+    // debugger;
     const usersCollection = Collection.all.filter((collection) => {
       return collection.user.id === this.id;
     });
-    // debugger;
+    debugger;
     // console.log(usersCollection);
     // const collectionsDisplay = document.querySelector(".collections-display");
 
