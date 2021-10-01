@@ -122,18 +122,20 @@ class User {
     });
     // debugger;
     // console.log(usersCollection);
-    const collectionsDisplay = document.querySelector(".collections-display");
+    // const collectionsDisplay = document.querySelector(".collections-display");
 
-    usersCollection.listCollections();
+    // usersCollection.appendCollections();
 
     for (const collection of usersCollection) {
-      debugger;
+      collection.appendCollections();
+      // debugger;
       // const collectionEl = document.createElement("div");
       // collectionEl.className = "each-collection";
       // collectionEl.innerText = collection.name;
       // collectionsDisplay.append(collectionEl);
       // debugger;
     }
+
     const collectionsList = document.querySelectorAll(".each-collection");
 
     for (const cEl of collectionsList) {

@@ -69,5 +69,12 @@ class Collection {
     // debugger;
   }
 
-  listCollections() {}
+  appendCollections() {
+    // debugger;
+    const collectionEl = document.createElement("div");
+    collectionEl.className = "each-collection";
+    collectionEl.innerText = this.name;
+    collectionsDisplay.append(collectionEl);
+    // debugger;
+  }
 }
