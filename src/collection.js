@@ -56,6 +56,7 @@ class Collection {
   accessCollection() {
     // debugger;
     for (const picture of this.pictures) {
+      console.log(picture.img_file);
       debugger;
     }
     Picture.getCollection(this);
