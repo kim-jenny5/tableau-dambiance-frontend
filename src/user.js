@@ -97,6 +97,9 @@ class User {
   }
 
   setUpUsersPage() {
+    const username = document.querySelector(".username-display");
+    username.innerText = this.username;
+
     returningUserPg.style.display = "none";
     const mainPg = document.querySelector(".main-page");
     mainPg.style.display = "block";

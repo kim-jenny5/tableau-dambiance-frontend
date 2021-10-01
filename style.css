@@ -204,7 +204,8 @@ a:link {
 .close-collections-btn {
   position: fixed;
   top: 2%;
-  left: 15%;
+  margin-left: 250px;
+  /* left: 15%; */
   cursor: pointer;
 }
 
