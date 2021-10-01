@@ -57,31 +57,50 @@ class User {
       startingPg.style.display = "none";
       returningUserPg.style.display = "block";
 
-      returningUserForm.addEventListener("submit", returningUserSubmit);
-
-      function returningUserSubmit(e) {
-        // debugger;
+      // returningUserForm.addEventListener("submit", returningUserSubmit);
+      returningUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
-
-        returningUserPg.style.display = "none";
-        const mainPg = document.querySelector(".main-page");
-        mainPg.style.display = "block";
 
         const username = document.getElementById(
           "returning-user-username"
         ).value;
 
         const foundUser = User.all.find((u) => u.username === username);
-        // debugger;
-        foundUser.setUpUsersPage();
-        // userApiCall.getUsersApi();
-      }
+
+        if (foundUser) {
+          foundUser.setUpUsersPage();
+        } else {
+          alert("Sorry! Username not found.");
+        }
+      });
+
+      // function returningUserSubmit(e) {
+      //   // debugger;
+      //   e.preventDefault();
+
+      //   returningUserPg.style.display = "none";
+      //   const mainPg = document.querySelector(".main-page");
+      //   mainPg.style.display = "block";
+
+      //   const username = document.getElementById(
+      //     "returning-user-username"
+      //   ).value;
+
+      //   const foundUser = User.all.find((u) => u.username === username);
+      //   // debugger;
+      //   foundUser.setUpUsersPage();
+      //   // userApiCall.getUsersApi();
+      // }
 
       // debugger;
     });
   }
 
   setUpUsersPage() {
+    returningUserPg.style.display = "none";
+    const mainPg = document.querySelector(".main-page");
+    mainPg.style.display = "block";
+
     hamburger.addEventListener("click", () => {
       collectionsMenu.style.display = "block";
       if (xCollectionsBtn.style.display === "none") {
