@@ -6,7 +6,12 @@ class PictureApi {
   getPictures() {
     fetch(this.url + `/pictures`)
       .then((resp) => resp.json())
-      .then((data) => {})
+      .then((data) => {
+        for (const picture of data) {
+          const p = new Picture(picture);
+          debugger;
+        }
+      })
       .catch();
   }
 }
