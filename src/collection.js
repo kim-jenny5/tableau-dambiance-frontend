@@ -60,8 +60,8 @@ class Collection {
   }
 
   clickOnCollection(e) {
-    const pictureBoard = document.querySelector(".picture-board");
     pictureBoard.innerHTML = "";
+    title.innerText = this.innerText;
 
     const foundCollection = Collection.all.find(
       (c) => c.name === e.target.innerText
