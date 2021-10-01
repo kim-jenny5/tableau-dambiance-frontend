@@ -8,9 +8,9 @@ class PictureApi {
       .then((resp) => resp.json())
       .then((data) => {
         for (const picture of data) {
-          const p = new Picture(picture);
+          // const p = new Picture(picture);
           // p.attachToDom();
-          // new Picture(picture);
+          new Picture(picture);
           // debugger;
         }
       })

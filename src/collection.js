@@ -50,7 +50,6 @@ class Collection {
     collectionEl.className = "each-collection";
     collectionEl.innerText = this.name;
     collectionsDisplay.appendChild(collectionEl);
-    // debugger;
   }
 
   accessCollection(e) {

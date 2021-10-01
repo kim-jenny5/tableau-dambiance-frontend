@@ -106,8 +106,8 @@ class User {
       if (xCollectionsBtn.style.display === "none") {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
+        this.gettingCollections();
       }
-      this.gettingCollections();
     });
 
     // xCollectionsBtn.addEventListener("click", function () {
@@ -128,6 +128,8 @@ class User {
 
   gettingCollections() {
     // debugger;
+    // console.log("HI");
+
     const usersCollection = Collection.all.filter((collection) => {
       return collection.user.id === this.id;
     });
@@ -136,15 +138,11 @@ class User {
     // const collectionsDisplay = document.querySelector(".collections-display");
 
     // usersCollection.appendCollections();
+    // debugger;
 
     for (const collection of usersCollection) {
+      // console.log(collection);
       collection.appendCollections();
-      // debugger;
-      // const collectionEl = document.createElement("div");
-      // collectionEl.className = "each-collection";
-      // collectionEl.innerText = collection.name;
-      // collectionsDisplay.append(collectionEl);
-      // debugger;
     }
 
     xCollectionsBtn.addEventListener("click", function () {
@@ -154,25 +152,20 @@ class User {
       collectionsMenu.style.display = "none";
     });
 
-    // debugger;
     const collectionsList = document.querySelectorAll(".each-collection");
 
     for (const collectionEl of collectionsList) {
       collectionEl.addEventListener("click", this.clickOnCollection);
     }
-    // collectionsList.addEventListener("")
   }
 
   clickOnCollection(e) {
-    // e.target.innerText;
     const foundCollection = Collection.all.find(
       (c) => c.name === e.target.innerText
     );
     foundCollection.accessCollection(e);
-    // console.log(foundCollection);
-
-    // debugger;
   }
+
   // gettingCollections(collections) {
   //   collections.find(function (c) {
   //     c.created_at;

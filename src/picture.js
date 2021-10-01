@@ -29,7 +29,7 @@ class Picture {
   attachToDom() {
     const pictureBoard = document.querySelector(".picture-board");
     const picEl = document.createElement("img");
-    picEl.src = `http://localhost:3000${this.url}`;
+    picEl.src = `${base_url}${this.url}`;
     // debugger;
     pictureBoard.appendChild(picEl);
     // Collection.accessCollections(this);
