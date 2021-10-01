@@ -42,6 +42,10 @@ a:link {
   cursor: pointer;
 }
 
+.picture-board {
+  /* width: ; */
+}
+
 /* STARTING PAGE */
 .open-about-btn,
 .close-about-btn {
