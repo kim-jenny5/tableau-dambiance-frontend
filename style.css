@@ -177,6 +177,14 @@ a:link {
   cursor: pointer;
 }
 
+.logout {
+  position: absolute;
+  font-size: 16px;
+  right: 15%;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
 .collections-side-menu {
   position: fixed;
   top: 0;
@@ -192,6 +200,7 @@ a:link {
 .collections-side-menu-txt-container {
   margin-top: 25%;
   margin-left: 10%;
+  margin-bottom: 10%;
 }
 
 .username-display {
