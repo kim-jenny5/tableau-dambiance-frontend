@@ -42,10 +42,6 @@ a:link {
   cursor: pointer;
 }
 
-.picture-board {
-  /* width: ; */
-}
-
 /* STARTING PAGE */
 .open-about-btn,
 .close-about-btn {
@@ -225,4 +221,21 @@ a:link {
 .each-collection {
   width: fit-content;
   cursor: pointer;
+}
+
+/* PICTURE BOARD */
+.picture-board .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.picture-board .row .col {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.picture-board .row .col img {
+  margin-top: 8px;
+  vertical-align: middle;
 }
