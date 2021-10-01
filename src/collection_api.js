@@ -3,7 +3,7 @@ class CollectionApi {
     this.url = url;
   }
 
-  getCollections() {
+  getCollectionsApi() {
     fetch(this.url + `/collections`)
       .then((resp) => resp.json())
       .then((data) => {

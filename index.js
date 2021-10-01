@@ -5,9 +5,9 @@ const pictureApiCall = new PictureApi(base_url);
 
 const logo = document.querySelectorAll(".logo");
 
-collectionApiCall.getCollections();
-userApiCall.getUsers();
-pictureApiCall.getPictures();
+collectionApiCall.getCollectionsApi();
+userApiCall.getUsersApi();
+pictureApiCall.getPicturesApi();
 
 for (const word of logo) {
   word.addEventListener("click", function () {

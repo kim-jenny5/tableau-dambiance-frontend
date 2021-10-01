@@ -3,7 +3,7 @@ class UserApi {
     this.url = url;
   }
 
-  getUsers() {
+  getUsersApi() {
     fetch(this.url + `/users`)
       .then((resp) => resp.json())
       .then((data) => {

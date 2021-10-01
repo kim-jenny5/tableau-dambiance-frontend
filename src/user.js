@@ -98,6 +98,7 @@ class User {
     });
     // console.log(usersCollection);
     const collectionsDisplay = document.querySelector(".collections-display");
+
     for (const collection of usersCollection) {
       const collectionEl = document.createElement("div");
       collectionEl.className = "each-collection";
@@ -153,5 +154,5 @@ function returningUserSubmit(e) {
   const mainPg = document.querySelector(".main-page");
   mainPg.style.display = "block";
 
-  userApiCall.getUsers();
+  userApiCall.getUsersApi();
 }

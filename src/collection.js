@@ -47,7 +47,8 @@ class Collection {
   }
 
   accessCollection() {
-    debugger;
+    Picture.getCollection(this);
+    // debugger;
     // const eachCollection = document.querySelectorAll(".each-collection");
 
     // for (const collection of eachCollection) {

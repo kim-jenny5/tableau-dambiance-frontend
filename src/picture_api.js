@@ -3,13 +3,13 @@ class PictureApi {
     this.url = url;
   }
 
-  getPictures() {
+  getPicturesApi() {
     fetch(this.url + `/pictures`)
       .then((resp) => resp.json())
       .then((data) => {
         for (const picture of data) {
           const p = new Picture(picture);
-          debugger;
+          // debugger;
         }
       })
       .catch();
