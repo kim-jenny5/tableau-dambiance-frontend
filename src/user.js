@@ -56,15 +56,13 @@ class User {
       startingPg.style.display = "none";
       returningUserPg.style.display = "block";
 
-      // returningUserForm.addEventListener("submit", returningUserSubmit);
       returningUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const username = document.getElementById(
-          "returning-user-username"
-        ).value;
-
-        const foundUser = User.all.find((u) => u.username === username);
+        // const username = returningUsername.value
+        const foundUser = User.all.find(
+          (u) => u.username === returningUsername.value
+        );
 
         if (foundUser) {
           foundUser.setUpUsersPage();
@@ -90,6 +88,19 @@ class User {
         xCollectionsBtn.style.display = "block";
         this.gettingCollections();
       }
+
+      const logout = document.querySelector(".logout");
+      logout.addEventListener("click", () => {
+        startingPg.style.display = "block";
+        mainPg.style.display = "none";
+        returningUserPg.style.display = "none";
+        newUserPg.style.display = "none";
+        collectionsMenu.style.display = "none";
+        hamburger.style.display = "block";
+        returningUsername.value = "";
+        pictureBoard.innerHTML = "";
+        title.innerText = "untitled";
+      });
     });
   }
 

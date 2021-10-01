@@ -1,6 +1,4 @@
-const hamburger = document.querySelector(".hamburger");
 const xCollectionsBtn = document.querySelector(".close-collections-btn");
-const collectionsMenu = document.querySelector(".collections-side-menu");
 
 class Collection {
   static all = [];

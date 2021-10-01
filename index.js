@@ -6,6 +6,8 @@ const pictureApiCall = new PictureApi(base_url);
 const collectionsDisplay = document.querySelector(".collections-display");
 const pictureBoard = document.querySelector(".picture-board");
 const title = document.querySelector(".file-name");
+const hamburger = document.querySelector(".hamburger");
+const collectionsMenu = document.querySelector(".collections-side-menu");
 
 const logo = document.querySelectorAll(".logo");
 

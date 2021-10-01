@@ -183,6 +183,7 @@ a:link {
   right: 15%;
   font-family: "Playfair Display", serif;
   font-style: italic;
+  cursor: pointer;
 }
 
 .collections-side-menu {
