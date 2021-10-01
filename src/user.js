@@ -25,23 +25,60 @@ const returningUsername = document.getElementById("returning-user-username");
 // ------------------------------
 
 class User {
+  static all = [];
+
   constructor({ id, username, collections }) {
     this.id = id;
     this.username = username;
     this.collections = collections;
+    User.all.push(this);
   }
 
   findUser() {
-    if (returningUsername.value === this.username) {
-      // const user = this;
-      const username = document.querySelector(".username-display");
-      // username.innerText = user.username;
-      username.innerText = this.username;
+    // if (returningUsername.value === this.username) {
+    //   const username = document.querySelector(".username-display");
+    //   username.innerText = this.username;
 
-      // Collection.setUpUsersPage(user);
+    //   // Collection.setUpUsersPage(user);
 
-      this.setUpUsersPage();
-    }
+    //   this.setUpUsersPage();
+    // } //else {
+    // //   alert("Please enter a username");
+    // // }
+    // debugger;
+    // if (User.all.)
+
+    newUser.addEventListener("click", function () {
+      startingPg.style.display = "none";
+      newUserPg.style.display = "block";
+    });
+
+    returningUser.addEventListener("click", function () {
+      startingPg.style.display = "none";
+      returningUserPg.style.display = "block";
+
+      returningUserForm.addEventListener("submit", returningUserSubmit);
+
+      function returningUserSubmit(e) {
+        // debugger;
+        e.preventDefault();
+
+        returningUserPg.style.display = "none";
+        const mainPg = document.querySelector(".main-page");
+        mainPg.style.display = "block";
+
+        const username = document.getElementById(
+          "returning-user-username"
+        ).value;
+
+        const foundUser = User.all.find((u) => u.username === username);
+        // debugger;
+        foundUser.setUpUsersPage();
+        // userApiCall.getUsersApi();
+      }
+
+      // debugger;
+    });
   }
 
   setUpUsersPage() {

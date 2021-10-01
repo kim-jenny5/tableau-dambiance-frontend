@@ -59,15 +59,15 @@ aboutDev.addEventListener("click", function () {
   }
 });
 
-newUser.addEventListener("click", function () {
-  startingPg.style.display = "none";
-  newUserPg.style.display = "block";
-});
+// newUser.addEventListener("click", function () {
+//   startingPg.style.display = "none";
+//   newUserPg.style.display = "block";
+// });
 
-returningUser.addEventListener("click", function () {
-  startingPg.style.display = "none";
-  returningUserPg.style.display = "block";
-});
+// returningUser.addEventListener("click", function () {
+//   startingPg.style.display = "none";
+//   returningUserPg.style.display = "block";
+// });
 
 newUserForm.addEventListener("submit", handleSubmit);
 
@@ -76,13 +76,13 @@ function handleSubmit(e) {
   userApiCall.createUsers();
 }
 
-returningUserForm.addEventListener("submit", returningUserSubmit);
+// returningUserForm.addEventListener("submit", returningUserSubmit);
 
-function returningUserSubmit(e) {
-  e.preventDefault();
-  returningUserPg.style.display = "none";
-  const mainPg = document.querySelector(".main-page");
-  mainPg.style.display = "block";
+// function returningUserSubmit(e) {
+//   e.preventDefault();
+//   returningUserPg.style.display = "none";
+//   const mainPg = document.querySelector(".main-page");
+//   mainPg.style.display = "block";
 
-  userApiCall.getUsersApi();
-}
+//   userApiCall.getUsersApi();
+// }
