@@ -20,8 +20,6 @@ const newUsername = document.getElementById("new-user-username");
 const returningUserForm = document.querySelector(".returning-user-form");
 const returningUsername = document.getElementById("returning-user-username");
 
-// ------------------
-
 // ------------------------------
 
 class User {
@@ -35,22 +33,23 @@ class User {
   }
 
   findUser() {
-    // if (returningUsername.value === this.username) {
-    //   const username = document.querySelector(".username-display");
-    //   username.innerText = this.username;
-
-    //   // Collection.setUpUsersPage(user);
-
-    //   this.setUpUsersPage();
-    // } //else {
-    // //   alert("Please enter a username");
-    // // }
-    // debugger;
-    // if (User.all.)
-
     newUser.addEventListener("click", function () {
       startingPg.style.display = "none";
       newUserPg.style.display = "block";
+
+      // newUserForm.addEventListener("submit", handleSubmit);
+
+      // function handleSubmit(e) {
+      //   debugger;
+      //   e.preventDefault();
+      //   // userApiCall.createUsers();
+      // }
+
+      newUserForm.addEventListener("submit", (e) => {
+        debugger;
+        e.preventDefault();
+        // userApiCall.createUsers();
+      });
     });
 
     returningUser.addEventListener("click", function () {
@@ -73,26 +72,6 @@ class User {
           alert("Sorry! Username not found.");
         }
       });
-
-      // function returningUserSubmit(e) {
-      //   // debugger;
-      //   e.preventDefault();
-
-      //   returningUserPg.style.display = "none";
-      //   const mainPg = document.querySelector(".main-page");
-      //   mainPg.style.display = "block";
-
-      //   const username = document.getElementById(
-      //     "returning-user-username"
-      //   ).value;
-
-      //   const foundUser = User.all.find((u) => u.username === username);
-      //   // debugger;
-      //   foundUser.setUpUsersPage();
-      //   // userApiCall.getUsersApi();
-      // }
-
-      // debugger;
     });
   }
 
@@ -112,21 +91,6 @@ class User {
         this.gettingCollections();
       }
     });
-
-    // xCollectionsBtn.addEventListener("click", function () {
-    //   collectionsDisplay.innerHTML = "";
-    //   hamburger.style.display = "block";
-    //   xCollectionsBtn.style.display = "none";
-    //   collectionsMenu.style.display = "none";
-    //   // if (xCollectionsBtn.style.display === "none") {
-    //   //   xCollectionsBtn.style.display = "block";
-    //   //   hamburger.style.display = "none";
-    //   // } else {
-    //   //   xCollectionsBtn.style.display = "none";
-    //   //   hamburger.style.display = "block";
-    //   //   collectionsMenu.style.display = "none";
-    //   // }
-    // });
   }
 
   gettingCollections() {
@@ -144,33 +108,5 @@ class User {
       xCollectionsBtn.style.display = "none";
       collectionsMenu.style.display = "none";
     });
-
-    // const collectionsList = document.querySelectorAll(".each-collection");
-
-    // for (const collectionEl of collectionsList) {
-    //   collectionEl.addEventListener("click", this.clickOnCollection);
-    // }
   }
-
-  // clickOnCollection(e) {
-  //   debugger;
-  //   const foundCollection = Collection.all.find(
-  //     (c) => c.name === e.target.innerText
-  //   );
-  //   foundCollection.accessCollection(e);
-  // }
-
-  // gettingCollections(collections) {
-  //   collections.find(function (c) {
-  //     c.created_at;
-  //     debugger;
-  //   });
-
-  //   // const allCollections = collections;
-
-  //   // debugger;
-  //   const filename = document.querySelector(".file-name");
-  //   filename.innerText = this.name;
-  //   console.log(filename);
-  // }
 }
