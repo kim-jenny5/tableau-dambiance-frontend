@@ -238,4 +238,7 @@ a:link {
 .picture-board .row .col img {
   margin-top: 8px;
   vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
