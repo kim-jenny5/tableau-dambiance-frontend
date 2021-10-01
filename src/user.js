@@ -22,54 +22,6 @@ const returningUsername = document.getElementById("returning-user-username");
 
 // ------------------
 
-qMark.addEventListener("click", function () {
-  if (aboutMenu.style.display === "none") {
-    aboutMenu.style.display = "block";
-    qMark.style.display = "none";
-    xBtn.style.display = "block";
-  } else {
-    aboutMenu.style.display = "none";
-  }
-});
-
-xBtn.addEventListener("click", function () {
-  if (xBtn.style.display === "block") {
-    xBtn.style.display = "none";
-    qMark.style.display = "block";
-    aboutMenu.style.display = "none";
-  } else {
-    aboutMenu.style.display = "block";
-  }
-});
-
-about.addEventListener("click", function () {
-  if (aboutGrp.style.display === "none") {
-    aboutGrp.style.display = "block";
-  } else {
-    aboutGrp.style.display = "none";
-  }
-});
-
-aboutDev.addEventListener("click", function () {
-  for (const element of aboutDevGrp) {
-    if (element.style.display === "none") {
-      element.style.display = "block";
-    } else {
-      element.style.display = "none";
-    }
-  }
-});
-
-newUser.addEventListener("click", function () {
-  startingPg.style.display = "none";
-  newUserPg.style.display = "block";
-});
-
-returningUser.addEventListener("click", function () {
-  startingPg.style.display = "none";
-  returningUserPg.style.display = "block";
-});
-
 // ------------------------------
 
 class User {
@@ -103,17 +55,20 @@ class User {
       this.gettingCollections();
     });
 
-    xCollectionsBtn.addEventListener("click", function () {
-      collectionsDisplay.innerHTML = "";
-      if (xCollectionsBtn.style.display === "none") {
-        xCollectionsBtn.style.display = "block";
-        hamburger.style.display = "none";
-      } else {
-        xCollectionsBtn.style.display = "none";
-        hamburger.style.display = "block";
-        collectionsMenu.style.display = "none";
-      }
-    });
+    // xCollectionsBtn.addEventListener("click", function () {
+    //   collectionsDisplay.innerHTML = "";
+    //   hamburger.style.display = "block";
+    //   xCollectionsBtn.style.display = "none";
+    //   collectionsMenu.style.display = "none";
+    //   // if (xCollectionsBtn.style.display === "none") {
+    //   //   xCollectionsBtn.style.display = "block";
+    //   //   hamburger.style.display = "none";
+    //   // } else {
+    //   //   xCollectionsBtn.style.display = "none";
+    //   //   hamburger.style.display = "block";
+    //   //   collectionsMenu.style.display = "none";
+    //   // }
+    // });
   }
 
   gettingCollections() {
@@ -135,6 +90,13 @@ class User {
       // collectionsDisplay.append(collectionEl);
       // debugger;
     }
+
+    xCollectionsBtn.addEventListener("click", function () {
+      collectionsDisplay.innerHTML = "";
+      hamburger.style.display = "block";
+      xCollectionsBtn.style.display = "none";
+      collectionsMenu.style.display = "none";
+    });
 
     // debugger;
     const collectionsList = document.querySelectorAll(".each-collection");
@@ -168,22 +130,4 @@ class User {
   //   filename.innerText = this.name;
   //   console.log(filename);
   // }
-}
-
-newUserForm.addEventListener("submit", handleSubmit);
-
-function handleSubmit(e) {
-  e.preventDefault();
-  userApiCall.createUsers();
-}
-
-returningUserForm.addEventListener("submit", returningUserSubmit);
-
-function returningUserSubmit(e) {
-  e.preventDefault();
-  returningUserPg.style.display = "none";
-  const mainPg = document.querySelector(".main-page");
-  mainPg.style.display = "block";
-
-  userApiCall.getUsersApi();
 }

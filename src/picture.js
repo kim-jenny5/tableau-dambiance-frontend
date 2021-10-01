@@ -16,7 +16,7 @@ class Picture {
     // debugger;
     // console.log(allCollectionPics);
     for (const picture of allCollectionPics) {
-      pictureApiCall.getPicturesApi(picture);
+      // pictureApiCall.getPicturesApi(picture);
       // const picEl = document.createElement("img");
       // picEl.src = picture.img_file;
       // const pictureBoard = document.querySelector(".picture-board");

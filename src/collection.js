@@ -46,7 +46,7 @@ class Collection {
   appendCollections() {
     // debugger;
     const collectionEl = document.createElement("div");
-    const collectionsDisplay = document.querySelector(".collections-display");
+    // const collectionsDisplay = document.querySelector(".collections-display");
     collectionEl.className = "each-collection";
     collectionEl.innerText = this.name;
     collectionsDisplay.append(collectionEl);
@@ -54,7 +54,10 @@ class Collection {
   }
 
   accessCollection() {
-    debugger;
+    // debugger;
+    for (const picture of this.pictures) {
+      debugger;
+    }
     Picture.getCollection(this);
     // debugger;
     // const eachCollection = document.querySelectorAll(".each-collection");
