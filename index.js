@@ -7,7 +7,7 @@ const logo = document.querySelectorAll(".logo");
 
 collectionApiCall.getCollectionsApi();
 userApiCall.getUsersApi();
-pictureApiCall.getPicturesApi();
+pictureApiCall.getAllPicturesApi();
 
 for (const word of logo) {
   word.addEventListener("click", function () {

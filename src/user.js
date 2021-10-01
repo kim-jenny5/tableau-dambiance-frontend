@@ -115,7 +115,7 @@ class User {
   }
 
   clickOnCollection(e) {
-    e.target.innerText;
+    // e.target.innerText;
     const foundCollection = Collection.all.find(
       (c) => c.name === e.target.innerText
     );
