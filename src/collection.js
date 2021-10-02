@@ -45,24 +45,38 @@ class Collection {
     for (const picture of collectionPictures) {
       picture.attachToDom();
     }
-    this.arrangePhotos();
+    // this.arrangePhotos();
   }
 
-  arrangePhotos() {
-    // debugger;
-    const picBtns = document.querySelectorAll(".board-numbers button");
-    for (const button of picBtns) {
-      button.addEventListener("click", () => {
-        const picBoardEl = document.querySelector(".picture-board-col");
-        if (button.innerText == 1) {
-          debugger;
-          picBoardEl.style.flex = "100%";
-        } else if (button.innerText == 2) {
-          picBoardEl.style.flex = "50%";
-        } else {
-          picBoardEl.style.flex = "33%";
-        }
-      });
-    }
-  }
+  // arrangePhotos() {
+  //   const picBtns = document.querySelectorAll(".board-numbers button");
+  //   const picCols = document.querySelectorAll(".picture-board-col");
+
+  //   let clicked = false;
+
+  //   for (const button of picBtns) {
+  //     button.addEventListener("click", () => {
+  //       if (button.innerText == 1) {
+  //         clicked = true;
+  //         picCols[0].style.flex = "100%";
+  //       } else if (button.innerText == 2) {
+  //         clicked = true;
+  //         picCols[1].style.flex = "50%";
+  //       } else if (button.innerText == 3) {
+  //         clicked = true;
+  //         picCols[2].style.flex = "33%";
+  //       }
+  //     });
+  //   }
+
+  //   if (clicked === true) {
+  //     for (const picture of collectionPictures) {
+  //       picture.attachToDom();
+  //     }
+  //   } else {
+  //     for (const picture of collectionPictures) {
+  //       picture.attachToDom();
+  //     }
+  //   }
+  // }
 }
