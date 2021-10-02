@@ -234,12 +234,12 @@ a:link {
   padding: 0 4px;
 }
 
-.picture-board .row .col {
-  flex: 50%;
+.picture-board-col {
+  /* flex: 50%; */
   padding: 0 4px;
 }
 
-.picture-board .row .col img {
+.picture-board-col img {
   margin-top: 8px;
   vertical-align: middle;
   margin-left: auto;

@@ -45,5 +45,24 @@ class Collection {
     for (const picture of collectionPictures) {
       picture.attachToDom();
     }
+    this.arrangePhotos();
+  }
+
+  arrangePhotos() {
+    // debugger;
+    const picBtns = document.querySelectorAll(".board-numbers button");
+    for (const button of picBtns) {
+      button.addEventListener("click", () => {
+        const picBoardEl = document.querySelector(".picture-board-col");
+        if (button.innerText == 1) {
+          debugger;
+          picBoardEl.style.flex = "100%";
+        } else if (button.innerText == 2) {
+          picBoardEl.style.flex = "50%";
+        } else {
+          picBoardEl.style.flex = "33%";
+        }
+      });
+    }
   }
 }
