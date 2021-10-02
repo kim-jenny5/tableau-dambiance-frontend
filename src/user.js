@@ -9,11 +9,6 @@ const aboutMenu = document.querySelector(".about-side-menu");
 const newUser = document.querySelector(".new-user");
 const returningUser = document.querySelector(".returning-user");
 
-// different pages
-const startingPg = document.querySelector(".starting-page");
-const newUserPg = document.querySelector(".new-user-page");
-const returningUserPg = document.querySelector(".returning-user-page");
-
 // new user form
 const newUserForm = document.querySelector(".new-user-form");
 const newUsername = document.getElementById("new-user-username");
@@ -78,7 +73,6 @@ class User {
     username.innerText = this.username;
 
     returningUserPg.style.display = "none";
-    const mainPg = document.querySelector(".main-page");
     mainPg.style.display = "block";
 
     hamburger.addEventListener("click", () => {
@@ -94,7 +88,6 @@ class User {
         startingPg.style.display = "block";
         mainPg.style.display = "none";
         newUserPg.style.display = "none";
-        collectionsMenu.style.display = "none";
         hamburger.style.display = "block";
         returningUsername.value = "";
         pictureBoard.innerHTML = "";

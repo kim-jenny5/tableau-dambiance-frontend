@@ -10,6 +10,12 @@ const title = document.querySelector(".file-name");
 const hamburger = document.querySelector(".hamburger");
 const collectionsMenu = document.querySelector(".collections-side-menu");
 
+// different pages
+const startingPg = document.querySelector(".starting-page");
+const newUserPg = document.querySelector(".new-user-page");
+const returningUserPg = document.querySelector(".returning-user-page");
+const mainPg = document.querySelector(".main-page");
+
 const logo = document.querySelectorAll(".logo");
 
 collectionApiCall.getCollectionsApi();
@@ -18,11 +24,12 @@ pictureApiCall.getAllPicturesApi();
 
 for (const word of logo) {
   word.addEventListener("click", function () {
-    if (startingPg.style.display === "none") {
-      startingPg.style.display = "block";
-      newUserPg.style.display = "none";
-      returningUserPg.style.display = "none";
-    }
+    startingPg.style.display = "block";
+    mainPg.style.display = "none";
+    newUserPg.style.display = "none";
+    returningUsername.value = "";
+    pictureBoard.innerHTML = "";
+    title.innerText = "untitled";
   });
 }
 
