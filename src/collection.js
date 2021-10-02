@@ -42,8 +42,41 @@ class Collection {
       return pic.collection.name === e.target.innerText;
     });
 
+    const picBtns = document.querySelectorAll(".board-numbers button");
+    const picCols = document.querySelectorAll(".picture-board-col");
+
     for (const picture of collectionPictures) {
-      picture.attachToDom();
+      let colNum = 1;
+      // if (colNum === 1 || )
+      for (const button of picBtns) {
+        button.addEventListener("click", () => {
+          debugger;
+          if (button.innerText == 1) {
+            // colNum = 1;
+            for (const col of picCols) {
+              col.style.flex = "100%";
+              picture.attachToDom();
+            }
+          } else if (button.innerText == 2) {
+            for (const col of picCols) {
+              col.style.flex = "50%";
+              picture.attachToDom();
+            }
+            // picCols[1].style.display = "block";
+            // picCols[1].style.flex = "100%";
+            // picture.attachToDom();
+          } else if (button.innerText == 3) {
+            for (const col of picCols) {
+              col.style.flex = "33%";
+              picture.attachToDom();
+            }
+          }
+        });
+      }
+
+      for (const col of picCols) {
+        picture.attachToDom();
+      }
     }
     // this.arrangePhotos();
   }
