@@ -26,6 +26,11 @@ class Collection {
     pictureBoard.innerHTML = "";
     title.innerText = this.innerText;
 
+    if (collectionsMenu.style.display === "block") {
+      hamburger.style.display = "block";
+      collectionsMenu.style.display = "none";
+    }
+
     const foundCollection = Collection.all.find(
       (c) => c.name === e.target.innerText
     );

@@ -107,6 +107,14 @@ class User {
         title.innerText = "untitled";
         debugger;
       });
+
+      const blank = document.querySelector(".blank");
+
+      blank.addEventListener("click", () => {
+        // debugger;
+        collectionsMenu.style.display = "none";
+        hamburger.style.display = "block";
+      });
     });
   }
 

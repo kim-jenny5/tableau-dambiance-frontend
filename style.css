@@ -224,6 +224,10 @@ a:link {
 }
 
 /* PICTURE BOARD */
+.blank {
+  height: 100vh;
+}
+
 .picture-board .row {
   display: flex;
   flex-wrap: wrap;
@@ -260,4 +264,8 @@ a:link {
 
 .board-numbers button:hover {
   opacity: 0.6;
+}
+
+.new-btn {
+  cursor: pointer;
 }
