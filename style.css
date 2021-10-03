@@ -294,6 +294,10 @@ a:link {
   /* top: 20% !important; */
 }
 
+.scrollBtns:hover {
+  color: slategray;
+}
+
 .uparrow {
   /* position: fixed; */
   margin-bottom: 50px;
