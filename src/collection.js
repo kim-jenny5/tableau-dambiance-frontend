@@ -24,6 +24,10 @@ class Collection {
 
   clickOnCollection(e) {
     pictureBoard.innerHTML = "";
+    // for (const col of pictureBoardCol) {
+    //   col.innerHTML = "";
+    // }
+
     title.innerText = this.innerText;
 
     if (collectionsMenu.style.display === "block") {
@@ -42,74 +46,31 @@ class Collection {
       return pic.collection.name === e.target.innerText;
     });
 
-    const picBtns = document.querySelectorAll(".board-numbers button");
-    const picCols = document.querySelectorAll(".picture-board-col");
+    // const picBtns = document.querySelectorAll(".board-numbers button");
+    // const picCols = document.querySelectorAll(".picture-board-col");
+    // const arr = Array.from(picCols);
 
     for (const picture of collectionPictures) {
-      let colNum = 1;
-      // if (colNum === 1 || )
-      for (const button of picBtns) {
-        button.addEventListener("click", () => {
-          debugger;
-          if (button.innerText == 1) {
-            // colNum = 1;
-            for (const col of picCols) {
-              col.style.flex = "100%";
-              picture.attachToDom();
-            }
-          } else if (button.innerText == 2) {
-            for (const col of picCols) {
-              col.style.flex = "50%";
-              picture.attachToDom();
-            }
-            // picCols[1].style.display = "block";
-            // picCols[1].style.flex = "100%";
-            // picture.attachToDom();
-          } else if (button.innerText == 3) {
-            for (const col of picCols) {
-              col.style.flex = "33%";
-              picture.attachToDom();
-            }
-          }
-        });
-      }
+      picture.attachToDom();
+      // const arr = Array.from(pictureBoardCol);
+      // const picEl = document.createElement("img");
 
-      for (const col of picCols) {
-        picture.attachToDom();
-      }
+      // picture.attachToDomOneColBase(picEl, arr);
+
+      // const picBtns = document.querySelectorAll(".board-numbers button");
+
+      // for (const button of picBtns) {
+      //   button.addEventListener("click", () => {
+      //     if (button.innerText == 1) {
+      //       picture.attachToDomOneColBase(picEl, arr);
+      //     } else if (button.innerText == 2) {
+      //       picture.attachToDomTwoCols(picEl, arr);
+      //     } else if (button.innerText == 3) {
+      //       picture.attachToDomThreeCols(picEl, arr);
+      //     }
+      //   });
+      // }
+      // }
     }
-    // this.arrangePhotos();
   }
-
-  // arrangePhotos() {
-  //   const picBtns = document.querySelectorAll(".board-numbers button");
-  //   const picCols = document.querySelectorAll(".picture-board-col");
-
-  //   let clicked = false;
-
-  //   for (const button of picBtns) {
-  //     button.addEventListener("click", () => {
-  //       if (button.innerText == 1) {
-  //         clicked = true;
-  //         picCols[0].style.flex = "100%";
-  //       } else if (button.innerText == 2) {
-  //         clicked = true;
-  //         picCols[1].style.flex = "50%";
-  //       } else if (button.innerText == 3) {
-  //         clicked = true;
-  //         picCols[2].style.flex = "33%";
-  //       }
-  //     });
-  //   }
-
-  //   if (clicked === true) {
-  //     for (const picture of collectionPictures) {
-  //       picture.attachToDom();
-  //     }
-  //   } else {
-  //     for (const picture of collectionPictures) {
-  //       picture.attachToDom();
-  //     }
-  //   }
-  // }
 }

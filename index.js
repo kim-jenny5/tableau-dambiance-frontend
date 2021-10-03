@@ -4,8 +4,12 @@ const userApiCall = new UserApi(base_url);
 const pictureApiCall = new PictureApi(base_url);
 
 const collectionsDisplay = document.querySelector(".collections-display");
-// const pictureBoard = document.querySelector(".picture-board");
+
+const pictureBoardCont = document.querySelector(".picture-board .container");
+// const pictureBoard = document.querySelector(".picture-board .row");
+// const pictureBoardCol = document.querySelectorAll(".picture-board-col");
 const pictureBoard = document.querySelector(".picture-board-col");
+
 const title = document.querySelector(".file-name");
 const hamburger = document.querySelector(".hamburger");
 const collectionsMenu = document.querySelector(".collections-side-menu");

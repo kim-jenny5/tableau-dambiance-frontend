@@ -12,38 +12,28 @@ class Picture {
   attachToDom() {
     const picEl = document.createElement("img");
     picEl.src = `${base_url}${this.url}`;
+
     pictureBoard.appendChild(picEl);
   }
 
-  // arrangePhotos() {
-  //   const picBtns = document.querySelectorAll(".board-numbers button");
-  //   const picCols = document.querySelectorAll(".picture-board-col");
+  // attachToDomOneColBase(picEl, arr) {
+  //   picEl.src = `${base_url}${this.url}`;
+  //   arr[0].appendChild(picEl);
+  // }
 
-  //   let clicked = false;
+  // attachToDomTwoCols(picEl, arr) {
+  //   picEl.src = `${base_url}${this.url}`;
+  //   // debugger;
+  //   arr[1].style.display = "block";
+  //   arr[0].style.flex = "50%";
+  //   arr[1].style.flex = "50%";
+  //   pictureBoard.appendChild(picEl);
+  // }
 
-  //   for (const button of picBtns) {
-  //     button.addEventListener("click", () => {
-  //       if (button.innerText == 1) {
-  //         clicked = true;
-  //         picCols[0].style.flex = "100%";
-  //       } else if (button.innerText == 2) {
-  //         clicked = true;
-  //         picCols[1].style.flex = "50%";
-  //       } else if (button.innerText == 3) {
-  //         clicked = true;
-  //         picCols[2].style.flex = "33%";
-  //       }
-  //     });
-  //   }
-
-  //   if (clicked === true) {
-  //     for (const picture of collectionPictures) {
-  //       picture.attachToDom();
-  //     }
-  //   } else {
-  //     for (const picture of collectionPictures) {
-  //       picture.attachToDom();
-  //     }
-  //   }
+  // attachToDomThreeCols(picEl, arr) {
+  //   picEl.src = `${base_url}${this.url}`;
+  //   arr[0].appendChild(picEl);
+  //   arr[1].appendChild(picEl);
+  //   arr[2].appendChild(picEl);
   // }
 }
