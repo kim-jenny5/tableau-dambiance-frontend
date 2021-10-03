@@ -72,5 +72,9 @@ class Collection {
       // }
       // }
     }
+
+    document.addEventListener("scroll", () => {
+      // debugger;
+    });
   }
 }

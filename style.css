@@ -275,6 +275,19 @@ a:link {
   left: 0;
   right: 0;
   margin-top: 50px !important;
-  /* padding-top: 50px; */
   margin-bottom: 50px;
+}
+
+.uparrow,
+.downarrow {
+  position: absolute;
+  right: 10%;
+}
+
+.uparrow {
+  margin-bottom: 50px;
+}
+
+.downarrow {
+  margin-top: 50px;
 }
