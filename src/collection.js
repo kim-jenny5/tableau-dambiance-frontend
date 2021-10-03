@@ -77,33 +77,38 @@ class Collection {
       // }
     }
 
-    document.addEventListener("scroll", () => {
-      const uparrow = document.querySelector(".uparrow");
-      const downarrow = document.querySelector(".downarrow");
+    const uparrow = document.querySelector(".uparrow");
+    const downarrow = document.querySelector(".downarrow");
 
-      uparrow.addEventListener("click", () => {
-        window.scrollTo(0, 0);
-      });
+    uparrow.addEventListener("click", () => {
+      window.scrollTo(0, 0);
+    });
 
-      downarrow.addEventListener("click", () => {
-        window.scrollTo(0, document.body.scrollHeight);
-      });
+    downarrow.addEventListener("click", () => {
+      window.scrollTo(0, document.body.scrollHeight);
+    });
 
-      // if (window.scrollY > 1000) {
-      //   // const scrollBtns = document.querySelectorAll(".scrollBtns");
-      //   // for (const button of scrollBtns) {
-      //   //   button.style.display = "block";
-      //   // }
-      //   // scrollBtns.style.display = "block";
-      //   // const uparrow = document.querySelector(".uparrow");
-      //   // const downarrow = document.querySelector(".downarrow");
-      //   // uparrow.addEventListener("click", () => {
-      //   //   window.scrollTo(0, 0);
-      //   // });
-      //   // downarrow.addEventListener("click", () => {
-      //   //   window.scrollTo(0, document.body.scrollHeight);
-      //   // });
-      // }
+    // document.addEventListener("scroll", () => {
+    //   // if (window.scrollY > 1000) {
+    //   //   // const scrollBtns = document.querySelectorAll(".scrollBtns");
+    //   //   // for (const button of scrollBtns) {
+    //   //   //   button.style.display = "block";
+    //   //   // }
+    //   //   // scrollBtns.style.display = "block";
+    //   //   // const uparrow = document.querySelector(".uparrow");
+    //   //   // const downarrow = document.querySelector(".downarrow");
+    //   //   // uparrow.addEventListener("click", () => {
+    //   //   //   window.scrollTo(0, 0);
+    //   //   // });
+    //   //   // downarrow.addEventListener("click", () => {
+    //   //   //   window.scrollTo(0, document.body.scrollHeight);
+    //   //   // });
+    //   // }
+    // });
+
+    const addBtn = document.querySelector(".addBtn");
+    addBtn.addEventListener("click", () => {
+      debugger;
     });
   }
 }
