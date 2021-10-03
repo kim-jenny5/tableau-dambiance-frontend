@@ -269,3 +269,12 @@ a:link {
 .new-btn {
   cursor: pointer;
 }
+
+.addBtn {
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
+  margin-top: 50px !important;
+  /* padding-top: 50px; */
+  margin-bottom: 50px;
+}
