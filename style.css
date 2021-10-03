@@ -278,16 +278,28 @@ a:link {
   margin-bottom: 50px;
 }
 
-.uparrow,
-.downarrow {
-  position: absolute;
-  right: 10%;
+.scrollBtns {
+  position: fixed;
+  /* right: 10%; */
+  /* margin-top: 50px; */
+  /* right: 0 !important; */
+  /* left: 0 !important; */
+  /* text-align: end;
+  z-index: 1;
+  top: 10%; */
+  /* float: right; */
+  top: 20vh;
+  margin-left: 90vw;
+  cursor: pointer;
+  /* top: 20% !important; */
 }
 
 .uparrow {
+  /* position: fixed; */
   margin-bottom: 50px;
 }
 
 .downarrow {
+  /* position: fixed; */
   margin-top: 50px;
 }
