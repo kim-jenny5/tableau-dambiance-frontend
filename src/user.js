@@ -75,6 +75,10 @@ class User {
     returningUserPg.style.display = "none";
     mainPg.style.display = "block";
 
+    title.addEventListener("click", () => {
+      debugger;
+    });
+
     hamburger.addEventListener("click", () => {
       collectionsMenu.style.display = "block";
       if (xCollectionsBtn.style.display === "none") {

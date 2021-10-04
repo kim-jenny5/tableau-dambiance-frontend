@@ -14,6 +14,8 @@ const title = document.querySelector(".file-name");
 const hamburger = document.querySelector(".hamburger");
 const collectionsMenu = document.querySelector(".collections-side-menu");
 
+const addBtn = document.querySelector(".addBtn");
+
 // different pages
 const startingPg = document.querySelector(".starting-page");
 const newUserPg = document.querySelector(".new-user-page");

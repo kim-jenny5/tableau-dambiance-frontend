@@ -38,6 +38,11 @@ class Collection {
     const foundCollection = Collection.all.find(
       (c) => c.name === e.target.innerText
     );
+
+    // addBtn.addEventListener("click", () => {
+    //   debugger;
+    // });
+
     foundCollection.accessCollection(e);
   }
 
@@ -105,10 +110,5 @@ class Collection {
     //   //   // });
     //   // }
     // });
-
-    const addBtn = document.querySelector(".addBtn");
-    addBtn.addEventListener("click", () => {
-      debugger;
-    });
   }
 }

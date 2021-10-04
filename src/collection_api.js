@@ -13,4 +13,10 @@ class CollectionApi {
       })
       .catch();
   }
+
+  // createCollections() {
+  //   fetch(this.url + `/collections`)
+  //     .then((resp) => resp.json())
+  //     .then((data) => {
+  // })
 }
