@@ -112,8 +112,9 @@ class User {
 
         collectionForm.addEventListener("submit", (e) => {
           e.preventDefault();
-          const collectionName = e.target.querySelector("input").value;
-          debugger;
+          // collectionName.value;
+          collectionApiCall.createCollections();
+          // debugger;
         });
         // pictureBoard.innerHTML = "";
         // title.innerText = "untitled";

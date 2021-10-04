@@ -14,9 +14,19 @@ class CollectionApi {
       .catch();
   }
 
-  // createCollections() {
-  //   fetch(this.url + `/collections`)
-  //     .then((resp) => resp.json())
-  //     .then((data) => {
-  // })
+  createCollections() {
+    debugger;
+    const collectionInfo = {
+      collection: {
+        name: collectionName.value,
+        // user_id: ,
+      },
+    };
+
+    fetch(this.url + `/collections`)
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }
 }

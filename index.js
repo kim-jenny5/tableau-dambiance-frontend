@@ -16,6 +16,8 @@ const collectionsMenu = document.querySelector(".collections-side-menu");
 
 const addBtn = document.querySelector(".addBtn");
 
+const collectionName = document.querySelector(".new-name");
+
 // different pages
 const startingPg = document.querySelector(".starting-page");
 const newUserPg = document.querySelector(".new-user-page");
