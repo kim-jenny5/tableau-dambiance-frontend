@@ -101,9 +101,11 @@ class User {
 
       const newBtn = document.querySelector(".new-btn");
       newBtn.addEventListener("click", () => {
-        pictureBoard.innerHTML = "";
-        title.innerText = "untitled";
-        debugger;
+        const collectionForm = document.querySelector(".new-collection-form");
+        collectionForm.style.display = "block";
+        // debugger;
+        // pictureBoard.innerHTML = "";
+        // title.innerText = "untitled";
       });
 
       const blank = document.querySelector(".blank");

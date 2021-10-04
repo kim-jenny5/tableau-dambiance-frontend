@@ -214,7 +214,6 @@ a:link {
   position: fixed;
   top: 2%;
   margin-left: 250px;
-  /* left: 15%; */
   cursor: pointer;
 }
 
@@ -271,7 +270,6 @@ a:link {
 }
 
 .addBtn {
-  /* bottom: 0; */
   left: 0;
   right: 0;
   margin-top: 50px !important;
@@ -280,18 +278,9 @@ a:link {
 
 .scrollBtns {
   position: fixed;
-  /* right: 10%; */
-  /* margin-top: 50px; */
-  /* right: 0 !important; */
-  /* left: 0 !important; */
-  /* text-align: end;
-  z-index: 1;
-  top: 10%; */
-  /* float: right; */
   top: 20vh;
   margin-left: 90vw;
   cursor: pointer;
-  /* top: 20% !important; */
 }
 
 .scrollBtns:hover {
@@ -299,11 +288,26 @@ a:link {
 }
 
 .uparrow {
-  /* position: fixed; */
   margin-bottom: 50px;
 }
 
 .downarrow {
-  /* position: fixed; */
   margin-top: 50px;
+}
+
+/* COLLECTION  */
+.submit-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.new-name {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background-color: transparent;
+}
+
+.new-name:focus {
+  outline: none;
 }
