@@ -93,7 +93,7 @@ class Collection {
       window.scrollTo(0, document.body.scrollHeight);
     });
 
-    addBtn.addEventListener("click", () => {
+    addBtn.addEventListener("click", (e) => {
       this.addNewPicture();
     });
 
@@ -117,8 +117,14 @@ class Collection {
   }
 
   addNewPicture() {
-    const newPictureForm = document.querySelector(".new-picture-form");
-    newPictureForm.style.display = "block";
+    // const newPictureForm = document.querySelector(".new-picture-form");
+    // newPictureForm.style.display = "block";
+    // debugger;
+    const newPicture = document.querySelector(".picture-upload");
+    newPicture.addEventListener("change", (e) => {
+      pictureApiCall.uploadNewPicture(e.target.value);
+    });
+    // newPicture.
     // debugger;
   }
 }

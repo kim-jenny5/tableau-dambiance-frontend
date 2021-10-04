@@ -17,5 +17,10 @@ class PictureApi {
       .catch();
   }
 
-  uploadNewPicture() {}
+  uploadNewPicture(picture) {
+    console.log(picture);
+    debugger;
+
+    // debugger;
+  }
 }

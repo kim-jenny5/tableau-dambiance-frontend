@@ -14,7 +14,7 @@ const title = document.querySelector(".file-name");
 const hamburger = document.querySelector(".hamburger");
 const collectionsMenu = document.querySelector(".collections-side-menu");
 
-const addBtn = document.querySelector(".add-btn");
+const addBtn = document.querySelector(".add-btn-container");
 
 const collectionName = document.querySelector(".new-name");
 
