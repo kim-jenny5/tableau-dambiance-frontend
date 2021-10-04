@@ -16,4 +16,6 @@ class PictureApi {
       })
       .catch();
   }
+
+  uploadNewPicture() {}
 }

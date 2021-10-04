@@ -269,11 +269,12 @@ a:link {
   cursor: pointer;
 }
 
-.addBtn {
-  left: 0;
-  right: 0;
+.add-btn {
+  /* left: 0;
+  right: 0; */
   margin-top: 50px !important;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .scrollBtns {
@@ -310,4 +311,9 @@ a:link {
 
 .new-name:focus {
   outline: none;
+}
+
+.add-btn-container {
+  display: flex;
+  justify-content: center;
 }

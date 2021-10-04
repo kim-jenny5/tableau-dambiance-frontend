@@ -93,6 +93,10 @@ class Collection {
       window.scrollTo(0, document.body.scrollHeight);
     });
 
+    addBtn.addEventListener("click", () => {
+      this.addNewPicture();
+    });
+
     // document.addEventListener("scroll", () => {
     //   // if (window.scrollY > 1000) {
     //   //   // const scrollBtns = document.querySelectorAll(".scrollBtns");
@@ -110,5 +114,11 @@ class Collection {
     //   //   // });
     //   // }
     // });
+  }
+
+  addNewPicture() {
+    const newPictureForm = document.querySelector(".new-picture-form");
+    newPictureForm.style.display = "block";
+    // debugger;
   }
 }
