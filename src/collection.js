@@ -94,6 +94,7 @@ class Collection {
     });
 
     addBtn.addEventListener("click", (e) => {
+      debugger;
       this.addNewPicture();
     });
 
@@ -116,15 +117,18 @@ class Collection {
     // });
   }
 
-  addNewPicture() {
-    // const newPictureForm = document.querySelector(".new-picture-form");
-    // newPictureForm.style.display = "block";
-    // debugger;
-    const newPicture = document.querySelector(".picture-upload");
-    newPicture.addEventListener("change", (e) => {
-      pictureApiCall.uploadNewPicture(e.target.value);
-    });
-    // newPicture.
-    // debugger;
-  }
+  // addNewPicture() {
+  //   // const newPictureForm = document.querySelector(".new-picture-form");
+  //   // newPictureForm.style.display = "block";
+  //   // debugger;
+  //   const newPicture = document.querySelector(".picture-upload");
+  //   newPicture.addEventListener("change", (e) => {
+  //     // e.target.value.uploadNewPicture();
+  //     // const newPicture = e.target.value;
+  //     // const p = new Picture(newPicture)
+  //     // pictureApiCall.uploadNewPicture(this, e.target.value);
+  //   });
+  //   // newPicture.
+  //   // debugger;
+  // }
 }
