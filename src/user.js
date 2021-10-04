@@ -113,14 +113,13 @@ class User {
         collectionForm.style.display = "block";
 
         // const submitBtn = document.querySelector(".submit-btn");
+        this.creatingCollection();
 
-        collectionForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-          // collectionName.value;
-          // collectionApiCall.createCollections(this);
-          this.creatingCollection();
-          // debugger;
-        });
+        // collectionForm.addEventListener("submit", (e) => {
+        //   e.preventDefault();
+        //   this.creatingCollection();
+        // });
+
         // pictureBoard.innerHTML = "";
         // title.innerText = "untitled";
       });
@@ -159,6 +158,9 @@ class User {
   }
 
   creatingCollection() {
-    collectionApiCall.createCollections(this);
+    collectionForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      collectionApiCall.createCollections(this);
+    });
   }
 }

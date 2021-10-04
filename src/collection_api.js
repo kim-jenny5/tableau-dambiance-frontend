@@ -4,7 +4,7 @@ class CollectionApi {
   }
 
   getCollectionsApi() {
-    fetch(this.url + `/collections`)
+    fetch(`${this.url}/collections`)
       .then((resp) => resp.json())
       .then((data) => {
         for (const collection of data) {
@@ -16,13 +16,9 @@ class CollectionApi {
 
   createCollections(user) {
     const collection = {
-      // collection: {
       name: collectionName.value,
       user_id: user.id,
-      // },
     };
-
-    // debugger;
 
     const configObj = {
       method: "POST",
