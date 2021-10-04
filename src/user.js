@@ -15,6 +15,8 @@ const newUsername = document.getElementById("new-user-username");
 const returningUserForm = document.querySelector(".returning-user-form");
 const returningUsername = document.getElementById("returning-user-username");
 
+const collectionForm = document.querySelector(".new-collection-form");
+
 // ------------------------------
 
 class User {
@@ -76,7 +78,7 @@ class User {
     mainPg.style.display = "block";
 
     title.addEventListener("click", () => {
-      debugger;
+      // debugger;
     });
 
     hamburger.addEventListener("click", () => {
@@ -97,11 +99,13 @@ class User {
         returningUsername.value = "";
         pictureBoard.innerHTML = "";
         title.innerText = "untitled";
+        if (collectionForm.style.display === "block") {
+          collectionForm.style.display = "none";
+        }
       });
 
       const newBtn = document.querySelector(".new-btn");
       newBtn.addEventListener("click", () => {
-        const collectionForm = document.querySelector(".new-collection-form");
         collectionForm.style.display = "block";
         // debugger;
         // pictureBoard.innerHTML = "";
@@ -114,6 +118,9 @@ class User {
         // debugger;
         collectionsMenu.style.display = "none";
         hamburger.style.display = "block";
+        if (collectionForm.style.display === "block") {
+          collectionForm.style.display = "none";
+        }
       });
     });
   }
@@ -132,6 +139,9 @@ class User {
       hamburger.style.display = "block";
       xCollectionsBtn.style.display = "none";
       collectionsMenu.style.display = "none";
+      if (collectionForm.style.display === "block") {
+        collectionForm.style.display = "none";
+      }
     });
   }
 }
