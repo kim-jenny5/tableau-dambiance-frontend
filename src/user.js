@@ -107,7 +107,14 @@ class User {
       const newBtn = document.querySelector(".new-btn");
       newBtn.addEventListener("click", () => {
         collectionForm.style.display = "block";
-        // debugger;
+
+        // const submitBtn = document.querySelector(".submit-btn");
+
+        collectionForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const collectionName = e.target.querySelector("input").value;
+          debugger;
+        });
         // pictureBoard.innerHTML = "";
         // title.innerText = "untitled";
       });
