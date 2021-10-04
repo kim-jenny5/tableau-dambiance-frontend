@@ -14,14 +14,19 @@ class CollectionApi {
       .catch();
   }
 
-  createCollections() {
-    debugger;
+  createCollections(user) {
+    // console.log(user);
+    // debugger;
+
     const collectionInfo = {
+      // debugger
       collection: {
         name: collectionName.value,
-        // user_id: ,
+        user_id: user.id;
       },
     };
+
+    // debugger;
 
     fetch(this.url + `/collections`)
       .then((resp) => resp.json())

@@ -71,6 +71,8 @@ class User {
   }
 
   setUpUsersPage() {
+    // const self = this;
+
     const username = document.querySelector(".username-display");
     username.innerText = this.username;
 
@@ -82,6 +84,8 @@ class User {
     });
 
     hamburger.addEventListener("click", () => {
+      // const self = this;
+
       collectionsMenu.style.display = "block";
       if (xCollectionsBtn.style.display === "none") {
         hamburger.style.display = "none";
@@ -113,7 +117,8 @@ class User {
         collectionForm.addEventListener("submit", (e) => {
           e.preventDefault();
           // collectionName.value;
-          collectionApiCall.createCollections();
+          // collectionApiCall.createCollections(this);
+          this.creatingCollection();
           // debugger;
         });
         // pictureBoard.innerHTML = "";
@@ -151,5 +156,9 @@ class User {
         collectionForm.style.display = "none";
       }
     });
+  }
+
+  creatingCollection() {
+    collectionApiCall.createCollections(this);
   }
 }
