@@ -15,20 +15,26 @@ class CollectionApi {
   }
 
   createCollections(user) {
-    // console.log(user);
-    // debugger;
-
-    const collectionInfo = {
-      // debugger
-      collection: {
-        name: collectionName.value,
-        user_id: user.id;
-      },
+    const collection = {
+      // collection: {
+      name: collectionName.value,
+      user_id: user.id,
+      // },
     };
 
     // debugger;
 
-    fetch(this.url + `/collections`)
+    const configObj = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(collection),
+    };
+
+    // fetch(this.url + `/collections`, collection);
+    fetch(`${this.url}/collections`, configObj)
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data);
