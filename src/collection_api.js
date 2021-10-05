@@ -15,8 +15,6 @@ class CollectionApi {
   }
 
   createCollections(user) {
-    // console.log("hello");
-    // debugger;
     const collection = {
       name: collectionName.value,
       user_id: user.id,
@@ -31,19 +29,12 @@ class CollectionApi {
       body: JSON.stringify(collection),
     };
 
-    // fetch(this.url + `/collections`, collection);
     fetch(`${this.url}/collections`, configObj)
       .then((resp) => resp.json())
       .then((data) => {
-        if (data.name.length === 0) {
-          data.name = "untitled";
-        }
         const c = new Collection(data);
-        // debugger;
         c.appendCollections();
         c.accessCollection();
-        // console.log(data);
-        // debugger;
       });
   }
 }
