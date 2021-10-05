@@ -37,6 +37,7 @@ class CollectionApi {
       .then((data) => {
         const c = new Collection(data);
         c.appendCollections();
+        c.accessCollection();
         // console.log(data);
         // debugger;
       });

@@ -23,33 +23,46 @@ class Collection {
   }
 
   clickOnCollection(e) {
-    pictureBoard.innerHTML = "";
-    // for (const col of pictureBoardCol) {
-    //   col.innerHTML = "";
+    // pictureBoard.innerHTML = "";
+
+    // title.innerText = this.innerText;
+
+    // if (collectionsMenu.style.display === "block") {
+    //   hamburger.style.display = "block";
+    //   collectionsMenu.style.display = "none";
     // }
 
-    title.innerText = this.innerText;
+    const foundCollection = Collection.all.find(
+      (c) => c.name === e.target.innerText
+    );
+
+    foundCollection.accessCollection(e);
+  }
+
+  accessCollection(e) {
+    // debugger;
+    pictureBoard.innerHTML = "";
 
     if (collectionsMenu.style.display === "block") {
       hamburger.style.display = "block";
       collectionsMenu.style.display = "none";
     }
 
-    const foundCollection = Collection.all.find(
-      (c) => c.name === e.target.innerText
-    );
+    let collectionPictures;
 
-    // addBtn.addEventListener("click", () => {
-    //   debugger;
-    // });
+    if (e) {
+      title.innerText = this.innerText;
 
-    foundCollection.accessCollection(e);
-  }
+      collectionPictures = Picture.all.filter((pic) => {
+        return pic.collection.name === e.target.innerText;
+      });
+    } else {
+      title.innerHTML = this.name;
 
-  accessCollection(e) {
-    const collectionPictures = Picture.all.filter((pic) => {
-      return pic.collection.name === e.target.innerText;
-    });
+      collectionPictures = Picture.all.filter((pic) => {
+        return pic.collection === this;
+      });
+    }
 
     // const picBtns = document.querySelectorAll(".board-numbers button");
     // const picCols = document.querySelectorAll(".picture-board-col");
