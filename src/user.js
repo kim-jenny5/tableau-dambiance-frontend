@@ -83,86 +83,125 @@ class User {
 
     // mainPg
 
-    newBtn.addEventListener("click", () => {
-      collectionForm.style.display = "block";
-      debugger;
-    });
-
-    mainPg.addEventListener("click", (e) => {
-      hamburger.addEventListener("click", (e) => {
-        // if (e.target.className.baseVal === "bi bi-list hamburger") {
-        // }
-      });
-      // debugger;
-      // collectionForm.style.display = "block";
-      // collectionForm.addEventListener("submit", (e) => {
-      //   e.preventDefault();
-      //   collectionApiCall.createCollections(this);
-
-      //   // this.creatingCollection;
-      //   // debugger;
-      // });
-      //   const newBtn = document.querySelector(".new-btn");
-      //   newBtn.addEventListener("click", () => {
-      //     collectionForm.style.display = "block";
-      //     collectionForm.addEventListener("submit", (e) => {
-      //       // console.log("Hello");
-      //       // debugger;
-      //       e.preventDefault();
-      //       collectionApiCall.createCollections(this);
-      //     });
-
-      //     // pictureBoard.innerHTML = "";
-      //     // title.innerText = "untitled";
-      //   });
-      // }
-
+    hamburger.addEventListener("click", () => {
       collectionsMenu.style.display = "block";
       if (xCollectionsBtn.style.display === "none") {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
         this.gettingCollections();
       }
+    });
 
-      const logout = document.querySelector(".logout");
-      logout.addEventListener("click", () => {
-        startingPg.style.display = "block";
-        mainPg.style.display = "none";
-        newUserPg.style.display = "none";
-        hamburger.style.display = "block";
-        collectionsMenu.style.display = "none";
-        returningUsername.value = "";
-        pictureBoard.innerHTML = "";
-        title.innerText = "untitled";
-        if (collectionForm.style.display === "block") {
-          collectionForm.style.display = "none";
-        }
-      });
-
-      // const newBtn = document.querySelector(".new-btn");
-      // newBtn.addEventListener("click", () => {
-      //   collectionForm.style.display = "block";
-      //   collectionForm.addEventListener("submit", (e) => {
-      //     e.preventDefault();
-      //     this.creatingCollection;
-      //     // collectionApiCall.createCollections(this);
-      //   });
-
-      //   // pictureBoard.innerHTML = "";
-      //   // title.innerText = "untitled";
-      // });
-
-      const blank = document.querySelector(".blank");
-
-      blank.addEventListener("click", () => {
-        // debugger;
-        collectionsMenu.style.display = "none";
-        hamburger.style.display = "block";
-        if (collectionForm.style.display === "block") {
-          collectionForm.style.display = "none";
-        }
+    newBtn.addEventListener("click", () => {
+      collectionForm.style.display = "block";
+      collectionForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        collectionApiCall.createCollections(this);
+        collectionForm.style.display = "none";
       });
     });
+
+    const logout = document.querySelector(".logout");
+    logout.addEventListener("click", () => {
+      startingPg.style.display = "block";
+      mainPg.style.display = "none";
+      newUserPg.style.display = "none";
+      hamburger.style.display = "block";
+      collectionsMenu.style.display = "none";
+      returningUsername.value = "";
+      pictureBoard.innerHTML = "";
+      title.innerText = "untitled";
+      if (collectionForm.style.display === "block") {
+        collectionForm.style.display = "none";
+      }
+    });
+
+    const blank = document.querySelector(".blank");
+    blank.addEventListener("click", () => {
+      // debugger;
+      collectionsMenu.style.display = "none";
+      hamburger.style.display = "block";
+      if (collectionForm.style.display === "block") {
+        collectionForm.style.display = "none";
+      }
+    });
+
+    // mainPg.addEventListener("click", (e) => {
+    //   hamburger.addEventListener("click", (e) => {
+    //     // if (e.target.className.baseVal === "bi bi-list hamburger") {
+    //     // }
+    //   });
+    //   // debugger;
+    //   // collectionForm.style.display = "block";
+    //   // collectionForm.addEventListener("submit", (e) => {
+    //   //   e.preventDefault();
+    //   //   collectionApiCall.createCollections(this);
+
+    //   //   // this.creatingCollection;
+    //   //   // debugger;
+    //   // });
+    //   //   const newBtn = document.querySelector(".new-btn");
+    //   //   newBtn.addEventListener("click", () => {
+    //   //     collectionForm.style.display = "block";
+    //   //     collectionForm.addEventListener("submit", (e) => {
+    //   //       // console.log("Hello");
+    //   //       // debugger;
+    //   //       e.preventDefault();
+    //   //       collectionApiCall.createCollections(this);
+    //   //     });
+
+    //   //     // pictureBoard.innerHTML = "";
+    //   //     // title.innerText = "untitled";
+    //   //   });
+    //   // }
+
+    //   // collectionsMenu.style.display = "block";
+    //   // if (xCollectionsBtn.style.display === "none") {
+    //   //   hamburger.style.display = "none";
+    //   //   xCollectionsBtn.style.display = "block";
+    //   //   this.gettingCollections();
+    //   // }
+
+    //   // const logout = document.querySelector(".logout");
+    //   // logout.addEventListener("click", () => {
+    //   //   startingPg.style.display = "block";
+    //   //   mainPg.style.display = "none";
+    //   //   newUserPg.style.display = "none";
+    //   //   hamburger.style.display = "block";
+    //   //   collectionsMenu.style.display = "none";
+    //   //   returningUsername.value = "";
+    //   //   pictureBoard.innerHTML = "";
+    //   //   title.innerText = "untitled";
+    //   //   if (collectionForm.style.display === "block") {
+    //   //     collectionForm.style.display = "none";
+    //   //   }
+    //   // });
+
+    //   // const newBtn = document.querySelector(".new-btn");
+    //   // newBtn.addEventListener("click", () => {
+    //   //   collectionForm.style.display = "block";
+    //   //   collectionForm.addEventListener("submit", (e) => {
+    //   //     e.preventDefault();
+    //   //     this.creatingCollection;
+    //   //     // collectionApiCall.createCollections(this);
+    //   //   });
+
+    //   //   // pictureBoard.innerHTML = "";
+    //   //   // title.innerText = "untitled";
+    //   // });
+
+    //   // const blank = document.querySelector(".blank");
+
+    //   // blank.addEventListener("click", () => {
+    //   //   // debugger;
+    //   //   collectionsMenu.style.display = "none";
+    //   //   hamburger.style.display = "block";
+    //   //   if (collectionForm.style.display === "block") {
+    //   //     collectionForm.style.display = "none";
+    //   //   }
+    //   // });
+    // });
   }
 
   gettingCollections() {
@@ -185,15 +224,17 @@ class User {
     });
   }
 
-  creatingCollection() {
-    // collectionForm.addEventListener("submit", (e) => {
-    //   e.preventDefault();
-    //   debugger;
-    //   collectionApiCall.createCollections(this);
-    // });
-    // collectionForm.addEventListener("submit", (e) => {
-    //   e.preventDefault();
-    // collectionApiCall.createCollections(this);
-    // });
-  }
+  // creatingCollection() {
+  //   collectionForm.addEventListener("submit", (e) => {
+  //     e.preventDefault();
+  //     e.stopPropagation();
+  //     // console.log("hello");
+  //     // debugger;
+  //     collectionApiCall.createCollections(this);
+  //   });
+  //   // collectionForm.addEventListener("submit", (e) => {
+  //   //   e.preventDefault();
+  //   // collectionApiCall.createCollections(this);
+  //   // });
+  // }
 }
