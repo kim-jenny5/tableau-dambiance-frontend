@@ -7,9 +7,6 @@ class UserApi {
     fetch(this.url + `/users`)
       .then((resp) => resp.json())
       .then((data) => {
-        // console.log(username);
-        // debugger;
-
         const u = new User(data.find((u) => u.username === username));
         u.setUpUsersPage();
         u.newCollectionUponLogIn();

@@ -2,8 +2,6 @@ const collectionForm = document.querySelector(".new-collection-form");
 
 const newBtn = document.querySelector(".new-btn");
 
-// ------------------------------
-
 class User {
   static all = [];
 
@@ -92,7 +90,6 @@ class User {
     for (const collection of usersCollection) {
       collection.appendCollections();
     }
-    // debugger;
 
     xCollectionsBtn.addEventListener("click", function () {
       collectionsDisplay.innerHTML = "";

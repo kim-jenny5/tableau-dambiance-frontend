@@ -6,8 +6,6 @@ const pictureApiCall = new PictureApi(base_url);
 const collectionsDisplay = document.querySelector(".collections-display");
 
 const pictureBoardCont = document.querySelector(".picture-board .container");
-// const pictureBoard = document.querySelector(".picture-board .row");
-// const pictureBoardCol = document.querySelectorAll(".picture-board-col");
 const pictureBoard = document.querySelector(".picture-board-col");
 
 const title = document.querySelector(".file-name");
@@ -134,7 +132,6 @@ returningUser.addEventListener("click", function () {
     const usernameInput = e.target.querySelector(
       "#returning-user-username"
     ).value;
-    // debugger;
     // e.stopImmediatePropagation();
     userApiCall.getUsersApi(usernameInput);
   });

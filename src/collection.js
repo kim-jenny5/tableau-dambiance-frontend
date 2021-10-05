@@ -14,7 +14,6 @@ class Collection {
   }
 
   appendCollections() {
-    // debugger;
     const collectionEl = document.createElement("div");
     collectionEl.className = "each-collection";
     collectionEl.innerText = this.name;
@@ -24,15 +23,6 @@ class Collection {
   }
 
   clickOnCollection(e) {
-    // pictureBoard.innerHTML = "";
-
-    // title.innerText = this.innerText;
-
-    // if (collectionsMenu.style.display === "block") {
-    //   hamburger.style.display = "block";
-    //   collectionsMenu.style.display = "none";
-    // }
-
     const foundCollection = Collection.all.find(
       (c) => c.name === e.target.innerText
     );
@@ -54,31 +44,8 @@ class Collection {
       return pic.collection.name === this.name;
     });
 
-    // const picBtns = document.querySelectorAll(".board-numbers button");
-    // const picCols = document.querySelectorAll(".picture-board-col");
-    // const arr = Array.from(picCols);
-
     for (const picture of collectionPictures) {
       picture.attachToDom();
-      // const arr = Array.from(pictureBoardCol);
-      // const picEl = document.createElement("img");
-
-      // picture.attachToDomOneColBase(picEl, arr);
-
-      // const picBtns = document.querySelectorAll(".board-numbers button");
-
-      // for (const button of picBtns) {
-      //   button.addEventListener("click", () => {
-      //     if (button.innerText == 1) {
-      //       picture.attachToDomOneColBase(picEl, arr);
-      //     } else if (button.innerText == 2) {
-      //       picture.attachToDomTwoCols(picEl, arr);
-      //     } else if (button.innerText == 3) {
-      //       picture.attachToDomThreeCols(picEl, arr);
-      //     }
-      //   });
-      // }
-      // }
     }
 
     const uparrow = document.querySelector(".uparrow");
