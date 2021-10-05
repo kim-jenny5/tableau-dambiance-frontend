@@ -36,6 +36,7 @@ class CollectionApi {
         // c.appendCollections();
         // c.accessCollection();
         new Collection(data);
+        title.innerHTML = data.name;
         user.gettingCollections();
       });
   }
