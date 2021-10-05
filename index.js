@@ -41,6 +41,7 @@ for (const word of logo) {
   });
 }
 
+const qMark = document.querySelector(".open-about-btn");
 qMark.addEventListener("click", function () {
   if (aboutMenu.style.display === "none") {
     aboutMenu.style.display = "block";
@@ -51,6 +52,7 @@ qMark.addEventListener("click", function () {
   }
 });
 
+const xBtn = document.querySelector(".close-about-btn");
 xBtn.addEventListener("click", function () {
   if (xBtn.style.display === "block") {
     xBtn.style.display = "none";
@@ -61,6 +63,7 @@ xBtn.addEventListener("click", function () {
   }
 });
 
+const about = document.querySelector(".about-app");
 about.addEventListener("click", function () {
   if (aboutGrp.style.display === "none") {
     aboutGrp.style.display = "block";
@@ -69,6 +72,7 @@ about.addEventListener("click", function () {
   }
 });
 
+const aboutDev = document.querySelector(".about-dev");
 aboutDev.addEventListener("click", function () {
   for (const element of aboutDevGrp) {
     if (element.style.display === "none") {

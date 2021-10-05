@@ -266,7 +266,8 @@ a:link {
 }
 
 .new-btn {
-  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .add-btn {

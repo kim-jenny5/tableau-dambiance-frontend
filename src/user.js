@@ -1,9 +1,5 @@
 // getting elements from DOM
-const qMark = document.querySelector(".open-about-btn");
-const xBtn = document.querySelector(".close-about-btn");
-const about = document.querySelector(".about-app");
 const aboutGrp = document.querySelector(".about-app-txt-grp");
-const aboutDev = document.querySelector(".about-dev");
 const aboutDevGrp = document.querySelectorAll(".about-dev-txt-grp");
 const aboutMenu = document.querySelector(".about-side-menu");
 const newUser = document.querySelector(".new-user");
@@ -16,6 +12,8 @@ const returningUserForm = document.querySelector(".returning-user-form");
 const returningUsername = document.getElementById("returning-user-username");
 
 const collectionForm = document.querySelector(".new-collection-form");
+
+const newBtn = document.querySelector(".new-btn");
 
 // ------------------------------
 
@@ -83,8 +81,41 @@ class User {
       // debugger;
     });
 
-    hamburger.addEventListener("click", () => {
-      // const self = this;
+    // mainPg
+
+    newBtn.addEventListener("click", () => {
+      collectionForm.style.display = "block";
+      debugger;
+    });
+
+    mainPg.addEventListener("click", (e) => {
+      hamburger.addEventListener("click", (e) => {
+        // if (e.target.className.baseVal === "bi bi-list hamburger") {
+        // }
+      });
+      // debugger;
+      // collectionForm.style.display = "block";
+      // collectionForm.addEventListener("submit", (e) => {
+      //   e.preventDefault();
+      //   collectionApiCall.createCollections(this);
+
+      //   // this.creatingCollection;
+      //   // debugger;
+      // });
+      //   const newBtn = document.querySelector(".new-btn");
+      //   newBtn.addEventListener("click", () => {
+      //     collectionForm.style.display = "block";
+      //     collectionForm.addEventListener("submit", (e) => {
+      //       // console.log("Hello");
+      //       // debugger;
+      //       e.preventDefault();
+      //       collectionApiCall.createCollections(this);
+      //     });
+
+      //     // pictureBoard.innerHTML = "";
+      //     // title.innerText = "untitled";
+      //   });
+      // }
 
       collectionsMenu.style.display = "block";
       if (xCollectionsBtn.style.display === "none") {
@@ -108,21 +139,18 @@ class User {
         }
       });
 
-      const newBtn = document.querySelector(".new-btn");
-      newBtn.addEventListener("click", () => {
-        collectionForm.style.display = "block";
+      // const newBtn = document.querySelector(".new-btn");
+      // newBtn.addEventListener("click", () => {
+      //   collectionForm.style.display = "block";
+      //   collectionForm.addEventListener("submit", (e) => {
+      //     e.preventDefault();
+      //     this.creatingCollection;
+      //     // collectionApiCall.createCollections(this);
+      //   });
 
-        // const submitBtn = document.querySelector(".submit-btn");
-        this.creatingCollection();
-
-        // collectionForm.addEventListener("submit", (e) => {
-        //   e.preventDefault();
-        //   this.creatingCollection();
-        // });
-
-        // pictureBoard.innerHTML = "";
-        // title.innerText = "untitled";
-      });
+      //   // pictureBoard.innerHTML = "";
+      //   // title.innerText = "untitled";
+      // });
 
       const blank = document.querySelector(".blank");
 
@@ -158,9 +186,14 @@ class User {
   }
 
   creatingCollection() {
-    collectionForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      collectionApiCall.createCollections(this);
-    });
+    // collectionForm.addEventListener("submit", (e) => {
+    //   e.preventDefault();
+    //   debugger;
+    //   collectionApiCall.createCollections(this);
+    // });
+    // collectionForm.addEventListener("submit", (e) => {
+    //   e.preventDefault();
+    // collectionApiCall.createCollections(this);
+    // });
   }
 }

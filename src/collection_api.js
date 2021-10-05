@@ -15,6 +15,8 @@ class CollectionApi {
   }
 
   createCollections(user) {
+    // console.log("hello");
+    // debugger;
     const collection = {
       name: collectionName.value,
       user_id: user.id,
@@ -33,7 +35,10 @@ class CollectionApi {
     fetch(`${this.url}/collections`, configObj)
       .then((resp) => resp.json())
       .then((data) => {
+        // const c = new Collection(data);
+        // c.appendCollections();
         console.log(data);
+        // debugger;
       });
   }
 }
