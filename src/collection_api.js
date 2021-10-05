@@ -40,4 +40,6 @@ class CollectionApi {
         // user.gettingCollections();
       });
   }
+
+  renameCollection(user, newTitle) {}
 }
