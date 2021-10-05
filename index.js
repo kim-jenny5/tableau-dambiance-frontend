@@ -24,7 +24,8 @@ const newUserPg = document.querySelector(".new-user-page");
 const returningUserPg = document.querySelector(".returning-user-page");
 const mainPg = document.querySelector(".main-page");
 
-const logo = document.querySelectorAll(".logo");
+const about = document.querySelector(".about-app");
+const aboutDev = document.querySelector(".about-dev");
 const aboutMenu = document.querySelector(".about-side-menu");
 const aboutGrp = document.querySelector(".about-app-txt-grp");
 const aboutDevGrp = document.querySelectorAll(".about-dev-txt-grp");
@@ -46,52 +47,34 @@ collectionApiCall.getCollectionsApi();
 // userApiCall.getUsersApi();
 pictureApiCall.getAllPicturesApi();
 
-// for (const word of logo) {
-//   word.addEventListener("click", function () {
-//     startingPg.style.display = "block";
-//     mainPg.style.display = "none";
-//     newUserPg.style.display = "none";
-//     returningUserPg.style.display = "none";
-//     returningUsername.value = "";
-//     pictureBoard.innerHTML = "";
-//     title.innerText = "untitled";
-//     userApiCall.getUsersApi();
-//   });
-// }
-
 const qMark = document.querySelector(".open-about-btn");
 qMark.addEventListener("click", function () {
-  if (aboutMenu.style.display === "none") {
-    aboutMenu.style.display = "block";
-    qMark.style.display = "none";
-    xBtn.style.display = "block";
-  } else {
-    aboutMenu.style.display = "none";
+  aboutMenu.style.display = "block";
+  qMark.style.display = "none";
+  xBtn.style.display = "block";
+
+  aboutGrp.style.display = "none";
+  for (const element of aboutDevGrp) {
+    element.style.display = "none";
   }
 });
 
 const xBtn = document.querySelector(".close-about-btn");
 xBtn.addEventListener("click", function () {
-  if (xBtn.style.display === "block") {
-    xBtn.style.display = "none";
-    qMark.style.display = "block";
-    aboutMenu.style.display = "none";
-  } else {
-    aboutMenu.style.display = "block";
-  }
+  xBtn.style.display = "none";
+  qMark.style.display = "block";
+  aboutMenu.style.display = "none";
 });
 
-const about = document.querySelector(".about-app");
-about.addEventListener("click", function () {
+function closingAbout() {
   if (aboutGrp.style.display === "none") {
     aboutGrp.style.display = "block";
   } else {
     aboutGrp.style.display = "none";
   }
-});
+}
 
-const aboutDev = document.querySelector(".about-dev");
-aboutDev.addEventListener("click", function () {
+function closingDev() {
   for (const element of aboutDevGrp) {
     if (element.style.display === "none") {
       element.style.display = "block";
@@ -99,11 +82,26 @@ aboutDev.addEventListener("click", function () {
       element.style.display = "none";
     }
   }
-});
+}
+
+about.addEventListener("click", closingAbout);
+aboutDev.addEventListener("click", closingDev);
+
+function reset() {
+  startingPg.style.display = "none";
+
+  aboutMenu.style.display = "none";
+  xBtn.style.display = "none";
+  qMark.style.display = "block";
+}
 
 newUser.addEventListener("click", function () {
-  startingPg.style.display = "none";
   newUserPg.style.display = "block";
+
+  reset();
+
+  closingAbout();
+  closingDev();
 
   newUserForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -124,8 +122,12 @@ newUser.addEventListener("click", function () {
 });
 
 returningUser.addEventListener("click", function () {
-  startingPg.style.display = "none";
   returningUserPg.style.display = "block";
+
+  reset();
+
+  closingAbout();
+  closingDev();
 
   returningUserForm.addEventListener("submit", (e) => {
     e.preventDefault();
