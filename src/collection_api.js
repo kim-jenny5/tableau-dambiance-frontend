@@ -29,6 +29,8 @@ class CollectionApi {
       body: JSON.stringify(collection),
     };
 
+    debugger;
+
     fetch(`${this.url}/collections`, configObj)
       .then((resp) => resp.json())
       .then((data) => {

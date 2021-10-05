@@ -27,7 +27,6 @@ class User {
   // }
 
   setUpUsersPage() {
-    // const self = this;
     startingPg.style.display = "none";
     newUserPg.style.display = "none";
     returningUserPg.style.display = "none";
@@ -35,8 +34,6 @@ class User {
 
     const username = document.querySelector(".username-display");
     username.innerText = this.username;
-
-    // collectionsDisplay.innerHTML = "";
 
     title.addEventListener("click", () => {
       // debugger;
@@ -89,7 +86,6 @@ class User {
 
   gettingCollections() {
     const usersCollection = Collection.all.filter((collection) => {
-      // debugger;
       return collection.user.id === this.id;
     });
 
@@ -108,17 +104,7 @@ class User {
     });
   }
 
-  // creatingCollection() {
-  //   collectionForm.addEventListener("submit", (e) => {
-  //     e.preventDefault();
-  //     e.stopPropagation();
-  //     // console.log("hello");
-  //     // debugger;
-  //     collectionApiCall.createCollections(this);
-  //   });
-  //   // collectionForm.addEventListener("submit", (e) => {
-  //   //   e.preventDefault();
-  //   // collectionApiCall.createCollections(this);
-  //   // });
-  // }
+  newCollectionUponLogIn() {
+    collectionApiCall.createCollections(this);
+  }
 }
