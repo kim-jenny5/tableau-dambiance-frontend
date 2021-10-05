@@ -42,15 +42,13 @@ class User {
 
       newUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
+        e.stopImmediatePropagation();
         userApiCall.createUsers();
         // userApiCall.createUsers();
       });
     });
 
     returningUser.addEventListener("click", function () {
-      startingPg.style.display = "none";
-      returningUserPg.style.display = "block";
-
       returningUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
@@ -70,6 +68,9 @@ class User {
 
   setUpUsersPage() {
     // const self = this;
+    startingPg.style.display = "none";
+    newUserPg.style.display = "none";
+    returningUserPg.style.display = "block";
 
     const username = document.querySelector(".username-display");
     username.innerText = this.username;

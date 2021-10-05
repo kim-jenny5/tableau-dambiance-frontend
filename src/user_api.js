@@ -32,7 +32,8 @@ class UserApi {
     fetch(`${this.url}/users`, configObj)
       .then((resp) => resp.json())
       .then((data) => {
-        debugger;
+        const newUser = new User(data);
+        newUser.setUpUsersPage();
       });
   }
 }
