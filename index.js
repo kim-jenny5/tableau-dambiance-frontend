@@ -35,6 +35,7 @@ for (const word of logo) {
     startingPg.style.display = "block";
     mainPg.style.display = "none";
     newUserPg.style.display = "none";
+    returningUserPg.style.display = "none";
     returningUsername.value = "";
     pictureBoard.innerHTML = "";
     title.innerText = "untitled";

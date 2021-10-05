@@ -39,6 +39,7 @@ class CollectionApi {
           data.name = "untitled";
         }
         const c = new Collection(data);
+        // debugger;
         c.appendCollections();
         c.accessCollection();
         // console.log(data);

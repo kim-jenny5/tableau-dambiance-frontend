@@ -41,8 +41,8 @@ class User {
       // }
 
       newUserForm.addEventListener("submit", (e) => {
-        debugger;
         e.preventDefault();
+        userApiCall.createUsers();
         // userApiCall.createUsers();
       });
     });

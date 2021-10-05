@@ -15,10 +15,24 @@ class UserApi {
       .catch();
   }
 
-  // createUsers() {
-  //   const user = {
-  //     username: newUsername.value,
-  //   };
-  //   debugger;
-  // }
+  createUsers() {
+    const user = {
+      username: newUsername.value,
+    };
+
+    const configObj = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(user),
+    };
+
+    fetch(`${this.url}/users`, configObj)
+      .then((resp) => resp.json())
+      .then((data) => {
+        debugger;
+      });
+  }
 }
