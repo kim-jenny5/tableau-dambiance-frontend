@@ -43,7 +43,7 @@ class User {
       if (xCollectionsBtn.style.display === "none") {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
-        // this.gettingCollections();
+        this.gettingCollections();
       }
     });
 
@@ -54,6 +54,7 @@ class User {
         e.stopImmediatePropagation();
         collectionApiCall.createCollections(this);
         collectionForm.style.display = "none";
+        collectionForm.querySelector(".new-name").value = "";
       });
     });
 
@@ -103,7 +104,7 @@ class User {
     });
   }
 
-  newCollectionUponLogIn() {
-    collectionApiCall.createCollections(this);
-  }
+  // newCollectionUponLogIn() {
+  //   collectionApiCall.createCollections(this);
+  // }
 }

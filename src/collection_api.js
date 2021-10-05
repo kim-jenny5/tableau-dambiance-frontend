@@ -32,12 +32,12 @@ class CollectionApi {
     fetch(`${this.url}/collections`, configObj)
       .then((resp) => resp.json())
       .then((data) => {
-        // const c = new Collection(data);
-        // c.appendCollections();
-        // c.accessCollection();
-        new Collection(data);
-        title.innerHTML = data.name;
-        user.gettingCollections();
+        const c = new Collection(data);
+        c.appendCollections();
+        c.accessCollection();
+        // new Collection(data);
+        // title.innerHTML = data.name;
+        // user.gettingCollections();
       });
   }
 }
