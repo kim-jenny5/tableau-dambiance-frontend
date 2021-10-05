@@ -43,17 +43,22 @@ class User {
       newUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
-        const usernameInput = e.target.querySelector(".user-username").value;
-        if (User.all.find((u) => u.username === usernameInput)) {
-          alert("This username has already been taken.");
-        } else {
-          userApiCall.createUsers();
-        }
-        // userApiCall.createUsers();
+        // const usernameInput =
+        //   e.target.getElementById("new-user-username").value;
+        // if (User.all.find((u) => u.username === usernameInput)) {
+        //   alert("This username has already been taken.");
+        // } else {
+        //   userApiCall.createUsers();
+        // }
+        userApiCall.createUsers();
       });
     });
+    // debugger;
 
     returningUser.addEventListener("click", function () {
+      startingPg.style.display = "none";
+      returningUserPg.style.display = "block";
+
       returningUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
