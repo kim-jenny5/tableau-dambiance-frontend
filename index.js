@@ -65,6 +65,13 @@ qMark.addEventListener("click", function () {
   } else {
     aboutMenu.style.display = "none";
   }
+
+  const empty = document.getElementById("empty");
+  empty.addEventListener("click", () => {
+    aboutMenu.style.display = "none";
+    qMark.style.display = "block";
+    xBtn.style.display = "none";
+  });
 });
 
 const xBtn = document.querySelector(".close-about-btn");
