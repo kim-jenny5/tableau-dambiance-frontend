@@ -5,12 +5,6 @@ const aboutMenu = document.querySelector(".about-side-menu");
 const newUser = document.querySelector(".new-user");
 const returningUser = document.querySelector(".returning-user");
 
-// new user form
-const newUserForm = document.querySelector(".new-user-form");
-const newUsername = document.getElementById("new-user-username");
-const returningUserForm = document.querySelector(".returning-user-form");
-const returningUsername = document.getElementById("returning-user-username");
-
 const collectionForm = document.querySelector(".new-collection-form");
 
 const newBtn = document.querySelector(".new-btn");
@@ -28,44 +22,37 @@ class User {
   }
 
   findUser() {
-    newUser.addEventListener("click", function () {
-      startingPg.style.display = "none";
-      newUserPg.style.display = "block";
+    //   newUser.addEventListener("click", function () {
+    //     startingPg.style.display = "none";
+    //     newUserPg.style.display = "block";
 
-      // newUserForm.addEventListener("submit", handleSubmit);
-
-      // function handleSubmit(e) {
-      //   debugger;
-      //   e.preventDefault();
-      //   // userApiCall.createUsers();
-      // }
-
-      newUserForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        // const usernameInput =
-        //   e.target.getElementById("new-user-username").value;
-        // if (User.all.find((u) => u.username === usernameInput)) {
-        //   alert("This username has already been taken.");
-        // } else {
-        //   userApiCall.createUsers();
-        // }
-        userApiCall.createUsers();
-      });
-    });
+    //     newUserForm.addEventListener("submit", (e) => {
+    //       e.preventDefault();
+    //       e.stopImmediatePropagation();
+    //       // const usernameInput =
+    //       //   e.target.getElementById("new-user-username").value;
+    //       // if (User.all.find((u) => u.username === usernameInput)) {
+    //       //   alert("This username has already been taken.");
+    //       // } else {
+    //       //   userApiCall.createUsers();
+    //       // }
+    //       userApiCall.createUsers();
+    //     });
+    //   });
     // debugger;
-
     returningUser.addEventListener("click", function () {
+      // debugger;
       startingPg.style.display = "none";
       returningUserPg.style.display = "block";
 
       returningUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
+        e.stopImmediatePropagation();
 
         // const username = returningUsername.value
-        const foundUser = User.all.find(
-          (u) => u.username === returningUsername.value
-        );
+        const foundUser = User.all.find((u) => {
+          return u.username === returningUsername.value;
+        });
 
         if (foundUser) {
           foundUser.setUpUsersPage();
@@ -80,19 +67,17 @@ class User {
     // const self = this;
     startingPg.style.display = "none";
     newUserPg.style.display = "none";
-    returningUserPg.style.display = "block";
+    returningUserPg.style.display = "none";
+    mainPg.style.display = "block";
 
     const username = document.querySelector(".username-display");
     username.innerText = this.username;
 
-    returningUserPg.style.display = "none";
-    mainPg.style.display = "block";
+    // collectionsDisplay.innerHTML = "";
 
     title.addEventListener("click", () => {
       // debugger;
     });
-
-    // mainPg
 
     hamburger.addEventListener("click", () => {
       collectionsMenu.style.display = "block";

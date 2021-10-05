@@ -9,6 +9,7 @@ class UserApi {
       .then((data) => {
         for (const user of data) {
           const u = new User(user);
+          // u.setUpUsersPage();
           u.findUser();
         }
       })

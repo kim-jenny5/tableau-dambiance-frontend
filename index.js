@@ -26,6 +26,14 @@ const mainPg = document.querySelector(".main-page");
 
 const logo = document.querySelectorAll(".logo");
 
+//new user form
+const newUserForm = document.querySelector(".new-user-form");
+const newUsername = document.getElementById("new-user-username");
+
+//returning user form
+const returningUserForm = document.querySelector(".returning-user-form");
+const returningUsername = document.getElementById("returning-user-username");
+
 collectionApiCall.getCollectionsApi();
 userApiCall.getUsersApi();
 pictureApiCall.getAllPicturesApi();
@@ -39,6 +47,7 @@ for (const word of logo) {
     returningUsername.value = "";
     pictureBoard.innerHTML = "";
     title.innerText = "untitled";
+    // userApiCall.getUsersApi();
   });
 }
 
@@ -82,4 +91,22 @@ aboutDev.addEventListener("click", function () {
       element.style.display = "none";
     }
   }
+});
+
+newUser.addEventListener("click", function () {
+  startingPg.style.display = "none";
+  newUserPg.style.display = "block";
+
+  newUserForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    // const usernameInput =
+    //   e.target.getElementById("new-user-username").value;
+    // if (User.all.find((u) => u.username === usernameInput)) {
+    //   alert("This username has already been taken.");
+    // } else {
+    //   userApiCall.createUsers();
+    // }
+    userApiCall.createUsers();
+  });
 });
