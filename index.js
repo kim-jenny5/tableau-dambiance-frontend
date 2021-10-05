@@ -27,15 +27,20 @@ const mainPg = document.querySelector(".main-page");
 const logo = document.querySelectorAll(".logo");
 
 //new user form
+const newUser = document.querySelector(".new-user");
 const newUserForm = document.querySelector(".new-user-form");
 const newUsername = document.getElementById("new-user-username");
 
 //returning user form
+const returningUser = document.querySelector(".returning-user");
 const returningUserForm = document.querySelector(".returning-user-form");
 const returningUsername = document.getElementById("returning-user-username");
 
+const backArrowNew = document.querySelector(".back-arrow-new");
+const backArrowReturning = document.querySelector(".back-arrow-returning");
+
 collectionApiCall.getCollectionsApi();
-userApiCall.getUsersApi();
+// userApiCall.getUsersApi();
 pictureApiCall.getAllPicturesApi();
 
 // for (const word of logo) {
@@ -107,5 +112,26 @@ newUser.addEventListener("click", function () {
       userApiCall.createUsers();
     }
     // userApiCall.createUsers();
+  });
+
+  backArrowNew.addEventListener("click", () => {
+    startingPg.style.display = "block";
+    newUserPg.style.display = "none";
+  });
+});
+
+returningUser.addEventListener("click", function () {
+  startingPg.style.display = "none";
+  returningUserPg.style.display = "block";
+
+  returningUserForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // e.stopImmediatePropagation();
+    userApiCall.getUsersApi();
+  });
+
+  backArrowReturning.addEventListener("click", () => {
+    startingPg.style.display = "block";
+    returningUserPg.style.display = "none";
   });
 });

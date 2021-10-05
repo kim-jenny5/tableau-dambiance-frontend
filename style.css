@@ -38,8 +38,16 @@ a:link {
   writing-mode: vertical-lr;
 }
 
-.logo {
-  cursor: pointer;
+.back-arrow-new,
+.back-arrow-returning {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
 }
 
 /* STARTING PAGE */
@@ -118,15 +126,6 @@ a:link {
 }
 
 /* NEW USER PAGE */
-.back-arrow {
-  position: absolute;
-  top: 2%;
-  left: 2%;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-}
-
 .user-container {
   position: absolute;
   width: fit-content !important;

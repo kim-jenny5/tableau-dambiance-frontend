@@ -2,8 +2,6 @@
 const aboutGrp = document.querySelector(".about-app-txt-grp");
 const aboutDevGrp = document.querySelectorAll(".about-dev-txt-grp");
 const aboutMenu = document.querySelector(".about-side-menu");
-const newUser = document.querySelector(".new-user");
-const returningUser = document.querySelector(".returning-user");
 
 const collectionForm = document.querySelector(".new-collection-form");
 
@@ -40,27 +38,43 @@ class User {
     //     });
     //   });
     // debugger;
-    returningUser.addEventListener("click", function () {
-      // debugger;
-      startingPg.style.display = "none";
-      returningUserPg.style.display = "block";
 
-      returningUserForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        e.stopImmediatePropagation();
+    // returningUser.addEventListener("click", function () {
+    //   startingPg.style.display = "none";
+    //   returningUserPg.style.display = "block";
 
-        // const username = returningUsername.value
-        const foundUser = User.all.find((u) => {
-          return u.username === returningUsername.value;
-        });
+    //   backArrow.addEventListener("click", () => {
+    //     // e.stopImmediatePropagation();
+    //     returningUserPg.style.display = "none";
+    //     startingPg.style.display = "block";
+    //   });
 
-        if (foundUser) {
-          foundUser.setUpUsersPage();
-        } else {
-          alert("Sorry! Username not found.");
-        }
-      });
+    //   returningUserForm.addEventListener("submit", (e) => {
+    //     e.preventDefault();
+    //     e.stopImmediatePropagation();
+
+    //     // const username = returningUsername.value
+    //     const foundUser = User.all.find((u) => {
+    //       return u.username === returningUsername.value;
+    //     });
+
+    //     if (foundUser) {
+    //       foundUser.setUpUsersPage();
+    //     } else {
+    //       alert("Sorry! Username not found.");
+    //     }
+    //   });
+    // });
+    debugger;
+    const foundUser = User.all.find((u) => {
+      return u.username === returningUsername.value;
     });
+
+    if (foundUser) {
+      foundUser.setUpUsersPage();
+    } else {
+      alert("Sorry! Username not found.");
+    }
   }
 
   setUpUsersPage() {
