@@ -1,8 +1,3 @@
-// getting elements from DOM
-const aboutGrp = document.querySelector(".about-app-txt-grp");
-const aboutDevGrp = document.querySelectorAll(".about-dev-txt-grp");
-const aboutMenu = document.querySelector(".about-side-menu");
-
 const collectionForm = document.querySelector(".new-collection-form");
 
 const newBtn = document.querySelector(".new-btn");

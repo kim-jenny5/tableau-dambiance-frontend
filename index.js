@@ -25,6 +25,9 @@ const returningUserPg = document.querySelector(".returning-user-page");
 const mainPg = document.querySelector(".main-page");
 
 const logo = document.querySelectorAll(".logo");
+const aboutMenu = document.querySelector(".about-side-menu");
+const aboutGrp = document.querySelector(".about-app-txt-grp");
+const aboutDevGrp = document.querySelectorAll(".about-dev-txt-grp");
 
 //new user form
 const newUser = document.querySelector(".new-user");
@@ -65,13 +68,6 @@ qMark.addEventListener("click", function () {
   } else {
     aboutMenu.style.display = "none";
   }
-
-  const empty = document.getElementById("empty");
-  empty.addEventListener("click", () => {
-    aboutMenu.style.display = "none";
-    qMark.style.display = "block";
-    xBtn.style.display = "none";
-  });
 });
 
 const xBtn = document.querySelector(".close-about-btn");

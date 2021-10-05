@@ -59,10 +59,6 @@ a:link {
   cursor: pointer;
 }
 
-#empty {
-  height: 100vh;
-}
-
 .center-container {
   position: absolute;
   width: fit-content;
