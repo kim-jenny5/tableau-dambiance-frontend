@@ -35,6 +35,9 @@ class CollectionApi {
     fetch(`${this.url}/collections`, configObj)
       .then((resp) => resp.json())
       .then((data) => {
+        if (data.name.length === 0) {
+          data.name = "untitled";
+        }
         const c = new Collection(data);
         c.appendCollections();
         c.accessCollection();

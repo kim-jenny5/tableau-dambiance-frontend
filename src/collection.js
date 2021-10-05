@@ -68,10 +68,6 @@ class Collection {
     // const picCols = document.querySelectorAll(".picture-board-col");
     // const arr = Array.from(picCols);
 
-    // for (const button of scrollBtns) {
-    //   button.style.display = "none";
-    // }
-
     for (const picture of collectionPictures) {
       picture.attachToDom();
       // const arr = Array.from(pictureBoardCol);
