@@ -14,6 +14,7 @@ class Collection {
   }
 
   appendCollections() {
+    // debugger;
     const collectionEl = document.createElement("div");
     collectionEl.className = "each-collection";
     collectionEl.innerText = this.name;

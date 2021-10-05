@@ -44,7 +44,7 @@ class User {
       if (xCollectionsBtn.style.display === "none") {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
-        this.gettingCollections();
+        // this.gettingCollections();
       }
     });
 
@@ -92,6 +92,7 @@ class User {
     for (const collection of usersCollection) {
       collection.appendCollections();
     }
+    // debugger;
 
     xCollectionsBtn.addEventListener("click", function () {
       collectionsDisplay.innerHTML = "";
