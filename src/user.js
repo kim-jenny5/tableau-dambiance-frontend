@@ -33,9 +33,10 @@ class User {
     const username = document.querySelector(".username-display");
     username.innerText = this.username;
 
-    title.addEventListener("click", () => {
-      // debugger;
-    });
+    // title.addEventListener("mouseover", () => {
+    //   const renameTitle = document.querySelector(".file-name-rename");
+    //   renameTitle.style.display = "block";
+    // });
 
     hamburger.addEventListener("click", () => {
       collectionsMenu.style.display = "block";

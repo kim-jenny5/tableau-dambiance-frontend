@@ -171,7 +171,23 @@ a:link {
   position: fixed;
   left: 0;
   right: 0;
+  cursor: pointer;
 }
+
+/* .file-name-rename {
+  border-width: thin;
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  position: fixed;
+  margin-top: 1%;
+  /* left: 600px; */
+  /* right: auto; */
+  /* display: flex; */
+  /* justify-content: center; */
+} */
 
 .hamburger {
   position: fixed;
