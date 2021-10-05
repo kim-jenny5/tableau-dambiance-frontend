@@ -79,7 +79,8 @@ a:link {
 
 .new-user,
 .returning-user {
-  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .user-btns {
