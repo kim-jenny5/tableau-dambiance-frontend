@@ -126,8 +126,12 @@ returningUser.addEventListener("click", function () {
 
   returningUserForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    const usernameInput = e.target.querySelector(
+      "#returning-user-username"
+    ).value;
+    // debugger;
     // e.stopImmediatePropagation();
-    userApiCall.getUsersApi();
+    userApiCall.getUsersApi(usernameInput);
   });
 
   backArrowReturning.addEventListener("click", () => {

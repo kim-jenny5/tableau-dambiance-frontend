@@ -19,63 +19,17 @@ class User {
     User.all.push(this);
   }
 
-  findUser() {
-    //   newUser.addEventListener("click", function () {
-    //     startingPg.style.display = "none";
-    //     newUserPg.style.display = "block";
+  // findUser() {
+  //   const foundUser = User.all.find((u) => {
+  //     return u.username === returningUsername.value;
+  //   });
 
-    //     newUserForm.addEventListener("submit", (e) => {
-    //       e.preventDefault();
-    //       e.stopImmediatePropagation();
-    //       // const usernameInput =
-    //       //   e.target.getElementById("new-user-username").value;
-    //       // if (User.all.find((u) => u.username === usernameInput)) {
-    //       //   alert("This username has already been taken.");
-    //       // } else {
-    //       //   userApiCall.createUsers();
-    //       // }
-    //       userApiCall.createUsers();
-    //     });
-    //   });
-    // debugger;
-
-    // returningUser.addEventListener("click", function () {
-    //   startingPg.style.display = "none";
-    //   returningUserPg.style.display = "block";
-
-    //   backArrow.addEventListener("click", () => {
-    //     // e.stopImmediatePropagation();
-    //     returningUserPg.style.display = "none";
-    //     startingPg.style.display = "block";
-    //   });
-
-    //   returningUserForm.addEventListener("submit", (e) => {
-    //     e.preventDefault();
-    //     e.stopImmediatePropagation();
-
-    //     // const username = returningUsername.value
-    //     const foundUser = User.all.find((u) => {
-    //       return u.username === returningUsername.value;
-    //     });
-
-    //     if (foundUser) {
-    //       foundUser.setUpUsersPage();
-    //     } else {
-    //       alert("Sorry! Username not found.");
-    //     }
-    //   });
-    // });
-    debugger;
-    const foundUser = User.all.find((u) => {
-      return u.username === returningUsername.value;
-    });
-
-    if (foundUser) {
-      foundUser.setUpUsersPage();
-    } else {
-      alert("Sorry! Username not found.");
-    }
-  }
+  //   if (foundUser) {
+  //     foundUser.setUpUsersPage();
+  //   } else {
+  //     alert("Sorry! Username not found.");
+  //   }
+  // }
 
   setUpUsersPage() {
     // const self = this;
