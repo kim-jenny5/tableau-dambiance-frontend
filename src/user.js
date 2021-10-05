@@ -126,6 +126,7 @@ class User {
 
   gettingCollections() {
     const usersCollection = Collection.all.filter((collection) => {
+      // debugger;
       return collection.user.id === this.id;
     });
 

@@ -38,18 +38,18 @@ collectionApiCall.getCollectionsApi();
 userApiCall.getUsersApi();
 pictureApiCall.getAllPicturesApi();
 
-for (const word of logo) {
-  word.addEventListener("click", function () {
-    startingPg.style.display = "block";
-    mainPg.style.display = "none";
-    newUserPg.style.display = "none";
-    returningUserPg.style.display = "none";
-    returningUsername.value = "";
-    pictureBoard.innerHTML = "";
-    title.innerText = "untitled";
-    // userApiCall.getUsersApi();
-  });
-}
+// for (const word of logo) {
+//   word.addEventListener("click", function () {
+//     startingPg.style.display = "block";
+//     mainPg.style.display = "none";
+//     newUserPg.style.display = "none";
+//     returningUserPg.style.display = "none";
+//     returningUsername.value = "";
+//     pictureBoard.innerHTML = "";
+//     title.innerText = "untitled";
+//     userApiCall.getUsersApi();
+//   });
+// }
 
 const qMark = document.querySelector(".open-about-btn");
 qMark.addEventListener("click", function () {
@@ -100,13 +100,12 @@ newUser.addEventListener("click", function () {
   newUserForm.addEventListener("submit", (e) => {
     e.preventDefault();
     e.stopImmediatePropagation();
-    // const usernameInput =
-    //   e.target.getElementById("new-user-username").value;
-    // if (User.all.find((u) => u.username === usernameInput)) {
-    //   alert("This username has already been taken.");
-    // } else {
-    //   userApiCall.createUsers();
-    // }
-    userApiCall.createUsers();
+    const usernameInput = e.target.querySelector("#new-user-username").value;
+    if (User.all.find((u) => u.username === usernameInput)) {
+      alert("This username has already been taken.");
+    } else {
+      userApiCall.createUsers();
+    }
+    // userApiCall.createUsers();
   });
 });
