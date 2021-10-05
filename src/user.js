@@ -43,7 +43,12 @@ class User {
       newUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
-        userApiCall.createUsers();
+        const usernameInput = e.target.querySelector(".user-username").value;
+        if (User.all.find((u) => u.username === usernameInput)) {
+          alert("This username has already been taken.");
+        } else {
+          userApiCall.createUsers();
+        }
         // userApiCall.createUsers();
       });
     });
