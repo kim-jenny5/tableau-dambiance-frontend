@@ -33,7 +33,7 @@ class User {
     const username = document.querySelector(".username-display");
     username.innerText = this.username;
 
-    // title.addEventListener("mouseover", () => {
+    // title.addEventListener("click", () => {
     //   const renameTitle = document.querySelector(".renaming-form");
     //   renameTitle.style.display = "block";
 
@@ -42,7 +42,7 @@ class User {
     //     // e.stopImmediatePropagation();
     //     const newTitle = e.target.querySelector(".file-rename").value;
     //     // collectionApiCall.renameCollection(this, newTitle);
-    //     collectionApiCall.renameCollection(newTitle);
+    //     collectionApiCall.renameCollection(this);
     //   });
     // });
 

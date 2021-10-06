@@ -41,12 +41,16 @@ class CollectionApi {
       });
   }
 
-  renameCollection(collection, newTitle) {
-    const { name, id } = collection;
+  renameCollection(collection) {
+    const { name, id, user } = collection;
 
     const collectionInfo = {
-      name: newTitle,
+      name,
+      id,
+      user: collection.user,
     };
+
+    console.log(collectionInfo);
 
     const configObj = {
       method: "PATCH",
@@ -57,13 +61,20 @@ class CollectionApi {
       body: JSON.stringify(collectionInfo),
     };
 
-    debugger;
+    console.log(configObj);
 
-    fetch(`${this.url}/collections/${id}`, configObj)
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        debugger;
-      });
+    // debugger;
+
+    fetch(`${this.url}/collections/${id}`, configObj).then(() => {
+      // debugger;
+      collection.accessCollection(collection.name);
+      // collection.adjustingCollection();
+    });
+    // .then((resp) => resp.json())
+    // .then((data) => {
+    //   // data.accessCollection();
+    //   console.log(data);
+    //   debugger;
+    // });
   }
 }

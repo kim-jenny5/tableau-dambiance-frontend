@@ -43,7 +43,7 @@ const backArrowReturning = document.querySelector(".back-arrow-returning");
 
 collectionApiCall.getCollectionsApi();
 // userApiCall.getUsersApi();
-pictureApiCall.getAllPicturesApi();
+pictureApiCall.getPicturesApi();
 
 const qMark = document.querySelector(".open-about-btn");
 qMark.addEventListener("click", function () {

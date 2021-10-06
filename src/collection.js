@@ -30,7 +30,7 @@ class Collection {
     foundCollection.accessCollection();
   }
 
-  accessCollection() {
+  accessCollection(collection) {
     pictureBoard.innerHTML = "";
 
     if (collectionsMenu.style.display === "block") {
@@ -40,12 +40,17 @@ class Collection {
 
     title.innerHTML = this.name;
 
-    const collectionPictures = Picture.all.filter((pic) => {
-      return pic.collection.name === this.name;
-    });
+    if (collection) {
+      // pictureApiCall.getPicsForCollection(this);
+      pictureApiCall.getPicturesApi(this);
+    } else {
+      const collectionPictures = Picture.all.filter((pic) => {
+        return pic.collection.name === this.name;
+      });
 
-    for (const picture of collectionPictures) {
-      picture.attachToDom();
+      for (const picture of collectionPictures) {
+        picture.attachToDom();
+      }
     }
 
     const uparrow = document.querySelector(".uparrow");
@@ -70,27 +75,33 @@ class Collection {
 
       renameTitle.addEventListener("submit", (e) => {
         e.preventDefault();
-        // e.stopImmediatePropagation();
+        e.stopImmediatePropagation();
+        this.renamingCollection(e);
         // console.log(this);
-        const newTitle = e.target.querySelector(".file-rename").value;
-        collectionApiCall.renameCollection(this, newTitle);
+        // debugger;
+        // collectionApiCall.renameCollection(this, newTitle);
         // collectionApiCall.renameCollection(newTitle);
       });
     });
   }
 
-  // addNewPicture() {
-  //   // const newPictureForm = document.querySelector(".new-picture-form");
-  //   // newPictureForm.style.display = "block";
-  //   // debugger;
-  //   const newPicture = document.querySelector(".picture-upload");
-  //   newPicture.addEventListener("change", (e) => {
-  //     // e.target.value.uploadNewPicture();
-  //     // const newPicture = e.target.value;
-  //     // const p = new Picture(newPicture)
-  //     // pictureApiCall.uploadNewPicture(this, e.target.value);
-  //   });
-  //   // newPicture.
-  //   // debugger;
-  // }
+  renamingCollection(e) {
+    this.name = e.target.querySelector(".file-rename").value;
+    collectionApiCall.renameCollection(this);
+  }
 }
+
+// addNewPicture() {
+//   // const newPictureForm = document.querySelector(".new-picture-form");
+//   // newPictureForm.style.display = "block";
+//   // debugger;
+//   const newPicture = document.querySelector(".picture-upload");
+//   newPicture.addEventListener("change", (e) => {
+//     // e.target.value.uploadNewPicture();
+//     // const newPicture = e.target.value;
+//     // const p = new Picture(newPicture)
+//     // pictureApiCall.uploadNewPicture(this, e.target.value);
+//   });
+//   // newPicture.
+//   // debugger;
+// }
