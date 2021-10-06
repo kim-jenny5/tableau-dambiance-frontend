@@ -38,12 +38,13 @@ class CollectionApi {
       });
   }
 
-  renameCollection(collection) {
+  renameCollection(collection, collection_id) {
     const { name, id, user } = collection;
 
+    debugger;
     const collectionInfo = {
       name,
-      id,
+      id: collection_id,
       user: collection.user,
     };
 
@@ -61,7 +62,10 @@ class CollectionApi {
     console.log(configObj);
 
     fetch(`${this.url}/collections/${id}`, configObj).then(() => {
-      collection.accessCollection(collection.name);
+      debugger;
+      // collection.accessCollection(collection.name);
+      // collection.appendCollections();
+      collection.accessCollection();
     });
   }
 }

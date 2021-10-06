@@ -1,4 +1,5 @@
 const xCollectionsBtn = document.querySelector(".close-collections-btn");
+const renameTitle = document.querySelector(".renaming-form");
 
 class Collection {
   static all = [];
@@ -30,7 +31,8 @@ class Collection {
     foundCollection.accessCollection();
   }
 
-  accessCollection(collection) {
+  // accessCollection(collection) {
+  accessCollection() {
     pictureBoard.innerHTML = "";
 
     if (collectionsMenu.style.display === "block") {
@@ -38,20 +40,27 @@ class Collection {
       collectionsMenu.style.display = "none";
     }
 
+    if (renameTitle.style.display === "block") {
+      renameTitle.style.display = "none";
+    }
+
     title.innerHTML = this.name;
 
-    if (collection) {
-      // pictureApiCall.getPicsForCollection(this);
-      pictureApiCall.getPicturesApi(this);
-    } else {
-      const collectionPictures = Picture.all.filter((pic) => {
-        return pic.collection.name === this.name;
-      });
+    pictureApiCall.getPicturesApi(this);
 
-      for (const picture of collectionPictures) {
-        picture.attachToDom();
-      }
-    }
+    // if (collection) {
+    //   // pictureApiCall.getPicsForCollection(this);
+    //   pictureApiCall.getPicturesApi(this);
+    // } else {
+    //   const collectionPictures = Picture.all.filter((pic) => {
+    //     debugger;
+    //     return pic.collection.name === this.name;
+    //   });
+
+    //   for (const picture of collectionPictures) {
+    //     picture.attachToDom();
+    //   }
+    // }
 
     const uparrow = document.querySelector(".uparrow");
     const downarrow = document.querySelector(".downarrow");
@@ -70,12 +79,12 @@ class Collection {
     });
 
     title.addEventListener("click", () => {
-      const renameTitle = document.querySelector(".renaming-form");
       renameTitle.style.display = "block";
 
       renameTitle.addEventListener("submit", (e) => {
         e.preventDefault();
-        e.stopImmediatePropagation();
+        // e.stopImmediatePropagation();
+        e.stopPropagation();
         this.renamingCollection(e);
       });
     });
@@ -83,6 +92,8 @@ class Collection {
 
   renamingCollection(e) {
     this.name = e.target.querySelector(".file-rename").value;
+    // const collection_id = this.id;
+    // collectionApiCall.renameCollection(this, collection_id);
     collectionApiCall.renameCollection(this);
   }
 }

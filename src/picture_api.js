@@ -3,19 +3,31 @@ class PictureApi {
     this.url = url;
   }
 
+  // getPicturesApi(collection) {
+  //   fetch(`${this.url}/pictures`)
+  //     .then((resp) => resp.json())
+  //     .then((data) => {
+  //       if (collection) {
+  //         for (const picture of collection.pictures) {
+  //           const p = new Picture(picture);
+  //           p.attachToDom();
+  //         }
+  //       } else {
+  //         for (const picture of data) {
+  //           new Picture(picture);
+  //         }
+  //       }
+  //     })
+  //     .catch();
+  // }
+
   getPicturesApi(collection) {
     fetch(`${this.url}/pictures`)
       .then((resp) => resp.json())
-      .then((data) => {
-        if (collection) {
-          for (const picture of collection.pictures) {
-            const p = new Picture(picture);
-            p.attachToDom();
-          }
-        } else {
-          for (const picture of data) {
-            new Picture(picture);
-          }
+      .then(() => {
+        for (const picture of collection.pictures) {
+          const p = new Picture(picture);
+          p.attachToDom();
         }
       })
       .catch();
