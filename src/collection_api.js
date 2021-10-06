@@ -11,7 +11,7 @@ class CollectionApi {
         for (const collection of collections) {
           const c = new Collection(collection);
           c.appendCollections();
-          c.clickOnCollection();
+          // c.clickOnCollection();
         }
       })
       .catch();

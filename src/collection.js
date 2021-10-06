@@ -17,6 +17,7 @@ class Collection {
   appendCollections() {
     const collectionEl = document.createElement("div");
     collectionEl.className = "each-collection";
+    collectionEl.id = this.id;
     collectionEl.innerText = this.name;
     collectionsDisplay.appendChild(collectionEl);
 
@@ -25,6 +26,8 @@ class Collection {
 
   clickOnCollection = (e) => {
     const allCollections = document.querySelectorAll(".each-collection");
+    console.log(allCollections);
+    debugger;
 
     for (const collection of allCollections) {
       collection.addEventListener("click", (e) => {
@@ -36,6 +39,7 @@ class Collection {
           (c) => c.name === e.target.innerText
         );
         foundCollection.accessCollection(e);
+        foundCollection.renamingCollection(e);
       });
     }
 
@@ -96,15 +100,6 @@ class Collection {
       this.addNewPicture();
     });
 
-    title.addEventListener("click", (e) => {
-      e.stopImmediatePropagation();
-
-      const foundCollection = Collection.all.find(
-        (c) => c.name === e.target.innerText
-      );
-      foundCollection.renamingCollection(e);
-    });
-
     // title.addEventListener("click", this.renamingCollection);
 
     // title.addEventListener("click", (e) => {
@@ -135,21 +130,32 @@ class Collection {
   };
 
   renamingCollection = (e) => {
-    e.stopImmediatePropagation();
     console.log(this);
-    // debugger;
-    renameTitle.style.display = "block";
-    renameTitle.reset();
-    renameTitle.addEventListener("submit", (e) => {
-      e.preventDefault();
+
+    title.addEventListener("click", (e) => {
       e.stopImmediatePropagation();
-      // e.stopPropagation();
-      // this.renamingCollection(e);
-      console.log(this);
-      debugger;
-      this.name = e.target.querySelector(".file-rename").value;
-      // collectionApiCall.renameCollection(this);
+
+      const foundCollection = Collection.all.find(
+        (c) => c.name === e.target.innerText
+      );
+      // foundCollection.renamingCollection(e);
+      renameTitle.style.display = "block";
+      renameTitle.reset();
+      renameTitle.addEventListener("submit", (e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        // e.stopPropagation();
+        // this.renamingCollection(e);
+        console.log(foundCollection);
+        debugger;
+        this.name = e.target.querySelector(".file-rename").value;
+        // collectionApiCall.renameCollection(this);
+      });
     });
+
+    // e.stopImmediatePropagation();
+    // console.log(this);
+    // // debugger;
     // this.name = e.target.querySelector(".file-rename").value;
     // collectionApiCall.renameCollection(this);
   };
