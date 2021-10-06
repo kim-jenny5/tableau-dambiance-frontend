@@ -41,5 +41,29 @@ class CollectionApi {
       });
   }
 
-  renameCollection(user, newTitle) {}
+  renameCollection(collection, newTitle) {
+    const { name, id } = collection;
+
+    const collectionInfo = {
+      name: newTitle,
+    };
+
+    const configObj = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(collectionInfo),
+    };
+
+    debugger;
+
+    fetch(`${this.url}/collections/${id}`, configObj)
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+        debugger;
+      });
+  }
 }

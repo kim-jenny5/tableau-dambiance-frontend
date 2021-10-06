@@ -33,19 +33,18 @@ class User {
     const username = document.querySelector(".username-display");
     username.innerText = this.username;
 
-    title.addEventListener("mouseover", () => {
-      const renameTitle = document.querySelector(".renaming-form");
-      renameTitle.style.display = "block";
+    // title.addEventListener("mouseover", () => {
+    //   const renameTitle = document.querySelector(".renaming-form");
+    //   renameTitle.style.display = "block";
 
-      renameTitle.addEventListener("submit", (e) => {
-        e.preventDefault();
-        // e.stopImmediatePropagation();
-        const newTitle = e.target.querySelector(".file-rename").value;
-        console.log(this);
-        debugger;
-        collectionApiCall.renameCollection(this, newTitle);
-      });
-    });
+    //   renameTitle.addEventListener("submit", (e) => {
+    //     e.preventDefault();
+    //     // e.stopImmediatePropagation();
+    //     const newTitle = e.target.querySelector(".file-rename").value;
+    //     // collectionApiCall.renameCollection(this, newTitle);
+    //     collectionApiCall.renameCollection(newTitle);
+    //   });
+    // });
 
     hamburger.addEventListener("click", () => {
       collectionsMenu.style.display = "block";

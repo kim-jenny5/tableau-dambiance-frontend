@@ -63,6 +63,20 @@ class Collection {
       debugger;
       this.addNewPicture();
     });
+
+    title.addEventListener("click", () => {
+      const renameTitle = document.querySelector(".renaming-form");
+      renameTitle.style.display = "block";
+
+      renameTitle.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // e.stopImmediatePropagation();
+        // console.log(this);
+        const newTitle = e.target.querySelector(".file-rename").value;
+        collectionApiCall.renameCollection(this, newTitle);
+        // collectionApiCall.renameCollection(newTitle);
+      });
+    });
   }
 
   // addNewPicture() {
