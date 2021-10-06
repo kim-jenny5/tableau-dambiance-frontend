@@ -25,7 +25,8 @@ class User {
   // }
 
   setUpUsersPage() {
-    this.gettingCollections();
+    // this.gettingCollections();
+    // collectionApiCall.getCollectionsApi(this);
 
     startingPg.style.display = "none";
     newUserPg.style.display = "none";
@@ -78,18 +79,6 @@ class User {
         collectionForm.style.display = "none";
       }
     });
-  }
-
-  gettingCollections() {
-    collectionApiCall.getCollectionsApi(this);
-
-    // const usersCollection = Collection.all.filter((collection) => {
-    //   return collection.user.id === this.id;
-    // });
-
-    // for (const collection of usersCollection) {
-    //   collection.appendCollections();
-    // }
 
     xCollectionsBtn.addEventListener("click", function () {
       collectionsDisplay.innerHTML = "";
@@ -100,17 +89,35 @@ class User {
         collectionForm.style.display = "none";
       }
     });
-
-    // const allCollections = document.querySelectorAll(".each-collection");
-    // for (const collection of allCollections) {
-    //   collection.addEventListener("click", (e) => {
-    //     // e.stopImmediatePropagation();
-    //     // e.stopPropagation();
-    //     const foundCollection = Collection.all.find(
-    //       (c) => c.name === e.target.innerText
-    //     );
-    //     foundCollection.accessCollection();
-    //   });
-    // }
   }
+
+  // gettingCollections() {
+  //   // collectionApiCall.getCollectionsApi(this);
+  //   // const usersCollection = Collection.all.filter((collection) => {
+  //   //   return collection.user.id === this.id;
+  //   // });
+  //   // for (const collection of usersCollection) {
+  //   //   collection.appendCollections();
+  //   // }
+  //   // xCollectionsBtn.addEventListener("click", function () {
+  //   //   collectionsDisplay.innerHTML = "";
+  //   //   hamburger.style.display = "block";
+  //   //   xCollectionsBtn.style.display = "none";
+  //   //   collectionsMenu.style.display = "none";
+  //   //   if (collectionForm.style.display === "block") {
+  //   //     collectionForm.style.display = "none";
+  //   //   }
+  //   // });
+  //   // const allCollections = document.querySelectorAll(".each-collection");
+  //   // for (const collection of allCollections) {
+  //   //   collection.addEventListener("click", (e) => {
+  //   //     // e.stopImmediatePropagation();
+  //   //     // e.stopPropagation();
+  //   //     const foundCollection = Collection.all.find(
+  //   //       (c) => c.name === e.target.innerText
+  //   //     );
+  //   //     foundCollection.accessCollection();
+  //   //   });
+  //   // }
+  // }
 }
