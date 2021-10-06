@@ -20,19 +20,23 @@ class Collection {
     collectionEl.innerText = this.name;
     collectionsDisplay.appendChild(collectionEl);
 
-    collectionEl.addEventListener("click", this.clickOnCollection);
+    // collectionEl.addEventListener("click", this.clickOnCollection);
   }
 
-  clickOnCollection(e) {
-    const foundCollection = Collection.all.find(
-      (c) => c.name === e.target.innerText
-    );
+  // clickOnCollection = (e) => {
+  //   // e.stopPropagation();
+  //   e.stopImmediatePropagation();
 
-    foundCollection.accessCollection();
-  }
+  //   const foundCollection = Collection.all.find((c) => c.name === this.name);
+  //   foundCollection.accessCollection();
+  // };
 
   // accessCollection(collection) {
-  accessCollection() {
+  accessCollection = () => {
+    const self = this;
+    // console.log(this);
+    // console.log(self);
+
     pictureBoard.innerHTML = "";
 
     if (collectionsMenu.style.display === "block") {
@@ -78,24 +82,52 @@ class Collection {
       this.addNewPicture();
     });
 
-    title.addEventListener("click", () => {
-      renameTitle.style.display = "block";
+    title.addEventListener("click", (e) => {
+      // e.stopImmediatePropagation();
+      e.stopPropagation();
+      console.log(this);
+      console.log(e.target);
 
-      renameTitle.addEventListener("submit", (e) => {
-        e.preventDefault();
-        // e.stopImmediatePropagation();
-        e.stopPropagation();
-        this.renamingCollection(e);
-      });
+      // const foundCollection = Collection.all.find(
+      //   (c) => c.name === e.target.innerText
+      // );
+
+      // const foundCollection = Collection.all.find((c) => c.name === this.name);
+
+      // console.log(foundCollection);
+
+      // renameTitle.style.display = "block";
+
+      // renameTitle.addEventListener("submit", (e) => {
+      //   e.preventDefault();
+      //   // e.stopImmediatePropagation();
+      //   e.stopPropagation();
+      // this.renamingCollection(e);
+      // });
     });
-  }
+  };
 
-  renamingCollection(e) {
-    this.name = e.target.querySelector(".file-rename").value;
-    // const collection_id = this.id;
-    // collectionApiCall.renameCollection(this, collection_id);
-    collectionApiCall.renameCollection(this);
-  }
+  // renamingCollection = (e) => {
+  //   console.log(this);
+  //   console.log(e.target);
+  //   debugger;
+  //   // debugger;
+
+  //   // renameTitle.style.display = "block";
+
+  //   // renameTitle.addEventListener("submit", (e) => {
+  //   //   e.preventDefault();
+  //   //   e.stopImmediatePropagation();
+  //   //   // e.stopPropagation();
+  //   //   // this.renamingCollection(e);
+  //   //   debugger;
+  //   //   this.name = e.target.querySelector(".file-rename").value;
+  //   //   collectionApiCall.renameCollection(this);
+  //   // });
+
+  //   // this.name = e.target.querySelector(".file-rename").value;
+  //   // collectionApiCall.renameCollection(this);
+  // };
 }
 
 // addNewPicture() {

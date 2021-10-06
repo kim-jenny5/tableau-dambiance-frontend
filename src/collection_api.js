@@ -3,12 +3,14 @@ class CollectionApi {
     this.url = url;
   }
 
-  getCollectionsApi() {
+  getCollectionsApi(user) {
     fetch(`${this.url}/collections`)
       .then((resp) => resp.json())
       .then((data) => {
-        for (const collection of data) {
-          new Collection(collection);
+        const collections = data.filter((c) => c.user.id === user.id);
+        for (const collection of collections) {
+          const c = new Collection(collection);
+          c.appendCollections();
         }
       })
       .catch();
@@ -38,17 +40,17 @@ class CollectionApi {
       });
   }
 
-  renameCollection(collection, collection_id) {
-    const { name, id, user } = collection;
+  renameCollection(collection) {
+    const { name, id } = collection;
 
-    debugger;
     const collectionInfo = {
       name,
-      id: collection_id,
+      id,
       user: collection.user,
     };
 
-    console.log(collectionInfo);
+    // debugger;
+    // console.log(collectionInfo);
 
     const configObj = {
       method: "PATCH",
@@ -59,10 +61,10 @@ class CollectionApi {
       body: JSON.stringify(collectionInfo),
     };
 
-    console.log(configObj);
+    // console.log(configObj);
 
     fetch(`${this.url}/collections/${id}`, configObj).then(() => {
-      debugger;
+      // debugger;
       // collection.accessCollection(collection.name);
       // collection.appendCollections();
       collection.accessCollection();

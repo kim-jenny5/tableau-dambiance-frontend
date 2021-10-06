@@ -41,7 +41,7 @@ const returningUsername = document.getElementById("returning-user-username");
 const backArrowNew = document.querySelector(".back-arrow-new");
 const backArrowReturning = document.querySelector(".back-arrow-returning");
 
-collectionApiCall.getCollectionsApi();
+// collectionApiCall.getCollectionsApi();
 // userApiCall.getUsersApi();
 // pictureApiCall.getPicturesApi();
 

@@ -164,6 +164,9 @@ a:link {
 }
 
 /* MAIN PAGE */
+.file-container {
+}
+
 .file-name {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;

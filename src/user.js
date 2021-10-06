@@ -25,6 +25,8 @@ class User {
   // }
 
   setUpUsersPage() {
+    this.gettingCollections();
+
     startingPg.style.display = "none";
     newUserPg.style.display = "none";
     returningUserPg.style.display = "none";
@@ -38,7 +40,7 @@ class User {
       if (xCollectionsBtn.style.display === "none") {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
-        this.gettingCollections();
+        // this.gettingCollections();
       }
     });
 
@@ -79,13 +81,15 @@ class User {
   }
 
   gettingCollections() {
-    const usersCollection = Collection.all.filter((collection) => {
-      return collection.user.id === this.id;
-    });
+    collectionApiCall.getCollectionsApi(this);
 
-    for (const collection of usersCollection) {
-      collection.appendCollections();
-    }
+    // const usersCollection = Collection.all.filter((collection) => {
+    //   return collection.user.id === this.id;
+    // });
+
+    // for (const collection of usersCollection) {
+    //   collection.appendCollections();
+    // }
 
     xCollectionsBtn.addEventListener("click", function () {
       collectionsDisplay.innerHTML = "";
@@ -96,5 +100,17 @@ class User {
         collectionForm.style.display = "none";
       }
     });
+
+    // const allCollections = document.querySelectorAll(".each-collection");
+    // for (const collection of allCollections) {
+    //   collection.addEventListener("click", (e) => {
+    //     // e.stopImmediatePropagation();
+    //     // e.stopPropagation();
+    //     const foundCollection = Collection.all.find(
+    //       (c) => c.name === e.target.innerText
+    //     );
+    //     foundCollection.accessCollection();
+    //   });
+    // }
   }
 }
