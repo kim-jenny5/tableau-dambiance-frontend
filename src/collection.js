@@ -24,35 +24,36 @@ class Collection {
     // collectionEl.addEventListener("click", this.clickOnCollection);
   }
 
-  clickOnCollection = (e) => {
-    const allCollections = document.querySelectorAll(".each-collection");
-    console.log(allCollections);
-    debugger;
+  // clickOnCollection = (e) => {
+  //   const allCollections = document.querySelectorAll(".each-collection");
+  //   console.log(allCollections);
+  //   debugger;
 
-    for (const collection of allCollections) {
-      collection.addEventListener("click", (e) => {
-        e.stopImmediatePropagation();
-        // e.stopPropagation();
-        // console.log(collection);
-        // debugger;
-        const foundCollection = Collection.all.find(
-          (c) => c.name === e.target.innerText
-        );
-        foundCollection.accessCollection(e);
-        foundCollection.renamingCollection(e);
-      });
-    }
+  //   for (const collection of allCollections) {
+  //     collection.addEventListener("click", (e) => {
+  //       e.stopImmediatePropagation();
+  //       // e.stopPropagation();
+  //       // console.log(collection);
+  //       // debugger;
+  //       const foundCollection = Collection.all.find(
+  //         (c) => c.name === e.target.innerText
+  //       );
+  //       foundCollection.accessCollection(e);
+  //       foundCollection.renamingCollection(e);
+  //     });
+  //   }
 
-    // debugger;
-    // e.stopPropagation();
-    // e.stopImmediatePropagation();
+  //   // debugger;
+  //   // e.stopPropagation();
+  //   // e.stopImmediatePropagation();
 
-    // const foundCollection = Collection.all.find((c) => c.name === this.name);
-    // foundCollection.accessCollection();
-  };
+  //   // const foundCollection = Collection.all.find((c) => c.name === this.name);
+  //   // foundCollection.accessCollection();
+  // };
 
   // accessCollection(collection) {
   accessCollection = (e) => {
+    // console.log(this);
     e.stopPropagation();
 
     pictureBoard.innerHTML = "";
