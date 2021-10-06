@@ -23,19 +23,33 @@ class Collection {
     // collectionEl.addEventListener("click", this.clickOnCollection);
   }
 
-  // clickOnCollection = (e) => {
-  //   // e.stopPropagation();
-  //   e.stopImmediatePropagation();
+  clickOnCollection = (e) => {
+    const allCollections = document.querySelectorAll(".each-collection");
 
-  //   const foundCollection = Collection.all.find((c) => c.name === this.name);
-  //   foundCollection.accessCollection();
-  // };
+    for (const collection of allCollections) {
+      collection.addEventListener("click", (e) => {
+        e.stopImmediatePropagation();
+        // e.stopPropagation();
+        // console.log(collection);
+        // debugger;
+        const foundCollection = Collection.all.find(
+          (c) => c.name === e.target.innerText
+        );
+        foundCollection.accessCollection(e);
+      });
+    }
+
+    // debugger;
+    // e.stopPropagation();
+    // e.stopImmediatePropagation();
+
+    // const foundCollection = Collection.all.find((c) => c.name === this.name);
+    // foundCollection.accessCollection();
+  };
 
   // accessCollection(collection) {
-  accessCollection = () => {
-    const self = this;
-    // console.log(this);
-    // console.log(self);
+  accessCollection = (e) => {
+    e.stopPropagation();
 
     pictureBoard.innerHTML = "";
 
@@ -48,7 +62,7 @@ class Collection {
       renameTitle.style.display = "none";
     }
 
-    title.innerHTML = this.name;
+    title.innerText = this.name;
 
     pictureApiCall.getPicturesApi(this);
 
@@ -83,51 +97,62 @@ class Collection {
     });
 
     title.addEventListener("click", (e) => {
-      // e.stopImmediatePropagation();
-      e.stopPropagation();
-      console.log(this);
-      console.log(e.target);
+      e.stopImmediatePropagation();
 
-      // const foundCollection = Collection.all.find(
-      //   (c) => c.name === e.target.innerText
-      // );
-
-      // const foundCollection = Collection.all.find((c) => c.name === this.name);
-
-      // console.log(foundCollection);
-
-      // renameTitle.style.display = "block";
-
-      // renameTitle.addEventListener("submit", (e) => {
-      //   e.preventDefault();
-      //   // e.stopImmediatePropagation();
-      //   e.stopPropagation();
-      // this.renamingCollection(e);
-      // });
+      const foundCollection = Collection.all.find(
+        (c) => c.name === e.target.innerText
+      );
+      foundCollection.renamingCollection(e);
     });
+
+    // title.addEventListener("click", this.renamingCollection);
+
+    // title.addEventListener("click", (e) => {
+    //   // e.stopImmediatePropagation();
+    //   // e.stopPropagation();
+    //   console.log(this);
+    //   console.log(self);
+    //   console.log(e.target);
+    //   debugger;
+
+    //   // const foundCollection = Collection.all.find(
+    //   //   (c) => c.name === e.target.innerText
+    //   // );
+
+    //   // const foundCollection = Collection.all.find((c) => c.name === this.name);
+
+    //   // console.log(foundCollection);
+
+    //   // renameTitle.style.display = "block";
+
+    //   // renameTitle.addEventListener("submit", (e) => {
+    //   //   e.preventDefault();
+    //   //   // e.stopImmediatePropagation();
+    //   //   e.stopPropagation();
+    //   this.renamingCollection();
+    //   // });
+    // });
   };
 
-  // renamingCollection = (e) => {
-  //   console.log(this);
-  //   console.log(e.target);
-  //   debugger;
-  //   // debugger;
-
-  //   // renameTitle.style.display = "block";
-
-  //   // renameTitle.addEventListener("submit", (e) => {
-  //   //   e.preventDefault();
-  //   //   e.stopImmediatePropagation();
-  //   //   // e.stopPropagation();
-  //   //   // this.renamingCollection(e);
-  //   //   debugger;
-  //   //   this.name = e.target.querySelector(".file-rename").value;
-  //   //   collectionApiCall.renameCollection(this);
-  //   // });
-
-  //   // this.name = e.target.querySelector(".file-rename").value;
-  //   // collectionApiCall.renameCollection(this);
-  // };
+  renamingCollection = (e) => {
+    e.stopImmediatePropagation();
+    console.log(this);
+    // debugger;
+    renameTitle.style.display = "block";
+    renameTitle.reset();
+    renameTitle.addEventListener("submit", (e) => {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      // e.stopPropagation();
+      // this.renamingCollection(e);
+      console.log(this);
+      debugger;
+      this.name = e.target.querySelector(".file-rename").value;
+      // collectionApiCall.renameCollection(this);
+    });
+    // this.name = e.target.querySelector(".file-rename").value;
+    // collectionApiCall.renameCollection(this);
+  };
 }
 
 // addNewPicture() {
