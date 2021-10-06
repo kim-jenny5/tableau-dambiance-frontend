@@ -318,6 +318,22 @@ a:link {
   margin-top: 50px;
 }
 
+.delete {
+  position: fixed;
+  /* top: 23vh;
+  margin-left: 86vw; */
+  /* top: 15vh;
+  margin-left: 89vw; */
+  /* border-width: thin; */
+  border-color: #ff5349;
+  border-radius: 15px;
+  color: white;
+  background-color: #ff5349;
+  font-family: "Open Sans", sans-serif;
+  font-style: bold;
+  font-size: 14px;
+}
+
 /* COLLECTION  */
 .submit-btn {
   border: none;
