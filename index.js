@@ -110,7 +110,6 @@ newUser.addEventListener("click", function () {
     } else {
       userApiCall.createUsers();
     }
-    // userApiCall.createUsers();
   });
 
   backArrowNew.addEventListener("click", () => {

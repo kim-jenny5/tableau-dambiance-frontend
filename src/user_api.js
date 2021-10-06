@@ -9,7 +9,6 @@ class UserApi {
       .then((data) => {
         const u = new User(data.find((u) => u.username === username));
         u.setUpUsersPage();
-        // u.newCollectionUponLogIn();
         // for (const user of data) {
         //   const u = new User(user);
         //   u.findUser();

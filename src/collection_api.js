@@ -35,9 +35,6 @@ class CollectionApi {
         const c = new Collection(data);
         c.appendCollections();
         c.accessCollection();
-        // new Collection(data);
-        // title.innerHTML = data.name;
-        // user.gettingCollections();
       });
   }
 
@@ -63,18 +60,8 @@ class CollectionApi {
 
     console.log(configObj);
 
-    // debugger;
-
     fetch(`${this.url}/collections/${id}`, configObj).then(() => {
-      // debugger;
       collection.accessCollection(collection.name);
-      // collection.adjustingCollection();
     });
-    // .then((resp) => resp.json())
-    // .then((data) => {
-    //   // data.accessCollection();
-    //   console.log(data);
-    //   debugger;
-    // });
   }
 }

@@ -77,10 +77,6 @@ class Collection {
         e.preventDefault();
         e.stopImmediatePropagation();
         this.renamingCollection(e);
-        // console.log(this);
-        // debugger;
-        // collectionApiCall.renameCollection(this, newTitle);
-        // collectionApiCall.renameCollection(newTitle);
       });
     });
   }

@@ -33,19 +33,6 @@ class User {
     const username = document.querySelector(".username-display");
     username.innerText = this.username;
 
-    // title.addEventListener("click", () => {
-    //   const renameTitle = document.querySelector(".renaming-form");
-    //   renameTitle.style.display = "block";
-
-    //   renameTitle.addEventListener("submit", (e) => {
-    //     e.preventDefault();
-    //     // e.stopImmediatePropagation();
-    //     const newTitle = e.target.querySelector(".file-rename").value;
-    //     // collectionApiCall.renameCollection(this, newTitle);
-    //     collectionApiCall.renameCollection(this);
-    //   });
-    // });
-
     hamburger.addEventListener("click", () => {
       collectionsMenu.style.display = "block";
       if (xCollectionsBtn.style.display === "none") {
@@ -83,7 +70,6 @@ class User {
 
     const blank = document.querySelector(".blank");
     blank.addEventListener("click", () => {
-      // debugger;
       collectionsMenu.style.display = "none";
       hamburger.style.display = "block";
       if (collectionForm.style.display === "block") {
@@ -111,8 +97,4 @@ class User {
       }
     });
   }
-
-  // newCollectionUponLogIn() {
-  //   collectionApiCall.createCollections(this);
-  // }
 }
