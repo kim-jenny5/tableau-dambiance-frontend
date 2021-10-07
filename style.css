@@ -171,8 +171,10 @@ a:link {
 
 .home {
   position: absolute;
-  left: 30%;
-  top: 25%;
+  /* left: 30%;
+  top: 25%; */
+  top: 33%;
+  left: 33%;
 }
 
 .welcome,
@@ -183,6 +185,7 @@ a:link {
 
 .instructions {
   font-family: "Open Sans", sans-serif;
+  font-size: 12px;
 }
 
 .hello-user {
