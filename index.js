@@ -41,6 +41,8 @@ const title = document.querySelector(".file-name");
 const pictureBoardCont = document.querySelector(".picture-board .container");
 const pictureBoard = document.querySelector(".picture-board-col");
 const addBtn = document.querySelector(".add-btn-container");
+const deleteForm = document.createElement("form");
+const deleteBtn = document.createElement("button");
 
 // collectionApiCall.getCollectionsApi();
 // userApiCall.getUsersApi();

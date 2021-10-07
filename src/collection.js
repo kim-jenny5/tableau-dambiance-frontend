@@ -1,6 +1,4 @@
 const xCollectionsBtn = document.querySelector(".close-collections-btn");
-const deleteForm = document.createElement("form");
-const deleteBtn = document.createElement("button");
 
 // const renameTitle = document.querySelector(".renaming-form");
 
@@ -72,10 +70,10 @@ class Collection {
 
     mainPg.appendChild(deleteBtn);
 
-    this.deleteCollection();
+    this.createDeleteBtn();
   };
 
-  deleteCollection() {
+  createDeleteBtn() {
     deleteBtn.setAttribute("form", `deleteColl${this.id}`);
     deleteBtn.setAttribute("type", "submit");
     deleteBtn.setAttribute("class", "btn btn-outline-dark delete fw-bold");
@@ -100,15 +98,15 @@ class Collection {
       Delete Entire Collection
     `;
 
-    deleteBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      if (window.confirm("Are you sure you want to delete this collection?")) {
-        collectionApiCall.deleteCollectionApi(
-          parseInt(e.target.id.match(/\d/))
-        );
-      }
-    });
+    //   deleteBtn.addEventListener("click", (e) => {
+    //     e.preventDefault();
+    //     e.stopImmediatePropagation();
+    //     if (window.confirm("Are you sure you want to delete this collection?")) {
+    //       collectionApiCall.deleteCollectionApi(
+    //         parseInt(e.target.id.match(/\d/))
+    //       );
+    //     }
+    //   });
   }
 }
 
