@@ -98,6 +98,11 @@ class Collection {
     deleteForm.style.display = "block";
     deleteForm.addEventListener("submit", (e) => {
       e.preventDefault();
+      if (window.confirm("Are you sure you want to delete this collection?")) {
+        console.log(this);
+        console.log(e.target);
+        debugger;
+      }
     });
   };
 }
