@@ -18,6 +18,9 @@ class User {
     returningUserPg.style.display = "none";
     mainPg.style.display = "block";
 
+    const helloUser = document.querySelector(".hello-user");
+    helloUser.innerHTML += `${this.username}.`;
+
     const username = document.querySelector(".username-display");
     username.innerText = this.username;
 

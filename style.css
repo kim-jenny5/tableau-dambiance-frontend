@@ -166,6 +166,16 @@ a:link {
 
 /* MAIN PAGE */
 
+.welcome,
+.hello-user {
+  font-size: 48px;
+  /* position: absolute; */
+}
+
+.hello-user {
+  font-weight: bold;
+}
+
 .file-name {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;

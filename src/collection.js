@@ -32,7 +32,10 @@ class Collection {
     }
   }
 
-  accessCollection = (e) => {
+  accessCollection() {
+    const newPictureForm = document.querySelector(".new-picture-form");
+    newPictureForm.style.display = "block";
+
     window.scrollTo(0, 0);
     if (deleteBtn) deleteBtn.remove();
 
@@ -71,7 +74,7 @@ class Collection {
     mainPg.appendChild(deleteBtn);
 
     this.createDeleteBtn();
-  };
+  }
 
   createDeleteBtn() {
     deleteBtn.setAttribute("form", `deleteColl${this.id}`);
