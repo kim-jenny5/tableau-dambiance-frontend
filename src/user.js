@@ -27,7 +27,7 @@ class User {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
       }
-      this.gettingCollections();
+      // this.gettingCollections();
     });
 
     newBtn.addEventListener("click", () => {
@@ -75,46 +75,14 @@ class User {
     });
   }
 
-  gettingCollections() {
-    //   // const usersCollection = Collection.all.filter((collection) => {
-    //   //   return collection.user.id === this.id;
-    //   // });
-    //   // for (const collection of usersCollection) {
-    //   //   collection.appendCollections();
-    //   // }
-    //   // xCollectionsBtn.addEventListener("click", function () {
-    //   //   collectionsDisplay.innerHTML = "";
-    //   //   hamburger.style.display = "block";
-    //   //   xCollectionsBtn.style.display = "none";
-    //   //   collectionsMenu.style.display = "none";
-    //   //   if (collectionForm.style.display === "block") {
-    //   //     collectionForm.style.display = "none";
-    //   //   }
-    //   // });
-    //   // const allCollections = document.querySelectorAll(".each-collection");
-    //   // for (const collection of allCollections) {
-    //   //   collection.addEventListener("click", (e) => {
-    //   //     // e.stopImmediatePropagation();
-    //   //     // e.stopPropagation();
-    //   //     const foundCollection = Collection.all.find(
-    //   //       (c) => c.name === e.target.innerText
-    //   //     );
-    //   //     foundCollection.accessCollection();
-    //   //   });
-    //   // }
-    const allCollections = document.querySelectorAll(".each-collection");
-    // console.log(allCollections);
-
-    // allCollections.forEach((collection) => {
-    // collection.addEventListener
-    // });
-    for (const collection of allCollections) {
-      collection.addEventListener("click", (e) => {
-        e.stopImmediatePropagation();
-        const foundCollection = Collection.all.find((c) => c.id == e.target.id);
-        foundCollection.accessCollection(e);
-        // foundCollection.renamingCollection(e);
-      });
-    }
-  }
+  // gettingCollections() {
+  //   const allCollections = document.querySelectorAll(".each-collection");
+  //   for (const collection of allCollections) {
+  //     collection.addEventListener("click", (e) => {
+  //       e.stopImmediatePropagation();
+  //       const foundCollection = Collection.all.find((c) => c.id == e.target.id);
+  //       foundCollection.accessCollection(e);
+  //     });
+  //   }
+  // }
 }

@@ -23,48 +23,20 @@ class Collection {
     collectionsDisplay.appendChild(collectionEl);
   }
 
-  // appendCollections() {
-  //   const collectionEl = document.createElement("div");
-  //   collectionEl.className = "each-collection";
-  //   collectionEl.id = this.id;
-  //   collectionEl.innerText = this.name;
-  //   collectionsDisplay.appendChild(collectionEl);
-  //   // collectionEl.addEventListener("click", this.clickOnCollection);
-  // }
+  clickOnCollection() {
+    const allCollections = document.querySelectorAll(".each-collection");
+    for (const collection of allCollections) {
+      collection.addEventListener("click", (e) => {
+        e.stopImmediatePropagation();
+        const foundCollection = Collection.all.find((c) => c.id == e.target.id);
+        foundCollection.accessCollection(e);
+      });
+    }
+  }
 
-  // clickOnCollection = (e) => {
-  //   const allCollections = document.querySelectorAll(".each-collection");
-  //   console.log(allCollections);
-  //   debugger;
-
-  //   for (const collection of allCollections) {
-  //     collection.addEventListener("click", (e) => {
-  //       e.stopImmediatePropagation();
-  //       // e.stopPropagation();
-  //       // console.log(collection);
-  //       // debugger;
-  //       const foundCollection = Collection.all.find(
-  //         (c) => c.name === e.target.innerText
-  //       );
-  //       foundCollection.accessCollection(e);
-  //       foundCollection.renamingCollection(e);
-  //     });
-  //   }
-
-  //   // debugger;
-  //   // e.stopPropagation();
-  //   // e.stopImmediatePropagation();
-
-  //   // const foundCollection = Collection.all.find((c) => c.name === this.name);
-  //   // foundCollection.accessCollection();
-  // };
-
-  // accessCollection(collection) {
   accessCollection = (e) => {
     window.scrollTo(0, 0);
     if (deleteBtn) deleteBtn.remove();
-    // e.stopPropagation();
-    // const self = this;
 
     pictureBoard.innerHTML = "";
 
@@ -77,10 +49,6 @@ class Collection {
       hamburger.style.display = "block";
       collectionsMenu.style.display = "none";
     }
-
-    // if (renameTitle.style.display === "block") {
-    //   renameTitle.style.display = "none";
-    // }
 
     title.innerText = this.name;
 
@@ -135,22 +103,9 @@ class Collection {
     deleteBtn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopImmediatePropagation();
-      // const foundCollection = Collection.all.find((c) => c.id == e.target.id);
-      // collectionApiCall.deleteCollectionApi(foundCollection);
       collectionApiCall.deleteCollectionApi(parseInt(e.target.id));
     });
   }
-
-  // deletingForm = (e) => {
-  //   e.preventDefault();
-  //   // console.log(this);
-  //   // debugger;
-  //   if (window.confirm("Are you sure you want to delete this collection?")) {
-  //     // console.log(this);
-  //     console.log(e.target);
-  //     debugger;
-  //   }
-  // };
 }
 
 // addNewPicture() {

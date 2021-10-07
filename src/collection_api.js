@@ -9,11 +9,9 @@ class CollectionApi {
       .then((data) => {
         const collections = data.filter((c) => c.user.id === user.id);
         for (const collection of collections) {
-          new Collection(collection);
-          // const c = new Collection(collection);
-          // c.appendCollections();
-          // c.clickOnCollection();
-          // c.deleteCollection();
+          // new Collection(collection);
+          const c = new Collection(collection);
+          c.clickOnCollection();
         }
       })
       .catch();
@@ -43,36 +41,28 @@ class CollectionApi {
       });
   }
 
-  renameCollection(collection) {
-    const { name, id } = collection;
+  // renameCollection(collection) {
+  //   const { name, id } = collection;
 
-    const collectionInfo = {
-      name,
-      id,
-      user: collection.user,
-    };
+  //   const collectionInfo = {
+  //     name,
+  //     id,
+  //     user: collection.user,
+  //   };
 
-    // debugger;
-    // console.log(collectionInfo);
+  //   const configObj = {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     body: JSON.stringify(collectionInfo),
+  //   };
 
-    const configObj = {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(collectionInfo),
-    };
-
-    // console.log(configObj);
-
-    fetch(`${this.url}/collections/${id}`, configObj).then(() => {
-      // debugger;
-      // collection.accessCollection(collection.name);
-      // collection.appendCollections();
-      collection.accessCollection();
-    });
-  }
+  //   fetch(`${this.url}/collections/${id}`, configObj).then(() => {
+  //     collection.accessCollection();
+  //   });
+  // }
 
   deleteCollectionApi(id) {
     console.log(id);
