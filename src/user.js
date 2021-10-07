@@ -66,7 +66,6 @@ class User {
     });
 
     xCollectionsBtn.addEventListener("click", function () {
-      collectionsDisplay.innerHTML = "";
       hamburger.style.display = "block";
       xCollectionsBtn.style.display = "none";
       collectionsMenu.style.display = "none";
