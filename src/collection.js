@@ -102,6 +102,12 @@ class Collection {
     });
 
     // title.addEventListener("click", this.renamingCollection);
+    title.addEventListener("click", (e) => {
+      // const foundCollection = Collection.all.find((c) => c.id == e.target.id);
+
+      // console.log(this);
+      debugger;
+    });
 
     // title.addEventListener("click", (e) => {
     //   // e.stopImmediatePropagation();
@@ -132,7 +138,7 @@ class Collection {
 
   renamingCollection = (e) => {
     console.log(this);
-
+    debugger;
     title.addEventListener("click", (e) => {
       e.stopImmediatePropagation();
 

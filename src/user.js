@@ -122,13 +122,15 @@ class User {
     const allCollections = document.querySelectorAll(".each-collection");
     // console.log(allCollections);
 
+    // allCollections.forEach((collection) => {
+    // collection.addEventListener
+    // });
     for (const collection of allCollections) {
       collection.addEventListener("click", (e) => {
         // console.log(e.target);
         // debugger;
         e.stopImmediatePropagation();
         // e.stopPropagation();
-        // console.log(collection);
         // debugger;
         const foundCollection = Collection.all.find((c) => c.id == e.target.id);
         foundCollection.accessCollection(e);
