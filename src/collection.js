@@ -38,12 +38,10 @@ class Collection {
 
     mainPg.style.display = "block";
     home.style.display = "none";
-    // pictureBoardCont.style.display = "block";
+    pictureBoard.innerHTML = "";
 
     window.scrollTo(0, 0);
     if (deleteBtn) deleteBtn.remove();
-
-    pictureBoard.innerHTML = "";
 
     const scrollBtns = document.querySelectorAll(".scroll-btns");
     for (const btn of scrollBtns) {
@@ -104,16 +102,6 @@ class Collection {
       </svg>
       Delete Entire Collection
     `;
-
-    //   deleteBtn.addEventListener("click", (e) => {
-    //     e.preventDefault();
-    //     e.stopImmediatePropagation();
-    //     if (window.confirm("Are you sure you want to delete this collection?")) {
-    //       collectionApiCall.deleteCollectionApi(
-    //         parseInt(e.target.id.match(/\d/))
-    //       );
-    //     }
-    //   });
   }
 }
 

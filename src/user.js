@@ -14,7 +14,7 @@ class User {
     User.all.push(this);
   }
 
-  openHomePage() {
+  setUpUsersPage() {
     startingPg.style.display = "none";
     newUserPg.style.display = "none";
     returningUserPg.style.display = "none";
@@ -22,13 +22,6 @@ class User {
     home.style.display = "block";
 
     helloUser.innerHTML = `${this.username}.`;
-
-    this.setUpUsersPage();
-  }
-
-  setUpUsersPage() {
-    // debugger;
-    mainPg.style.display = "block";
 
     username.innerText = this.username;
 
@@ -107,9 +100,8 @@ class User {
         );
       }
       pictureBoard.innerHTML = "";
-      this.openHomePage();
       mainPg.style.display = "none";
-      // CREATE A HOME PAGE FOR THE MAIN PAGE
+      this.setUpUsersPage();
     });
   }
 }
