@@ -73,4 +73,6 @@ class CollectionApi {
       collection.accessCollection();
     });
   }
+
+  deleteCollectionApi(collection) {}
 }

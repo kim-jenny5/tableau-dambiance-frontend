@@ -132,23 +132,14 @@ class Collection {
       Delete Entire Collection
     `;
 
-    // mainPg.appendChild(deleteBtn);
-    console.log(deleteBtn);
-    // debugger;
-    // const correctCollection = e.target.innerText;
+    // console.log(e.target);
 
     deleteBtn.addEventListener("click", (e) => {
       e.preventDefault();
+      e.stopImmediatePropagation();
       const foundCollection = Collection.all.find((c) => c.id == e.target.id);
       console.log(foundCollection);
-      //   e.stopImmediatePropagation();
-      //   console.log(correctCollection);
-      debugger;
-      //   if (window.confirm("Are you sure you want to delete this collection?")) {
-      //     // console.log(this);
-      //     console.log(e.target);
-      //     debugger;
-      //   }
+      collectionApiCall.deleteCollectionApi(foundCollection);
     });
   }
 
