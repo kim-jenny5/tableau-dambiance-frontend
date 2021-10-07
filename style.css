@@ -300,7 +300,6 @@ a:link {
 .new-btn {
   border: none;
   background-color: transparent;
-  z-index: 1;
 }
 
 .add-btn {

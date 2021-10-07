@@ -36,7 +36,6 @@ class CollectionApi {
       .then((resp) => resp.json())
       .then((data) => {
         const c = new Collection(data);
-        c.appendCollections();
         c.accessCollection();
       });
   }
