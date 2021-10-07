@@ -171,11 +171,7 @@ a:link {
   font-weight: bold;
   font-size: 14px;
   position: fixed;
-  /* left: 0;
-  right: 0; */
-  cursor: pointer;
-  /* width: max-content; */
-  /* display: inline-block; */
+  /* cursor: pointer; */
 }
 
 /* .file-name-rename {

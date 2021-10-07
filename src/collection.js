@@ -53,6 +53,7 @@ class Collection {
 
   // accessCollection(collection) {
   accessCollection = (e) => {
+    window.scrollTo(0, 0);
     e.stopPropagation();
 
     const self = this;
