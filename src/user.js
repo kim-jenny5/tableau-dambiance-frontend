@@ -12,18 +12,6 @@ class User {
     User.all.push(this);
   }
 
-  // findUser() {
-  //   const foundUser = User.all.find((u) => {
-  //     return u.username === returningUsername.value;
-  //   });
-
-  //   if (foundUser) {
-  //     foundUser.setUpUsersPage();
-  //   } else {
-  //     alert("Sorry! Username not found.");
-  //   }
-  // }
-
   setUpUsersPage() {
     // this.gettingCollections();
     // collectionApiCall.getCollectionsApi(this);
@@ -92,7 +80,6 @@ class User {
   }
 
   gettingCollections() {
-    //   // collectionApiCall.getCollectionsApi(this);
     //   // const usersCollection = Collection.all.filter((collection) => {
     //   //   return collection.user.id === this.id;
     //   // });

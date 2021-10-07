@@ -56,6 +56,8 @@ class Collection {
     // console.log(this);
     e.stopPropagation();
 
+    const self = this;
+
     pictureBoard.innerHTML = "";
 
     if (collectionsMenu.style.display === "block") {
@@ -70,20 +72,6 @@ class Collection {
     title.innerText = this.name;
 
     pictureApiCall.getPicturesApi(this);
-
-    // if (collection) {
-    //   // pictureApiCall.getPicsForCollection(this);
-    //   pictureApiCall.getPicturesApi(this);
-    // } else {
-    //   const collectionPictures = Picture.all.filter((pic) => {
-    //     debugger;
-    //     return pic.collection.name === this.name;
-    //   });
-
-    //   for (const picture of collectionPictures) {
-    //     picture.attachToDom();
-    //   }
-    // }
 
     const uparrow = document.querySelector(".uparrow");
     const downarrow = document.querySelector(".downarrow");
@@ -100,72 +88,6 @@ class Collection {
       debugger;
       this.addNewPicture();
     });
-
-    // title.addEventListener("click", this.renamingCollection);
-    title.addEventListener("click", (e) => {
-      // const foundCollection = Collection.all.find((c) => c.id == e.target.id);
-
-      // console.log(this);
-      debugger;
-    });
-
-    // title.addEventListener("click", (e) => {
-    //   // e.stopImmediatePropagation();
-    //   // e.stopPropagation();
-    //   console.log(this);
-    //   console.log(self);
-    //   console.log(e.target);
-    //   debugger;
-
-    //   // const foundCollection = Collection.all.find(
-    //   //   (c) => c.name === e.target.innerText
-    //   // );
-
-    //   // const foundCollection = Collection.all.find((c) => c.name === this.name);
-
-    //   // console.log(foundCollection);
-
-    //   // renameTitle.style.display = "block";
-
-    //   // renameTitle.addEventListener("submit", (e) => {
-    //   //   e.preventDefault();
-    //   //   // e.stopImmediatePropagation();
-    //   //   e.stopPropagation();
-    //   this.renamingCollection();
-    //   // });
-    // });
-  };
-
-  renamingCollection = (e) => {
-    console.log(this);
-    debugger;
-    title.addEventListener("click", (e) => {
-      e.stopImmediatePropagation();
-
-      const foundCollection = Collection.all.find(
-        (c) => c.name === e.target.innerText
-      );
-      // foundCollection.renamingCollection(e);
-      renameTitle.style.display = "block";
-      renameTitle.reset();
-      renameTitle.addEventListener("submit", (e) => {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        // e.stopPropagation();
-        // this.renamingCollection(e);
-        console.log(foundCollection);
-        debugger;
-        this.name = e.target.querySelector(".file-rename").value;
-        // collectionApiCall.renameCollection(this);
-      });
-    });
-
-    // e.stopImmediatePropagation();
-    // console.log(this);
-    // // debugger;
-    // this.name = e.target.querySelector(".file-rename").value;
-    // collectionApiCall.renameCollection(this);
-  };
 }
 
 // addNewPicture() {

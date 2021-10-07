@@ -175,6 +175,7 @@ a:link {
   left: 0;
   right: 0;
   cursor: pointer;
+  /* width: max-content; */
 }
 
 /* .file-name-rename {
