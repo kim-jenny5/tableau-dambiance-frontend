@@ -16,7 +16,7 @@ class Collection {
 
     const collectionEl = document.createElement("div");
     collectionEl.className = "each-collection";
-    collectionEl.id = this.id;
+    collectionEl.id = `collection-${this.id}`;
     collectionEl.innerText = this.name;
     collectionsDisplay.appendChild(collectionEl);
   }
@@ -26,7 +26,9 @@ class Collection {
     for (const collection of allCollections) {
       collection.addEventListener("click", (e) => {
         e.stopImmediatePropagation();
-        const foundCollection = Collection.all.find((c) => c.id == e.target.id);
+        const foundCollection = Collection.all.find(
+          (c) => c.id == parseInt(e.target.id.match(/\d/))
+        );
         foundCollection.accessCollection(e);
       });
     }
@@ -79,10 +81,10 @@ class Collection {
   }
 
   createDeleteBtn() {
-    deleteBtn.setAttribute("form", `deleteColl${this.id}`);
+    deleteBtn.setAttribute("form", `deleteColl-${this.id}`);
     deleteBtn.setAttribute("type", "submit");
     deleteBtn.setAttribute("class", "btn btn-outline-dark delete fw-bold");
-    deleteBtn.setAttribute("id", `collection-${this.id}`);
+    deleteBtn.setAttribute("id", `deleteColl-${this.id}`);
 
     deleteBtn.innerHTML = `<svg
         xmlns="http://www.w3.org/2000/svg"

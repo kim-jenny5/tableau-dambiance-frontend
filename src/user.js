@@ -94,6 +94,7 @@ class User {
     deleteBtn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopImmediatePropagation();
+      debugger;
       if (window.confirm("Are you sure you want to delete this collection?")) {
         collectionApiCall.deleteCollectionApi(
           parseInt(e.target.id.match(/\d/))
