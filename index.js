@@ -8,7 +8,7 @@ const startingPg = document.querySelector(".starting-page");
 const newUserPg = document.querySelector(".new-user-page");
 const returningUserPg = document.querySelector(".returning-user-page");
 const mainPg = document.querySelector(".main-page");
-const homepage = document.querySelector(".homepage");
+const home = document.querySelector(".home");
 
 //about side menu
 const about = document.querySelector(".about-app");

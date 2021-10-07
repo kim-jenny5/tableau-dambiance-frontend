@@ -18,8 +18,11 @@ class User {
     returningUserPg.style.display = "none";
     mainPg.style.display = "block";
 
+    home.style.display = "block";
     const helloUser = document.querySelector(".hello-user");
-    helloUser.innerHTML += `${this.username}.`;
+    helloUser.innerHTML = `${this.username}.`;
+
+    // const randEmoji = document.querySelector(".rand-emoji");
 
     const username = document.querySelector(".username-display");
     username.innerText = this.username;
