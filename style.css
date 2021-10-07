@@ -3,6 +3,7 @@
 
 body {
   font-family: "Playfair Display", serif !important;
+  /* height: 100vh !important; */
 }
 
 a:link {
@@ -164,18 +165,17 @@ a:link {
 }
 
 /* MAIN PAGE */
-.file-container {
-}
 
 .file-name {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 14px;
   position: fixed;
-  left: 0;
-  right: 0;
+  /* left: 0;
+  right: 0; */
   cursor: pointer;
   /* width: max-content; */
+  /* display: inline-block; */
 }
 
 /* .file-name-rename {
