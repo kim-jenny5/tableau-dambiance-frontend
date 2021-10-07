@@ -94,14 +94,17 @@ class User {
     deleteBtn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopImmediatePropagation();
-      debugger;
+      // debugger;
+      const id = parseInt(e.target.id.match(/\d/));
       if (window.confirm("Are you sure you want to delete this collection?")) {
-        collectionApiCall.deleteCollectionApi(
-          parseInt(e.target.id.match(/\d/))
-        );
+        collectionApiCall.deleteCollectionApi(id);
       }
       pictureBoard.innerHTML = "";
       mainPg.style.display = "none";
+      document
+        .querySelector(".collections-display")
+        .querySelector(`#collection-${id}`)
+        .remove();
       this.setUpUsersPage();
     });
   }
