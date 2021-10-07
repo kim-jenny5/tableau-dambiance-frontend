@@ -1,4 +1,6 @@
 const collectionForm = document.querySelector(".new-collection-form");
+const helloUser = document.querySelector(".hello-user");
+const username = document.querySelector(".username-display");
 
 const newBtn = document.querySelector(".new-btn");
 
@@ -12,19 +14,22 @@ class User {
     User.all.push(this);
   }
 
-  setUpUsersPage() {
+  openHomePage() {
     startingPg.style.display = "none";
     newUserPg.style.display = "none";
     returningUserPg.style.display = "none";
-    mainPg.style.display = "block";
-
+    hamburger.style.display = "block";
     home.style.display = "block";
-    const helloUser = document.querySelector(".hello-user");
+
     helloUser.innerHTML = `${this.username}.`;
 
-    // const randEmoji = document.querySelector(".rand-emoji");
+    this.setUpUsersPage();
+  }
 
-    const username = document.querySelector(".username-display");
+  setUpUsersPage() {
+    // debugger;
+    mainPg.style.display = "block";
+
     username.innerText = this.username;
 
     hamburger.addEventListener("click", () => {
@@ -101,7 +106,9 @@ class User {
           parseInt(e.target.id.match(/\d/))
         );
       }
-      // this.setUpUsersPage();
+      pictureBoard.innerHTML = "";
+      this.openHomePage();
+      mainPg.style.display = "none";
       // CREATE A HOME PAGE FOR THE MAIN PAGE
     });
   }

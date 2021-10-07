@@ -33,6 +33,7 @@ const backArrowReturning = document.querySelector(".back-arrow-returning");
 
 //collections side menu
 const hamburger = document.querySelector(".hamburger");
+// const hamburger = document.querySelector(".hamburger2");
 const collectionsMenu = document.querySelector(".collections-side-menu");
 const collectionsDisplay = document.querySelector(".collections-display");
 const collectionName = document.querySelector(".new-name");

@@ -9,7 +9,8 @@ class UserApi {
       .then((data) => {
         const u = new User(data.find((u) => u.username === username));
         collectionApiCall.getCollectionsApi(u);
-        u.setUpUsersPage();
+        // u.setUpUsersPage();
+        u.openHomePage();
         u.deletingCollection();
       })
       .catch(() => alert("Sorry! Username not found."));
