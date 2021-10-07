@@ -1,5 +1,5 @@
 const xCollectionsBtn = document.querySelector(".close-collections-btn");
-const renameTitle = document.querySelector(".renaming-form");
+// const renameTitle = document.querySelector(".renaming-form");
 
 class Collection {
   static all = [];
@@ -65,9 +65,9 @@ class Collection {
       collectionsMenu.style.display = "none";
     }
 
-    if (renameTitle.style.display === "block") {
-      renameTitle.style.display = "none";
-    }
+    // if (renameTitle.style.display === "block") {
+    //   renameTitle.style.display = "none";
+    // }
 
     title.innerText = this.name;
 
@@ -87,6 +87,12 @@ class Collection {
     addBtn.addEventListener("click", (e) => {
       debugger;
       this.addNewPicture();
+    });
+
+    const deleteForm = document.querySelector(".delete-form");
+    deleteForm.style.display = "block";
+    deleteForm.addEventListener("submit", (e) => {
+      e.preventDefault();
     });
   };
 }

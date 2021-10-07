@@ -128,6 +128,7 @@ returningUser.addEventListener("click", function () {
 
   returningUserForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    e.stopImmediatePropagation();
     const usernameInput = e.target.querySelector(
       "#returning-user-username"
     ).value;
