@@ -3,25 +3,13 @@ const collectionApiCall = new CollectionApi(base_url);
 const userApiCall = new UserApi(base_url);
 const pictureApiCall = new PictureApi(base_url);
 
-const collectionsDisplay = document.querySelector(".collections-display");
-
-const pictureBoardCont = document.querySelector(".picture-board .container");
-const pictureBoard = document.querySelector(".picture-board-col");
-
-const title = document.querySelector(".file-name");
-const hamburger = document.querySelector(".hamburger");
-const collectionsMenu = document.querySelector(".collections-side-menu");
-
-const addBtn = document.querySelector(".add-btn-container");
-
-const collectionName = document.querySelector(".new-name");
-
 // different pages
 const startingPg = document.querySelector(".starting-page");
 const newUserPg = document.querySelector(".new-user-page");
 const returningUserPg = document.querySelector(".returning-user-page");
 const mainPg = document.querySelector(".main-page");
 
+//about side menu
 const about = document.querySelector(".about-app");
 const aboutDev = document.querySelector(".about-dev");
 const aboutMenu = document.querySelector(".about-side-menu");
@@ -38,8 +26,21 @@ const returningUser = document.querySelector(".returning-user");
 const returningUserForm = document.querySelector(".returning-user-form");
 const returningUsername = document.getElementById("returning-user-username");
 
+//back arrows
 const backArrowNew = document.querySelector(".back-arrow-new");
 const backArrowReturning = document.querySelector(".back-arrow-returning");
+
+//collections side menu
+const hamburger = document.querySelector(".hamburger");
+const collectionsMenu = document.querySelector(".collections-side-menu");
+const collectionsDisplay = document.querySelector(".collections-display");
+const collectionName = document.querySelector(".new-name");
+
+//collections
+const title = document.querySelector(".file-name");
+const pictureBoardCont = document.querySelector(".picture-board .container");
+const pictureBoard = document.querySelector(".picture-board-col");
+const addBtn = document.querySelector(".add-btn-container");
 
 // collectionApiCall.getCollectionsApi();
 // userApiCall.getUsersApi();
