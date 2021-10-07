@@ -99,17 +99,24 @@ class Collection {
       this.addNewPicture();
     });
 
+    this.deleteCollection();
+  };
+
+  deleteCollection() {
     const deleteForm = document.querySelector(".delete-form");
     deleteForm.style.display = "block";
+    console.log(this);
+    const self = this;
     deleteForm.addEventListener("submit", (e) => {
       e.preventDefault();
+      debugger;
       if (window.confirm("Are you sure you want to delete this collection?")) {
         console.log(this);
         console.log(e.target);
         debugger;
       }
     });
-  };
+  }
 }
 
 // addNewPicture() {
