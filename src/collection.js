@@ -79,7 +79,7 @@ class Collection {
     deleteBtn.setAttribute("form", `deleteColl${this.id}`);
     deleteBtn.setAttribute("type", "submit");
     deleteBtn.setAttribute("class", "btn btn-outline-dark delete fw-bold");
-    deleteBtn.setAttribute("id", `${this.id}`);
+    deleteBtn.setAttribute("id", `collection-${this.id}`);
 
     deleteBtn.innerHTML = `<svg
         xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ class Collection {
     deleteBtn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopImmediatePropagation();
-      collectionApiCall.deleteCollectionApi(parseInt(e.target.id));
+      collectionApiCall.deleteCollectionApi(parseInt(e.target.id.match(/\d/)));
     });
   }
 }

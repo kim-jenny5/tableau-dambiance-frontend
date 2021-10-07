@@ -85,4 +85,6 @@ class User {
   //     });
   //   }
   // }
+
+  // deleteCollection() {}
 }
