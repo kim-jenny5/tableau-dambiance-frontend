@@ -60,14 +60,16 @@ class User {
       }
     });
 
-    const blank = document.querySelector(".blank");
-    blank.addEventListener("click", () => {
-      collectionsMenu.style.display = "none";
-      hamburger.style.display = "block";
-      if (collectionForm.style.display === "block") {
-        collectionForm.style.display = "none";
-      }
-    });
+    const blank = document.querySelectorAll(".blank");
+    for (const page of blank) {
+      page.addEventListener("click", () => {
+        collectionsMenu.style.display = "none";
+        hamburger.style.display = "block";
+        if (collectionForm.style.display === "block") {
+          collectionForm.style.display = "none";
+        }
+      });
+    }
 
     xCollectionsBtn.addEventListener("click", function () {
       hamburger.style.display = "block";
