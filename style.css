@@ -282,15 +282,15 @@ a:link {
   cursor: pointer;
 }
 
-.scrollBtns {
+.scroll-btns {
   position: fixed;
   top: 20vh;
   margin-left: 90vw;
   cursor: pointer;
 }
 
-.scrollBtns:hover {
-  color: slategray;
+.scroll-btns:hover {
+  color: #808080;
 }
 
 .uparrow {

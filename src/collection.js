@@ -60,6 +60,11 @@ class Collection {
 
     pictureBoard.innerHTML = "";
 
+    const scrollBtns = document.querySelectorAll(".scroll-btns");
+    for (const btn of scrollBtns) {
+      btn.style.display = "block";
+    }
+
     if (collectionsMenu.style.display === "block") {
       hamburger.style.display = "block";
       collectionsMenu.style.display = "none";
