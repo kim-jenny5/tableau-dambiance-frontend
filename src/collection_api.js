@@ -13,6 +13,7 @@ class CollectionApi {
           // const c = new Collection(collection);
           // c.appendCollections();
           // c.clickOnCollection();
+          // c.deleteCollection();
         }
       })
       .catch();
