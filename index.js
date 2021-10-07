@@ -3,6 +3,10 @@ const collectionApiCall = new CollectionApi(base_url);
 const userApiCall = new UserApi(base_url);
 const pictureApiCall = new PictureApi(base_url);
 
+// collectionApiCall.getCollectionsApi();
+// userApiCall.getUsersApi();
+// pictureApiCall.getPicturesApi();
+
 // different pages
 const startingPg = document.querySelector(".starting-page");
 const newUserPg = document.querySelector(".new-user-page");
@@ -44,10 +48,6 @@ const pictureBoard = document.querySelector(".picture-board-col");
 const addBtn = document.querySelector(".add-btn-container");
 const deleteForm = document.createElement("form");
 const deleteBtn = document.createElement("button");
-
-// collectionApiCall.getCollectionsApi();
-// userApiCall.getUsersApi();
-// pictureApiCall.getPicturesApi();
 
 const qMark = document.querySelector(".open-about-btn");
 qMark.addEventListener("click", function () {

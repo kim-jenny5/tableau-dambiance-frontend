@@ -45,10 +45,6 @@ class Collection {
     window.scrollTo(0, 0);
     if (deleteBtn) deleteBtn.remove();
 
-    // if (blank.style.display === "block") {
-    //   blank.style.display = "none";
-    // }
-
     const scrollBtns = document.querySelectorAll(".scroll-btns");
     for (const btn of scrollBtns) {
       btn.style.display = "block";

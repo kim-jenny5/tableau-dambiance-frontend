@@ -81,17 +81,6 @@ class User {
     });
   }
 
-  // gettingCollections() {
-  //   const allCollections = document.querySelectorAll(".each-collection");
-  //   for (const collection of allCollections) {
-  //     collection.addEventListener("click", (e) => {
-  //       e.stopImmediatePropagation();
-  //       const foundCollection = Collection.all.find((c) => c.id == e.target.id);
-  //       foundCollection.accessCollection(e);
-  //     });
-  //   }
-  // }
-
   deletingCollection() {
     deleteBtn.addEventListener("click", (e) => {
       e.preventDefault();
