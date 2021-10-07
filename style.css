@@ -165,11 +165,12 @@ a:link {
 }
 
 /* MAIN PAGE */
-.main-page {
+.main-page,
+.home {
   position: relative;
 }
 
-.home {
+.home-container {
   position: absolute;
   top: 30%;
   left: 20%;
