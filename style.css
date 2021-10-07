@@ -171,25 +171,26 @@ a:link {
 
 .home {
   position: absolute;
-  /* left: 30%;
-  top: 25%; */
-  top: 33%;
-  left: 33%;
+  top: 30%;
+  left: 20%;
+  right: 0;
+  background: url("imgs/Camera _Flatline.png") no-repeat center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .welcome,
 .hello-user {
   font-size: 48px;
-  /* position: absolute; */
+}
+
+.hello-user {
+  font-weight: bold;
 }
 
 .instructions {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
-}
-
-.hello-user {
-  font-weight: bold;
 }
 
 .file-name {
