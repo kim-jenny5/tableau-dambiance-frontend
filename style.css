@@ -14,7 +14,7 @@ a:link {
   writing-mode: vertical-lr;
   font-size: 300%;
   position: fixed;
-  bottom: 7%;
+  bottom: 6%;
 }
 
 .dambiance {
@@ -165,16 +165,24 @@ a:link {
 }
 
 /* MAIN PAGE */
+.main-page {
+  position: relative;
+}
+
 .home {
-  margin-top: 100px;
-  /* left: 25%;
-  top: 25%; */
+  position: absolute;
+  left: 30%;
+  top: 25%;
 }
 
 .welcome,
 .hello-user {
   font-size: 48px;
   /* position: absolute; */
+}
+
+.instructions {
+  font-family: "Open Sans", sans-serif;
 }
 
 .hello-user {
