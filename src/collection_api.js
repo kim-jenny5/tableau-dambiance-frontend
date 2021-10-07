@@ -74,5 +74,13 @@ class CollectionApi {
     });
   }
 
-  deleteCollectionApi(collection) {}
+  deleteCollectionApi(id) {
+    console.log(id);
+    fetch(`${this.url}/collections/${id}`, { method: "DELETE" })
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+        debugger;
+      });
+  }
 }
