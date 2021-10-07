@@ -13,9 +13,6 @@ class User {
   }
 
   setUpUsersPage() {
-    // this.gettingCollections();
-    // collectionApiCall.getCollectionsApi(this);
-
     startingPg.style.display = "none";
     newUserPg.style.display = "none";
     returningUserPg.style.display = "none";
@@ -114,17 +111,11 @@ class User {
     // });
     for (const collection of allCollections) {
       collection.addEventListener("click", (e) => {
-        // console.log(e.target);
-        // debugger;
         e.stopImmediatePropagation();
-        // e.stopPropagation();
-        // debugger;
         const foundCollection = Collection.all.find((c) => c.id == e.target.id);
         foundCollection.accessCollection(e);
         // foundCollection.renamingCollection(e);
       });
     }
-
-    // debugger;
   }
 }

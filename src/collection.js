@@ -53,7 +53,6 @@ class Collection {
 
   // accessCollection(collection) {
   accessCollection = (e) => {
-    // console.log(this);
     e.stopPropagation();
 
     const self = this;
@@ -88,6 +87,7 @@ class Collection {
       debugger;
       this.addNewPicture();
     });
+  };
 }
 
 // addNewPicture() {
