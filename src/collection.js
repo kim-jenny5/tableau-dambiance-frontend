@@ -12,17 +12,22 @@ class Collection {
     this.created_at = created_at;
 
     Collection.all.push(this);
-  }
 
-  appendCollections() {
     const collectionEl = document.createElement("div");
     collectionEl.className = "each-collection";
     collectionEl.id = this.id;
     collectionEl.innerText = this.name;
     collectionsDisplay.appendChild(collectionEl);
-
-    // collectionEl.addEventListener("click", this.clickOnCollection);
   }
+
+  // appendCollections() {
+  //   const collectionEl = document.createElement("div");
+  //   collectionEl.className = "each-collection";
+  //   collectionEl.id = this.id;
+  //   collectionEl.innerText = this.name;
+  //   collectionsDisplay.appendChild(collectionEl);
+  //   // collectionEl.addEventListener("click", this.clickOnCollection);
+  // }
 
   // clickOnCollection = (e) => {
   //   const allCollections = document.querySelectorAll(".each-collection");
@@ -55,8 +60,8 @@ class Collection {
   accessCollection = (e) => {
     window.scrollTo(0, 0);
     e.stopPropagation();
-
-    const self = this;
+    // e.stopImmediatePropagation();
+    // const self = this;
 
     pictureBoard.innerHTML = "";
 

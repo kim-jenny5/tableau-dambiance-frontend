@@ -9,8 +9,9 @@ class CollectionApi {
       .then((data) => {
         const collections = data.filter((c) => c.user.id === user.id);
         for (const collection of collections) {
-          const c = new Collection(collection);
-          c.appendCollections();
+          new Collection(collection);
+          // const c = new Collection(collection);
+          // c.appendCollections();
           // c.clickOnCollection();
         }
       })
