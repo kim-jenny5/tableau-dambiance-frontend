@@ -173,11 +173,11 @@ a:link {
 .home-container {
   position: absolute;
   top: 30%;
-  left: 20%;
+  left: 30%;
   right: 0;
   background: url("imgs/Camera _Flatline.png") no-repeat center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .welcome,
