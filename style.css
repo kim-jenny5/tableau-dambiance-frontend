@@ -302,12 +302,15 @@ a:link {
 }
 
 .delete-form {
+  position: fixed;
+  right: 10vh;
+  bottom: 5vh;
 }
 
 .delete {
   position: fixed;
-  /* border: none;
-  background-color: #e0e0e0; */
+  right: 10vh;
+  bottom: 5vh;
   border-radius: 20px !important;
   font-family: "Open Sans", sans-serif;
   font-size: 12px !important;
