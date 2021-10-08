@@ -311,7 +311,7 @@ a:link {
 .add-btn {
   margin-top: 50px !important;
   margin-bottom: 50px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .scroll-btns {

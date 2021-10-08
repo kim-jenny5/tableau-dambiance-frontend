@@ -77,9 +77,9 @@ class Collection {
   }
 
   createDeleteBtn() {
-    deleteBtn.setAttribute("id", `deleteColl-${this.id}`);
     deleteBtn.setAttribute("type", "submit");
     deleteBtn.setAttribute("class", "btn btn-outline-dark delete fw-bold");
+    deleteBtn.setAttribute("id", `deleteColl-${this.id}`);
 
     deleteBtn.innerHTML = `<svg
         xmlns="http://www.w3.org/2000/svg"
@@ -102,13 +102,30 @@ class Collection {
   }
 
   createAddBtn() {
-    console.log(this); //correct collection
-
-    addBtn.setAttribute("form", "");
+    // console.log(this); //correct collection
+    // addBtn.setAttribute("type", "submit");
+    // addBtn.setAttribute("class", "add-btn");
+    // addBtn.setAttribute("id", `addPic-${this.id}`);
+    // const addPicForm = document.createElement("form");
+    // const fileUpload = document.createElement("input");
+    // fileUpload.type = "file";
+    // fileUpload.id = "picture-upload";
+    // fileUpload.class = "picture-upload";
+    // fileUpload.style = "display: none";
+    // fileUpload.data - direct - upload - url;
+    // console.log(fileUpload);
+    // <input
+    //   type="file"
+    //   id="picture-upload"
+    //   class="picture-upload"
+    //   style="display: none"
+    //   data-direct-upload-url="<%=
+    //           rails_direct_uploads_url %>"
+    // />;
+    // fileUpload.innerHTML = ``;
     // addBtnCont.addEventListener("click", () => {
     //   console.log(e.target); // path
     //   console.log(this); // wrong collection
-
     //   debugger;
     // });
   }
