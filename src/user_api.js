@@ -11,6 +11,7 @@ class UserApi {
         collectionApiCall.getCollectionsApi(u);
         u.setUpUsersPage();
         u.deletingCollection();
+        // u.addingPicture();
       })
       .catch(() => alert("Sorry! Username not found."));
   }

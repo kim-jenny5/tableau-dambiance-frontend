@@ -103,31 +103,47 @@ class Collection {
 
   createAddBtn() {
     // console.log(this); //correct collection
-    // addBtn.setAttribute("type", "submit");
-    // addBtn.setAttribute("class", "add-btn");
-    // addBtn.setAttribute("id", `addPic-${this.id}`);
-    // const addPicForm = document.createElement("form");
-    // const fileUpload = document.createElement("input");
-    // fileUpload.type = "file";
-    // fileUpload.id = "picture-upload";
-    // fileUpload.class = "picture-upload";
-    // fileUpload.style = "display: none";
-    // fileUpload.data - direct - upload - url;
-    // console.log(fileUpload);
-    // <input
-    //   type="file"
-    //   id="picture-upload"
-    //   class="picture-upload"
-    //   style="display: none"
-    //   data-direct-upload-url="<%=
-    //           rails_direct_uploads_url %>"
-    // />;
-    // fileUpload.innerHTML = ``;
-    // addBtnCont.addEventListener("click", () => {
-    //   console.log(e.target); // path
-    //   console.log(this); // wrong collection
-    //   debugger;
-    // });
+    const addPicForm = document.createElement("form");
+    addPicForm.setAttribute("class", "new-picture-form");
+    addPicForm.setAttribute("id", `addPicColl-${this.id}`);
+
+    addPicForm.innerHTML = `
+    <label for="picture-upload" class="add-btn-container">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        fill="currentColor"
+        class="bi bi-plus-circle-fill add-btn"
+        viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+        />
+      </svg>
+    </label>
+    <input
+      type="file"
+      id="picture-upload"
+      class="picture-upload"
+      style="display: none"
+      multiple
+      data-direct-upload-url="<%=
+      rails_direct_uploads_url %>"
+    />`;
+
+    pictureBoard.append(addPicForm);
+
+    addPicForm.addEventListener("change", (e) => {
+      console.log(this); // correct collection
+      // const id = parseInt(e.target.parentElement.id.match(/\d/));
+      // console.log(`Collection id: ${id}`);
+      const fileInput = document.getElementById("picture-upload").files;
+      // if (fileInput.length > 1) {
+
+      // }
+      console.log(fileInput);
+      debugger;
+    });
   }
 }
 
