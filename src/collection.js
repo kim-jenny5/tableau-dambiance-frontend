@@ -35,8 +35,8 @@ class Collection {
   }
 
   accessCollection() {
-    const newPictureForm = document.querySelector(".new-picture-form");
-    newPictureForm.style.display = "block";
+    // const newPictureForm = document.querySelector(".new-picture-form");
+    // newPictureForm.style.display = "block";
 
     mainPg.style.display = "block";
     home.style.display = "none";
@@ -70,21 +70,16 @@ class Collection {
       window.scrollTo(0, document.body.scrollHeight);
     });
 
-    addBtn.addEventListener("click", (e) => {
-      debugger;
-      this.addNewPicture();
-    });
-
     mainPg.appendChild(deleteBtn);
 
     this.createDeleteBtn();
+    this.createAddBtn();
   }
 
   createDeleteBtn() {
-    deleteBtn.setAttribute("form", `deleteColl-${this.id}`);
+    deleteBtn.setAttribute("id", `deleteColl-${this.id}`);
     deleteBtn.setAttribute("type", "submit");
     deleteBtn.setAttribute("class", "btn btn-outline-dark delete fw-bold");
-    deleteBtn.setAttribute("id", `deleteColl-${this.id}`);
 
     deleteBtn.innerHTML = `<svg
         xmlns="http://www.w3.org/2000/svg"
@@ -104,6 +99,18 @@ class Collection {
       </svg>
       Delete Entire Collection
     `;
+  }
+
+  createAddBtn() {
+    console.log(this); //correct collection
+
+    addBtn.setAttribute("form", "");
+    // addBtnCont.addEventListener("click", () => {
+    //   console.log(e.target); // path
+    //   console.log(this); // wrong collection
+
+    //   debugger;
+    // });
   }
 }
 

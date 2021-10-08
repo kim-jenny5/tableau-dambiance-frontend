@@ -303,9 +303,12 @@ a:link {
   background-color: transparent;
 }
 
+.add-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
 .add-btn {
-  /* left: 0;
-  right: 0; */
   margin-top: 50px !important;
   margin-bottom: 50px;
   cursor: pointer;
@@ -360,9 +363,4 @@ a:link {
 
 .new-name:focus {
   outline: none;
-}
-
-.add-btn-container {
-  display: flex;
-  justify-content: center;
 }

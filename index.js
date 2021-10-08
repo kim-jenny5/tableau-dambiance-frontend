@@ -45,8 +45,9 @@ const collectionName = document.querySelector(".new-name");
 const title = document.querySelector(".file-name");
 const pictureBoardCont = document.querySelector(".picture-board .container");
 const pictureBoard = document.querySelector(".picture-board-col");
-const addBtn = document.querySelector(".add-btn-container");
-const deleteForm = document.createElement("form");
+// const addBtnCont = document.querySelector(".add-btn-container");
+// const addBtn = document.querySelector(".add-btn-container");
+const addBtn = document.createElement("button");
 const deleteBtn = document.createElement("button");
 
 const qMark = document.querySelector(".open-about-btn");
