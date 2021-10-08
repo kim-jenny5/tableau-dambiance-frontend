@@ -16,6 +16,10 @@ class Picture {
     pictureBoard.appendChild(picEl);
   }
 
+  // uploadPictures() {
+
+  // }
+
   // attachToDomOneColBase(picEl, arr) {
   //   picEl.src = `${base_url}${this.url}`;
   //   arr[0].appendChild(picEl);

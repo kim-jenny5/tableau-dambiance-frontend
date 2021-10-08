@@ -138,9 +138,14 @@ class Collection {
       // const id = parseInt(e.target.parentElement.id.match(/\d/));
       // console.log(`Collection id: ${id}`);
       const fileInput = document.getElementById("picture-upload").files;
-      // if (fileInput.length > 1) {
+      if (fileInput.length > 1) {
+        for (const input of fileInput) {
+          pictureApiCall.uploadPictures(input);
+        }
+      } else {
+        pictureApiCall.uploadPictures(fileInput[0]);
+      }
 
-      // }
       console.log(fileInput);
       debugger;
     });
