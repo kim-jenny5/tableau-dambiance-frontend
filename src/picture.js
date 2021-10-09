@@ -1,9 +1,9 @@
 class Picture {
   static all = [];
 
-  constructor({ id, url, collection }) {
+  constructor({ id, pic_url, collection }) {
     this.id = id;
-    this.url = url;
+    this.pic_url = pic_url;
     this.collection = collection;
     Picture.all.push(this);
   }
@@ -25,7 +25,8 @@ class Picture {
     // </svg>`;
 
     const picEl = document.createElement("img");
-    picEl.src = `${this.url}`;
+    // picEl.src = `${this.url}`;
+    picEl.src = `${this.pic_url}`;
 
     // picDiv.append(deletePicBtn, picEl);
     // pictureBoard.appendChild(picDiv);
