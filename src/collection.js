@@ -132,7 +132,7 @@ class Collection {
 
     pictureBoard.append(addPicForm);
 
-    console.log(addPicForm);
+    // console.log(addPicForm);
 
     addPicForm.addEventListener("change", (e) => {
       // console.log(this); // correct collection
@@ -150,17 +150,13 @@ class Collection {
         // pictureApiCall.uploadPictures(this.id, file);
         // console.log(data);
         // debugger;
-        const formData = new FormData();
-        formData.append("file", file);
-        debugger;
-        console.log(formData);
         // pictureApiCall.uploadPictures(formData);
-        // const url = input.dataset.directUploadUrl;
-        // const upload = new ActiveStorage.DirectUpload(file, url);
-        // console.log(url);
+        const url = input.dataset.directUploadUrl;
+        const upload = new ActiveStorage.DirectUpload(file, url);
+        console.log(url);
         // console.log(data);
-        // console.log(upload);
-        // debugger;
+        console.log(upload);
+        debugger;
       }
 
       // uploadFile(fileInput[0]);
