@@ -1,4 +1,5 @@
 const xCollectionsBtn = document.querySelector(".close-collections-btn");
+const addPicForm = document.createElement("form");
 
 // const renameTitle = document.querySelector(".renaming-form");
 
@@ -103,7 +104,9 @@ class Collection {
 
   createAddBtn() {
     // console.log(this); //correct collection
-    const addPicForm = document.createElement("form");
+
+    if (addPicForm) addPicForm.remove();
+
     addPicForm.setAttribute("class", "new-picture-form");
     addPicForm.setAttribute("id", `addPicColl-${this.id}`);
 
@@ -138,10 +141,10 @@ class Collection {
       id="picture-upload"
       class="picture-upload"
       name="img_file"
-    />
-    <input
-      type="submit"
     />`;
+    // <input
+    //   type="submit"
+    // />`;
 
     const addFormCont = document.querySelector(".add-form-container");
     addFormCont.append(addPicForm);
@@ -150,14 +153,17 @@ class Collection {
 
     const input = document.querySelector("input[type=file]");
 
-    addPicForm.addEventListener("submit", (e) => {
-      e.preventDefault();
+    input.addEventListener("change", (e) => {
+      // addPicForm.addEventListener("submit", (e) => {
+      console.log(this);
+      // e.preventDefault();
+      // debugger;
       const formData = new FormData();
       formData.append("collection_id", this.id);
       formData.append("img_file", input.files[0]);
       pictureApiCall.uploadPictures(formData);
-      z;
       input.value = "";
+      // });
     });
   }
 }
