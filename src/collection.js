@@ -110,41 +110,32 @@ class Collection {
     addPicForm.setAttribute("class", "new-picture-form");
     addPicForm.setAttribute("id", `addPicColl-${this.id}`);
 
-    // addPicForm.innerHTML = `
-    // <label for="picture-upload" class="add-btn-container">
-    //   <svg
-    //     xmlns="http://www.w3.org/2000/svg"
-    //     width="40"
-    //     height="40"
-    //     fill="currentColor"
-    //     class="bi bi-plus-circle-fill add-btn"
-    //     viewBox="0 0 16 16">
-    //     <path
-    //       d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
-    //     />
-    //   </svg>
-    // </label>
-    // <input
+    // addPicForm.innerHTML = `<input
     //   type="file"
     //   id="picture-upload"
     //   class="picture-upload"
-    //   style="display: none"
-    //   multiple
-    //   data-direct-upload-url="<%=rails_direct_uploads_url %>"
-    // />
-    // <input
-    //   type="submit"
+    //   name="img_file"
     // />`;
 
-    addPicForm.innerHTML = `<input
+    addPicForm.innerHTML = `<label for="picture-upload" class="add-btn-container">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      fill="currentColor"
+      class="bi bi-plus-circle-fill add-btn"
+      viewBox="0 0 16 16"
+    >
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+    </svg>
+    </label>
+    <input
       type="file"
       id="picture-upload"
       class="picture-upload"
       name="img_file"
+      style="display: none"
     />`;
-    // <input
-    //   type="submit"
-    // />`;
 
     const addFormCont = document.querySelector(".add-form-container");
     addFormCont.append(addPicForm);

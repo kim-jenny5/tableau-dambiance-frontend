@@ -303,7 +303,7 @@ a:link {
   background-color: transparent;
 }
 
-/* .add-btn-container {
+.add-btn-container {
   display: flex;
   justify-content: center;
 }
@@ -312,17 +312,17 @@ a:link {
   margin-top: 50px !important;
   margin-bottom: 50px;
   cursor: pointer;
-} */
+}
 
 /* .add-form-container {
   margin-top: 50px !important;
   margin-bottom: 50px !important;
 } */
 
-.new-picture-form {
+/* .new-picture-form {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-}
+} */
 
 .scroll-btns {
   position: fixed;
