@@ -11,7 +11,8 @@ class Picture {
 
   attachToDom() {
     const picEl = document.createElement("img");
-    picEl.src = `${base_url}${this.url}`;
+    // picEl.src = `${base_url}${this.url}`;
+    picEl.src = `${this.url}`;
 
     pictureBoard.appendChild(picEl);
   }

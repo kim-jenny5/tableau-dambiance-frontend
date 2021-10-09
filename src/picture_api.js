@@ -15,33 +15,35 @@ class PictureApi {
       .catch();
   }
 
-  uploadPictures(picture) {
-    console.log(picture);
-
-    debugger;
-    // console.log(collection);
-    // console.log(pic);
+  // uploadPictures(collection_id, img_file) {
+  uploadPictures(formData) {
+    console.log(formData);
 
     // const picture = {
-    //   // filename: pic,
-    //   collection_id: collection.id,
+    //   collection_id,
+    //   img_file: img_file,
     // };
 
-    const configObj = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(picture),
-    };
+    // const configObj = {
+    //   method: "POST",
+    // headers: {
+    //   "Content-Type": "application/json",
+    //   Accept: "application/json",
+    // },
+    // body: JSON.stringify(picture),
+    // };
 
-    fetch(`${this.url}/pictures`, configObj)
-      .then((resp) => resp.json())
-      .then((data) => {
-        debugger;
-        // console.log(data);
-      });
+    // console.log(picture);
+    // console.log(configObj);
+
+    // debugger;
+
+    // fetch(`${this.url}/pictures`, configObj)
+    //   .then((resp) => resp.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     debugger;
+    //   });
 
     // console.log(picture);
     // debugger;

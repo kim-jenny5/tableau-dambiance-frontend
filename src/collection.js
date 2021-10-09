@@ -127,29 +127,59 @@ class Collection {
       class="picture-upload"
       style="display: none"
       multiple
-      data-direct-upload-url="<%=
-      rails_direct_uploads_url %>"
-    />`;
+      data-direct-upload-url="<%=rails_direct_uploads_url %>"
+      />`;
 
     pictureBoard.append(addPicForm);
 
+    console.log(addPicForm);
+
     addPicForm.addEventListener("change", (e) => {
-      console.log(this); // correct collection
+      // console.log(this); // correct collection
       // const id = parseInt(e.target.parentElement.id.match(/\d/));
       // console.log(`Collection id: ${id}`);
-      const fileInput = document.getElementById("picture-upload").files;
-      if (fileInput.length > 1) {
-        for (const input of fileInput) {
-          pictureApiCall.uploadPictures(input);
-        }
-      } else {
-        pictureApiCall.uploadPictures(fileInput[0]);
+      // const fileInput = document.getElementById("picture-upload").files;
+
+      const input = document.querySelector("input[type=file]");
+
+      for (const file of input.files) {
+        // console.log(this);
+        // console.log(file);
+        // debugger;
+        // this.uploadingPicture(this.id, file);
+        // pictureApiCall.uploadPictures(this.id, file);
+        // console.log(data);
+        // debugger;
+        const formData = new FormData();
+        formData.append("file", file);
+        debugger;
+        console.log(formData);
+        // pictureApiCall.uploadPictures(formData);
+        // const url = input.dataset.directUploadUrl;
+        // const upload = new ActiveStorage.DirectUpload(file, url);
+        // console.log(url);
+        // console.log(data);
+        // console.log(upload);
+        // debugger;
       }
 
-      console.log(fileInput);
-      debugger;
+      // uploadFile(fileInput[0]);
+      // const uploadFile = (file) => {
+      //   // const url =
+      // };
+
+      // console.log(fileInput);
+      // debugger;
     });
   }
+
+  // uploadingPicture(input, file) {
+  //   const url = input.dataset.directUploadUrl;
+  //   const upload = new DirectUpload(file, url);
+  //   console.log(url);
+  //   console.log(upload);
+  //   debugger;
+  // }
 }
 
 // addNewPicture() {
