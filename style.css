@@ -277,20 +277,30 @@ a:link {
   height: 100vh;
 }
 
-.picture-board .row {
+/* .img-container {
+  position: relative;
+}
+
+.img-container .close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 100;
+} */
+
+/* .picture-board .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-}
+} */
 
-.picture-board-col {
+/* .picture-board-col {
   flex: 100%;
   padding: 0 4px;
-}
+} */
 
 .picture-board-col img {
-  margin-top: 8px;
-  vertical-align: middle;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -313,16 +323,6 @@ a:link {
   margin-bottom: 50px;
   cursor: pointer;
 }
-
-/* .add-form-container {
-  margin-top: 50px !important;
-  margin-bottom: 50px !important;
-} */
-
-/* .new-picture-form {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-} */
 
 .scroll-btns {
   position: fixed;
