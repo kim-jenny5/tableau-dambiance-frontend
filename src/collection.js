@@ -143,7 +143,10 @@ class Collection {
       type="submit"
     />`;
 
-    pictureBoard.append(addPicForm);
+    const addFormCont = document.querySelector(".add-form-container");
+    addFormCont.append(addPicForm);
+
+    // pictureBoard.append(addPicForm);
 
     const input = document.querySelector("input[type=file]");
 
@@ -153,6 +156,8 @@ class Collection {
       formData.append("collection_id", this.id);
       formData.append("img_file", input.files[0]);
       pictureApiCall.uploadPictures(formData);
+      z;
+      input.value = "";
     });
   }
 }
