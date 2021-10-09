@@ -125,6 +125,7 @@ class Collection {
       id="picture-upload"
       class="picture-upload"
       name="img_file"
+      multiple
       style="display: none"
     />`;
 
@@ -134,10 +135,12 @@ class Collection {
     const input = document.querySelector("input[type=file]");
 
     input.addEventListener("change", (e) => {
-      const formData = new FormData();
-      formData.append("collection_id", this.id);
-      formData.append("img_file", input.files[0]);
-      pictureApiCall.uploadPictures(formData);
+      for (const file of input.files) {
+        const formData = new FormData();
+        formData.append("collection_id", this.id);
+        formData.append("img_file", file);
+        pictureApiCall.uploadPictures(formData);
+      }
     });
   }
 }
