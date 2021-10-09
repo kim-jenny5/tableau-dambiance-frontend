@@ -145,61 +145,14 @@ class Collection {
 
     pictureBoard.append(addPicForm);
 
-    const pictureUpload = document.getElementById("picture-upload");
-    // console.log(addPicForm);
-
-    // addPicForm.addEventListener("change", (e) => {
-    //   // console.log(this); // correct collection
-    //   // const id = parseInt(e.target.parentElement.id.match(/\d/));
-    //   // console.log(`Collection id: ${id}`);
-    //   // const fileInput = document.getElementById("picture-upload").files;
-
     const input = document.querySelector("input[type=file]");
 
-    //   for (const file of input.files) {
-    //     pictureApiCall.uploadPictures(this, file);
-    //   }
-    // });
     addPicForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const formData = new FormData();
       formData.append("collection_id", this.id);
       formData.append("img_file", input.files[0]);
-      // console.log(formData);
-      // console.log(formData.get("file"));
-      // for (const value of formData.values()) {
-      //   console.log(value);
-      // }
-      // for (const entry of formData.entries()) {
-      //   console.log(entry);
-      // }
-      // console.log(formData.get("collection_id"));
-      // console.log(formData.get("img_file"));
-      // debugger;
       pictureApiCall.uploadPictures(formData);
     });
   }
-
-  // uploadingPicture(input, file) {
-  //   const url = input.dataset.directUploadUrl;
-  //   const upload = new DirectUpload(file, url);
-  //   console.log(url);
-  //   console.log(upload);
-  //   debugger;
-  // }
 }
-
-// addNewPicture() {
-//   // const newPictureForm = document.querySelector(".new-picture-form");
-//   // newPictureForm.style.display = "block";
-//   // debugger;
-//   const newPicture = document.querySelector(".picture-upload");
-//   newPicture.addEventListener("change", (e) => {
-//     // e.target.value.uploadNewPicture();
-//     // const newPicture = e.target.value;
-//     // const p = new Picture(newPicture)
-//     // pictureApiCall.uploadNewPicture(this, e.target.value);
-//   });
-//   // newPicture.
-//   // debugger;
-// }

@@ -99,16 +99,4 @@ class User {
       this.setUpUsersPage();
     });
   }
-
-  addingPicture() {
-    addPicForm.addEventListener("change", () => {
-      console.log("change");
-      // debugger;
-    });
-
-    addPicForm.addEventListener("submit", () => {
-      console.log("submit");
-      // debugger;
-    });
-  }
 }
