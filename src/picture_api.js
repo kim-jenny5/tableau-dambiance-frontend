@@ -25,7 +25,6 @@ class PictureApi {
       .then((resp) => resp.json())
       .then((data) => {
         const p = new Picture(data);
-        // console.log(p);
         p.attachToDom();
       })
       .catch();

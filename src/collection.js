@@ -103,19 +103,10 @@ class Collection {
   }
 
   createAddBtn() {
-    // console.log(this); //correct collection
-
     if (addPicForm) addPicForm.remove();
 
     addPicForm.setAttribute("class", "new-picture-form");
     addPicForm.setAttribute("id", `addPicColl-${this.id}`);
-
-    // addPicForm.innerHTML = `<input
-    //   type="file"
-    //   id="picture-upload"
-    //   class="picture-upload"
-    //   name="img_file"
-    // />`;
 
     addPicForm.innerHTML = `<label for="picture-upload" class="add-btn-container">
     <svg
@@ -140,21 +131,13 @@ class Collection {
     const addFormCont = document.querySelector(".add-form-container");
     addFormCont.append(addPicForm);
 
-    // pictureBoard.append(addPicForm);
-
     const input = document.querySelector("input[type=file]");
 
     input.addEventListener("change", (e) => {
-      // addPicForm.addEventListener("submit", (e) => {
-      console.log(this);
-      // e.preventDefault();
-      // debugger;
       const formData = new FormData();
       formData.append("collection_id", this.id);
       formData.append("img_file", input.files[0]);
       pictureApiCall.uploadPictures(formData);
-      input.value = "";
-      // });
     });
   }
 }
