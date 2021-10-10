@@ -36,9 +36,6 @@ class Collection {
   }
 
   accessCollection() {
-    // const newPictureForm = document.querySelector(".new-picture-form");
-    // newPictureForm.style.display = "block";
-
     mainPg.style.display = "block";
     home.style.display = "none";
     pictureBoard.innerHTML = "";

@@ -3,10 +3,6 @@ const collectionApiCall = new CollectionApi(base_url);
 const userApiCall = new UserApi(base_url);
 const pictureApiCall = new PictureApi(base_url);
 
-// collectionApiCall.getCollectionsApi();
-// userApiCall.getUsersApi();
-// pictureApiCall.getPicturesApi();
-
 // different pages
 const startingPg = document.querySelector(".starting-page");
 const newUserPg = document.querySelector(".new-user-page");
@@ -45,8 +41,6 @@ const collectionName = document.querySelector(".new-name");
 const title = document.querySelector(".file-name");
 const pictureBoardCont = document.querySelector(".picture-board .container");
 const pictureBoard = document.querySelector(".picture-board-col");
-// const addBtnCont = document.querySelector(".add-btn-container");
-// const addBtn = document.querySelector(".add-btn-container");
 const deleteBtn = document.createElement("button");
 
 const qMark = document.querySelector(".open-about-btn");
@@ -136,7 +130,6 @@ returningUser.addEventListener("click", function () {
     const usernameInput = e.target.querySelector(
       "#returning-user-username"
     ).value;
-    // e.stopImmediatePropagation();
     userApiCall.getUsersApi(usernameInput);
   });
 

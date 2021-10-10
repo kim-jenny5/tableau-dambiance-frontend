@@ -3,7 +3,6 @@
 
 body {
   font-family: "Playfair Display", serif !important;
-  /* height: 100vh !important; */
 }
 
 a:link {
@@ -276,28 +275,6 @@ a:link {
 .blank {
   height: 100vh;
 }
-
-/* .img-container {
-  position: relative;
-}
-
-.img-container .close {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  z-index: 100;
-} */
-
-/* .picture-board .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-} */
-
-/* .picture-board-col {
-  flex: 100%;
-  padding: 0 4px;
-} */
 
 .picture-board-col img {
   margin-top: 20px;

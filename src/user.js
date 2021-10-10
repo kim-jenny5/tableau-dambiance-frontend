@@ -31,7 +31,6 @@ class User {
         hamburger.style.display = "none";
         xCollectionsBtn.style.display = "block";
       }
-      // this.gettingCollections();
     });
 
     newBtn.addEventListener("click", () => {
@@ -85,18 +84,18 @@ class User {
     deleteBtn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopImmediatePropagation();
-      // debugger;
+
       const id = parseInt(e.target.id.match(/\d/));
       if (window.confirm("Are you sure you want to delete this collection?")) {
         collectionApiCall.deleteCollectionApi(id);
+        pictureBoard.innerHTML = "";
+        mainPg.style.display = "none";
+        document
+          .querySelector(".collections-display")
+          .querySelector(`#collection-${id}`)
+          .remove();
+        this.setUpUsersPage();
       }
-      pictureBoard.innerHTML = "";
-      mainPg.style.display = "none";
-      document
-        .querySelector(".collections-display")
-        .querySelector(`#collection-${id}`)
-        .remove();
-      this.setUpUsersPage();
     });
   }
 }
