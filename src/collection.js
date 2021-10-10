@@ -134,7 +134,7 @@ class Collection {
 
     const input = document.querySelector("input[type=file]");
 
-    input.addEventListener("change", (e) => {
+    input.addEventListener("change", () => {
       for (const file of input.files) {
         const formData = new FormData();
         formData.append("collection_id", this.id);
