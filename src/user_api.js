@@ -32,8 +32,17 @@ class UserApi {
     fetch(`${this.url}/users`, configObj)
       .then((resp) => resp.json())
       .then((data) => {
-        const newUser = new User(data);
-        newUser.setUpUsersPage();
-      });
+        if (data["error"]) {
+          alert(data["error"]);
+        } else {
+          const newUser = new User(data);
+          newUser.setUpUsersPage();
+        }
+      })
+      .catch(() =>
+        alert(
+          "Username has already been taken. Please choose a different username."
+        )
+      );
   }
 }
