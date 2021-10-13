@@ -11,8 +11,7 @@ class PictureApi {
           const p = new Picture(picture);
           p.attachToDom();
         }
-      })
-      .catch();
+      });
   }
 
   uploadPictures(formData) {
@@ -24,9 +23,12 @@ class PictureApi {
     fetch(`${this.url}/pictures`, configObj)
       .then((resp) => resp.json())
       .then((data) => {
-        const p = new Picture(data);
-        p.attachToDom();
-      })
-      .catch();
+        if (data["error"]) {
+          alert(data["error"]);
+        } else {
+          const p = new Picture(data);
+          p.attachToDom();
+        }
+      });
   }
 }

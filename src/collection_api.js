@@ -9,12 +9,10 @@ class CollectionApi {
       .then((data) => {
         const collections = data.filter((c) => c.user.id === user.id);
         for (const collection of collections) {
-          // new Collection(collection);
           const c = new Collection(collection);
           c.clickOnCollection();
         }
-      })
-      .catch();
+      });
   }
 
   createCollections(user) {
@@ -35,8 +33,12 @@ class CollectionApi {
     fetch(`${this.url}/collections`, configObj)
       .then((resp) => resp.json())
       .then((data) => {
-        const c = new Collection(data);
-        c.accessCollection();
+        if (data["error"]) {
+          alert(data["error"]);
+        } else {
+          const c = new Collection(data);
+          c.accessCollection();
+        }
       });
   }
 
