@@ -48,12 +48,13 @@ class User {
     logout.addEventListener("click", () => {
       startingPg.style.display = "block";
       mainPg.style.display = "none";
+      home.style.display = "none";
       newUserPg.style.display = "none";
-      hamburger.style.display = "block";
+      hamburger.style.display = "none";
       collectionsMenu.style.display = "none";
+      collectionsDisplay.innerHTML = "";
       returningUsername.value = "";
       pictureBoard.innerHTML = "";
-      title.innerText = "untitled";
       if (collectionForm.style.display === "block") {
         collectionForm.style.display = "none";
       }
