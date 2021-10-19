@@ -25,6 +25,7 @@ class User {
 
     username.innerText = this.username;
 
+    //easier way: toggle
     hamburger.addEventListener("click", () => {
       collectionsMenu.style.display = "block";
       if (xCollectionsBtn.style.display === "none") {

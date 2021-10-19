@@ -1,4 +1,5 @@
-const base_url = `http://localhost:3000`;
+// const base_url = `http://localhost:3000`;
+const base_url = `https://tableau-dambiance.herokuapp.com/`;
 const collectionApiCall = new CollectionApi(base_url);
 const userApiCall = new UserApi(base_url);
 const pictureApiCall = new PictureApi(base_url);
