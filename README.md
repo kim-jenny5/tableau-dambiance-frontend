@@ -12,9 +12,19 @@ CSS and Bootstrap was used as well to design the frontend.
 
 ## Usage
 
-To get started:
+To view the website live and in action:
 
-- Visit the [Tableau d'Ambiance website](https://tableau-dambiance.netlify.app/) to see the website live and in action.
+- Visit [Tableau d'Ambiance](https://tableau-dambiance.netlify.app/)
+- If you prefer viewing a sample account and its images:
+  - Click "Returning"
+  - Enter "jennyjellybeans" and click continue
+- If you'd like to create your account:
+
+  - Click "New"
+  - Enter your username--must be unique
+
+**Reminder:**
+This application does NOT handle secure user authentication at the moment, as it doesn't require users to create a password. Please continue knowing whatever photos you upload, if any other user were to get ahold of your username, they will be able to access said photos and collections.
 
 ## License
 
